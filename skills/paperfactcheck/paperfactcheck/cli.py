@@ -11,8 +11,10 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import json
+import os
 import re
 import sys
+import textwrap
 from pathlib import Path
 from typing import Any
 
@@ -196,27 +198,39 @@ def run_checks(doc: Doc, offline: bool = False, lang: str = "") -> dict[str, Any
 
 
 def summary(result: dict[str, Any], out: Path) -> str:
+    """Terminal summary: one block per finding, then totals. Full data stays in findings.json."""
     f = result["findings"]
-    first = [x for x in f if x["order"] == "first"]
-    lines = [f"# Paper Fact Check: {result['paper']}", "",
-             f"{len(f)} script finding(s), {len(first)} first-order. Report: {out / 'report.html'}", ""]
+    first = sum(x["order"] == "first" for x in f)
+    major = sum(x["order"] != "first" and x["severity"] in ("critical", "major") for x in f)
+    width = max((len(x["title"]) for x in f), default=0)
+    lines = [result["paper"]]
     for x in f:
-        lines.append(f"- {x['id']} [{x['severity']}/{x['order']}] {x['title']}"
-                     + (f" ({x['where']})" if x["where"] else "") + f": {x['evidence'][:220]}")
+        mark = "*" if x["order"] == "first" else " "
+        where = f"  {x['where']}" if x["where"] else ""
+        lines.append(f"  {x['id']:<4}{x['severity']:<9}{mark} {x['title']:<{width}}{where}")
+        wrapped = textwrap.wrap(x["evidence"], 96)
+        if len(wrapped) > 2:
+            wrapped = [wrapped[0], textwrap.shorten(" ".join(wrapped[1:]), 96, placeholder=" …")]
+        lines += ["        " + line for line in wrapped]
+    lines.append("")
+    lines.append(f"{len(f)} findings: {first} change a conclusion (*), {major} worth fixing, "
+                 f"{len(f) - first - major} minor.")
     refs = result["references"]
     if refs.get("total"):
         st: dict[str, int] = {}
         for it in refs["items"]:
             st[it["status"]] = st.get(it["status"], 0) + 1
-        lines += ["", f"References: {refs['total']} entries, " + ", ".join(f"{v} {k}" for k, v in sorted(st.items()))]
-    missing = [s["statement"] for s in result["statements"] if not s["found"]]
+        lines.append(f"References: {refs['total']} looked up (" +
+                     ", ".join(f"{v} {k.replace('_', ' ')}" for k, v in sorted(st.items())) + ").")
+    missing = [s["statement"].replace("_", " ") for s in result["statements"] if not s["found"]]
     if missing:
-        lines += ["", "Statements not found: " + ", ".join(missing)]
+        lines.append("Declarations not found: " + ", ".join(missing) + ".")
     if result["not_verified"]:
-        lines += ["", "Not verified: " + "; ".join(f"{n['item']} ({n['reason']})" if n["reason"] else n["item"]
-                                                for n in result["not_verified"])]
-    lines += ["", f"Full data: {out / 'findings.json'}. Next: review per SKILL.md, write {out / 'review.json'}, "
-              f"then run `render {out}`."]
+        lines.append("Not verified: " + "; ".join(f"{n['item']} ({n['reason']})" if n["reason"] else n["item"]
+                                                for n in result["not_verified"]) + ".")
+    rel = Path(os.path.relpath(out)) if not os.path.relpath(out).startswith("..") else out
+    lines += [f"Report: {rel / 'report.html'}",
+              f"Data: {rel / 'findings.json'} (add review.json beside it, then run `render {rel}`)"]
     return "\n".join(lines)
 
 

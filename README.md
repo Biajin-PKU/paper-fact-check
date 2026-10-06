@@ -1,170 +1,167 @@
 # Paper Fact Check
 
-**Fact-check your paper against its own evidence before reviewers do.**
+[![ci](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/Biajin-PKU/paperfactcheck)](https://github.com/Biajin-PKU/paperfactcheck/releases)
+[![python](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
+[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-[English](README.md) · [简体中文](README.zh-CN.md)
+**[Checks](docs/checks.md)** | **[Benchmarks](benchmark/README.md)** | **[MCP](docs/mcp.md)** | **[GitHub Action](docs/action.md)** | **[中文](README.zh-CN.md)**
 
-![license: MIT](https://img.shields.io/badge/license-MIT-blue) ![python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue) ![works with 80+ agents](https://img.shields.io/badge/agents-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Cursor%20%C2%B7%2080%2B-black)
+A fact-checker for research papers. It recomputes the statistics, percentages and changes a paper
+reports, compares the text with its tables, and looks up every reference. Each finding quotes the
+paper, shows the arithmetic, and suggests a fix.
 
-Paper Fact Check reads a manuscript, and its code and data if you have them, and reports every place where the paper disagrees with itself: numbers that differ between abstract and table, p-values that do not follow from their statistics, references that do not exist, conclusions stronger than the results. Each finding quotes the paper, shows the arithmetic, and gives a sentence you can paste in.
+It runs as an agent skill in Claude Code, Codex, Cursor and other coding agents, where the model
+then reviews every finding and reads the paper for what arithmetic cannot settle. It also runs on
+its own from the command line.
 
-It works on any field and any language the paper is written in, from a PDF, Word file, or LaTeX/Overleaf project.
+```console
+$ paperfactcheck main.tex --offline
+main.tex
+  S1  major    * Text and table give different values             Results
+        The text gives 0.847 for 'our model', but no cell of its table row matches at that precision;
+        the nearest row value is 0.851.
+  S2  major    * Mean impossible for its sample size (GRIM)       Results
+        Mean 5.19 to 2 dp is not achievable from any integer total over N=18 items (GRIM test) — the
+        reported mean is arithmetically impossible for that N.
+  S3  major    * p-value does not follow from its test statistic  Results
+        t = 1.20 cannot give p = 0.003: whatever the degrees of freedom, its two-sided p is at least
+        .228. The result is not significant at 0.05.
+  …
 
----
-
-## A real example
-
-A 2026 arXiv paper (ICRA 2026), version 1, Figure 2 caption:
-
-> "achieving 41.4% bandwidth reduction (800 vs 2800 bits)"
-
-```
-[major · changes the conclusion]  Relative change does not match its own numbers
-Where     Abstract; Section I; Figure 2 caption; Sections VI and VII
-Evidence  800 vs 2800 bits per episode (Figure 2 caption; Table I)
-Check     1 − 800 / 2800 = 71.4%, not 41.4%
-Fix       "achieving 71.4% bandwidth reduction (800 vs 2800 bits)"
-```
-
-The authors corrected every occurrence to 71.4% in version 2. Paper Fact Check flags version 1 and reports nothing on version 2.
-
----
-
-## Quick start
-
-**In your coding agent (Claude Code, Codex, Cursor, OpenCode, Gemini CLI and 80+ others)**
-
-```bash
-npx skills add Biajin-PKU/paperfactcheck
+8 findings: 6 change a conclusion (*), 1 worth fixing, 1 minor.
+Report: report/report.html
 ```
 
-then, in the agent:
+- 41 computed and lookup checks across numbers, statistics, references, figures, and released code
+  and data, listed in [docs/checks.md](docs/checks.md)
+- Reference lookups against Crossref, OpenAlex, arXiv and doi.org: existence, DOI match, retractions
+- A review pass for claims, reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE, STARD,
+  TRIPOD+AI, COREQ) and declarations
+- PDF, Word, LaTeX folders and Overleaf zips, Markdown; papers in English and Chinese
+- HTML, Markdown and JSON reports
+- Python 3.9 standard library only; the manuscript is not uploaded anywhere
 
+<p align="center"><img src="docs/images/report-en.png" width="85%" alt="An HTML report with findings grouped by area"></p>
+
+## Installation
+
+As a skill for Claude Code, Codex, Cursor, OpenCode, Gemini CLI and
+[other agents](https://github.com/vercel-labs/skills):
+
+```console
+$ npx skills add Biajin-PKU/paperfactcheck
 ```
+
+As a Claude Code plugin:
+
+```console
+/plugin marketplace add Biajin-PKU/paperfactcheck
+/plugin install paperfactcheck@paperfactcheck
+```
+
+From [ClawHub](https://clawhub.ai), for OpenClaw and Hermes:
+
+```console
+$ clawhub install paperfactcheck
+```
+
+As a command-line tool:
+
+```console
+$ uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck paper.pdf
+```
+
+Or with no installation at all:
+
+```console
+$ git clone https://github.com/Biajin-PKU/paperfactcheck
+$ python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf
+```
+
+In Claude.ai, upload `paperfactcheck-skill.zip` from the
+[latest release](https://github.com/Biajin-PKU/paperfactcheck/releases/latest) as a custom skill in
+Settings. In any other chat assistant, paste [`prompt.md`](prompt.md) and
+attach the paper; without the script, the arithmetic is left to the model.
+
+PDF input uses `pdftotext` (poppler) when it is installed, or `pypdf` if available. Without either,
+the agent reads the PDF itself.
+
+## Usage
+
+In an agent:
+
+```console
 /paperfactcheck paper.pdf
 /paperfactcheck overleaf-project.zip --code ./repo
 ```
 
-| Where you work | How to install |
+The agent runs the checks, confirms each finding against the paper and dismisses misreadings, reads
+the paper against the [reading checklist](skills/paperfactcheck/references/checklist.md) and the
+matching reporting guideline, and writes the report.
+
+On the command line:
+
+```console
+$ paperfactcheck [check] PAPER [--code DIR] [--out DIR] [--offline] [--lang auto|en|zh] [--json]
+$ paperfactcheck render DIR
+$ paperfactcheck mcp
+```
+
+| Option | |
 |---|---|
-| Claude Code plugin | `/plugin marketplace add Biajin-PKU/paperfactcheck`, then `/plugin install paperfactcheck@paperfactcheck` |
-| OpenClaw, Hermes and other ClawHub clients | `clawhub install paperfactcheck` |
-| Claude.ai | Download `paperfactcheck-skill.zip` from Releases, upload under *Settings → Skills* |
-| Clone and run | `git clone https://github.com/Biajin-PKU/paperfactcheck && python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf` (no dependencies) |
-| Command line | `uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck paper.pdf` |
-| Claude Desktop, Cursor, any MCP client | `paperfactcheck mcp` ([config](docs/mcp.md)) |
-| GitHub / Overleaf git sync | [GitHub Action](docs/action.md): checks the paper on every push |
-| ChatGPT, Kimi, Doubao, any chat | Paste [`prompt.md`](prompt.md) ([中文](prompt.zh-CN.md)), attach the PDF. No install; arithmetic is done by the model, so expect fewer findings |
+| `PAPER` | `.pdf`, `.docx`, `.tex`, a LaTeX folder, a `.zip`, `.md` or `.txt` |
+| `--code DIR` | Released code or data; enables the code and data checks |
+| `--out DIR` | Report folder, default `paperfactcheck-<name>` |
+| `--offline` | Skip reference lookups |
+| `--lang` | Report language; `auto` follows the paper |
+| `--json` | Print the findings as JSON |
 
----
+`render` rebuilds the report after a `review.json` is added to the report folder
+([format](skills/paperfactcheck/references/review-format.md)). `mcp` serves the checks over the Model
+Context Protocol ([setup](docs/mcp.md)). The [GitHub Action](docs/action.md) checks a paper on every
+push.
 
-## What it checks
+Exit status is 0 when nothing changes a conclusion, 1 when something does, and 3 when the file could
+not be read.
 
-**Numbers**
-- The same quantity given different values in abstract, text, tables, and captions
-- "Improved by X%" against the two numbers it compares
-- Percentages against their counts; parts that do not add up to the total
+## How it works
 
-**Statistics**
-- p-values recomputed from t, F, χ², r, z and degrees of freedom, including where the conclusion flips
-- Confidence intervals that contradict their p-value; estimates outside their own interval
-- Effect sizes recomputed from reported statistics
-- Means and standard deviations that integer data cannot produce (GRIM, GRIMMER)
-- "Better" or "significant" next to an interval that includes no effect
-- Results more regular than measurement allows
+1. **Read.** Every format is turned into one text, with Word and Markdown tables rebuilt as tables
+   so that text and table values can be compared.
+2. **Compute.** The script extracts reported statistics, percentages, changes, means and table cells,
+   recomputes them from the paper's own numbers, and allows for the rounding printed.
+3. **Look up.** Each reference is matched in Crossref, OpenAlex and arXiv by DOI, identifier or
+   citation text; retraction notices come from Crossref.
+4. **Review.** In the skill, the model opens every script finding in the paper and dismisses
+   misreadings, then reads for claims, reporting items and declarations.
+5. **Report.** Findings are grouped by area, with the quote, the evidence, the calculation and a fix.
 
-**References**
-- Whether each reference exists, with correct authors, year, venue, and DOI
-- Retracted papers and expressions of concern
-- Whether the cited paper says what the sentence attributes to it
-- Citations missing from the list, and list entries never cited
+## False positives
 
-**Figures and tables**
-- Panels referred to but not present; tables and figures never referred to
-- Captions that describe something the figure does not show
+A script finding is a candidate. Most false alarms come from a number the script tied to the wrong
+row or condition, a setting read as a result, or a test the sentence does not say was one-sided. The
+review step exists to remove these, and dismissed findings stay visible in the report with the
+reason.
 
-**Code and data** (when provided)
-- Runs the released code and compares its output with the paper's numbers
-- Code that computes something other than what Methods describe
-- Train/test leakage and evaluations that can only agree
-- Result files that no test reads
+On 182 recent arXiv papers never used in development, the script raised 25 major findings; checked
+by hand, 5 were real (citation keys missing from the bibliography, figure panels the caption does
+not describe) and the rest were false alarms. The patterns behind them were fixed after each set; the
+last set of 50 papers raised one. Details and the data are in [benchmark/](benchmark/README.md).
 
-**Reporting standards**
-- Detects the study type and checks the matching guideline: CONSORT, STROBE, PRISMA, ARRIVE, STARD, TRIPOD+AI, COREQ
-- Ethics approval, consent, conflicts of interest, funding, data and code availability, trial registration
-- Sample size justification, randomisation, blinding
+## Scope
 
-**Claims**
-- Causal wording on observational data; hedged findings written as certain
-- An abstract that claims more than the results show
-- Planned work reported as achieved; selectively reported subgroups or thresholds
+Paper Fact Check reports where a paper disagrees with itself or with its sources. It does not score
+plagiarism or AI-generated text, detect image manipulation, judge novelty, or decide whether
+misconduct happened.
 
-**Traces of AI writing**
-- Leftover assistant text, placeholders, and `[citation needed]`
-- Tortured phrases: fixed terms broken by synonym substitution
-- One concept under several names; abbreviations used before they are defined
+Reference lookups send the reference entries, not the manuscript, to Crossref, OpenAlex, arXiv and
+doi.org. Everything else runs locally and with the model you already use.
 
----
+## Contributing
 
-## What you get
-
-A single HTML report that opens in any browser, plus Markdown and JSON.
-
-- **Summary**: how many findings change a conclusion, how many are worth fixing, what could not be checked
-- **Every finding**: the quoted passage and where it is, the conflicting evidence, the calculation, a replacement sentence, and its severity
-- **Could not verify**: what was not checked and why (no code supplied, a reference lookup failed), so nothing is silently skipped
-- The report is written in the language you ask in
-
-![A report](docs/images/report-en.png)
-
-Sample reports: [English](examples/demo/report/report.md) · [Chinese, with the review pass](examples/demo-zh/report/report.md). The HTML versions are beside them.
-
----
-
-## Why you can trust a finding
-
-- **Computed, not guessed.** Anything arithmetic can settle is calculated by a script, so those findings are the same on every run and with every model.
-- **Quoted, not paraphrased.** A finding exists only if it can point to the passage and the evidence that contradicts it.
-- **Inconsistency, not accusation.** It reports what the paper says and what disagrees with it. It never infers intent.
-- **Every candidate is confirmed.** The reviewing model opens each script finding in the paper and dismisses misreadings before the report is written.
-
-## Benchmarks
-
-Built from public arXiv sources and reproducible; details in [`benchmark/`](benchmark/README.md). These measure the script layer alone, before the model review.
-
-| Test | Result |
-|---|---|
-| 14 papers whose authors later corrected numbers | Flagged on the uncorrected version: 1 (the 41.4% case above). Most corrections change text and table together, so the uncorrected version does not contradict itself |
-| 182 recent papers never used in development (3 sets, different fields) | 25 major findings, each checked by hand: 5 real (citation keys with no bibliography entry, figure panels the caption does not describe), the rest false alarms. Each set's false-alarm patterns were fixed before the next set; the last set of 50 papers raised 1, a false alarm |
-
-So a script finding is a candidate, and the confirmation step above is part of the tool, which is why it runs as a skill.
-
----
-
-## What it does not do
-
-- Plagiarism or AI-text percentage scores. Use the platform your institution specifies.
-- Image manipulation forensics.
-- Judge novelty or importance.
-- Decide whether misconduct happened.
-
-## Privacy
-
-The manuscript stays on your machine and with the model you already use. Reference checks send only the reference metadata to Crossref, OpenAlex, arXiv, and PubMed; turn them off with `--offline`.
-
-## FAQ
-
-**How is this different from asking ChatGPT to review my paper?**
-A chat model reads and gives an opinion, and gives a different one each time. Paper Fact Check recomputes the paper's numbers, looks every reference up, and only reports what it can quote.
-
-**Will it flag things that are fine?**
-Sometimes, for example a number that differs because it comes from another condition. Every finding shows its evidence, so it takes seconds to dismiss.
-
-**Which fields does it work for?**
-Any field that reports numbers, statistics, or references. Reporting-standard checks cover clinical, biomedical, social science, and machine learning study types.
-
-**What file types?**
-PDF, Word (.docx), LaTeX folders or zip (including Overleaf exports), Markdown. Code and data folders are optional.
+See [CONTRIBUTING.md](CONTRIBUTING.md). New checks need a self-test and a hand-checked run on unseen
+papers.
 
 ## License
 

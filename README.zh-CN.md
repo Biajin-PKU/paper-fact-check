@@ -1,170 +1,138 @@
 # Paper Fact Check
 
-**投稿前，让论文和它自己的证据对一遍。**
+[![ci](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/Biajin-PKU/paperfactcheck)](https://github.com/Biajin-PKU/paperfactcheck/releases)
+[![python](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
+[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-[English](README.md) · [简体中文](README.zh-CN.md)
+**[检查项](docs/checks.md)** | **[基准测试](benchmark/README.md)** | **[MCP](docs/mcp.md)** | **[GitHub Action](docs/action.md)** | **[English](README.md)**
 
-![license: MIT](https://img.shields.io/badge/license-MIT-blue) ![python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue) ![works with 80+ agents](https://img.shields.io/badge/agents-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Cursor%20%C2%B7%2080%2B-black)
+论文事实核查工具。它按论文自己给出的数重算统计量、百分比和变化幅度，核对正文与表格，逐条查询参考文献。每条发现都引用原文、给出算式和修改建议。
 
-Paper Fact Check 读你的论文（有代码和数据也一起读），找出论文自己和自己对不上的地方：摘要和表格里同一个数不一样、p 值和统计量算不回来、引用的文献不存在、结论比结果说得更满。每一条都引用原文、给出算式，并给一句可以直接替换的改法。
+它可以作为 skill 在 Claude Code、Codex、Cursor 等编程智能体里运行，由模型逐条复核发现，并通读算术判断不了的部分；也可以单独在命令行运行。
 
-各个学科都能用，中英文论文都支持。PDF、Word、LaTeX/Overleaf 项目都可以直接丢进来。
+```console
+$ paperfactcheck manuscript.md
+manuscript.md
+  S1  major    * 正文和表格的数对不上        3.2 模型性能
+        The text gives 0.868 for '深度学习模型', but no cell of its table row matches at that precision; the
+        nearest row value is 0.873.
+  S2  major    * 相对变化和它自己给的两个数对不上  摘要
+        The sentence gives a 18.4% change of 0.873 over 0.712, but relative to 0.712 those numbers give
+        22.6%.
+  S3  major    * 百分比和计数对不上         2.1 研究对象
+        98 of 412 is 23.8%, not 25.8%.
+  …
 
----
-
-## 一个真实例子
-
-一篇 2026 年 arXiv 论文（ICRA 2026）的第 1 版，图 2 图注写道：
-
-> "achieving 41.4% bandwidth reduction (800 vs 2800 bits)"
-
-```
-[重要 · 影响结论]  相对变化和它自己给的两个数对不上
-位置    摘要；第 I 节；图 2 图注；第 VI、VII 节
-证据    每轮 800 vs 2800 bits（图 2 图注；表 I）
-算式    1 − 800 / 2800 = 71.4%，不是 41.4%
-改法    "achieving 71.4% bandwidth reduction (800 vs 2800 bits)"
-```
-
-作者在第 2 版把所有出现的地方都改成了 71.4%。Paper Fact Check 在第 1 版上指出这个问题，在第 2 版上不再报告。
-
----
-
-## 快速开始
-
-**在编程智能体里用（Claude Code、Codex、Cursor、OpenCode、Gemini CLI 等 80 多种）**
-
-```bash
-npx skills add Biajin-PKU/paperfactcheck
+9 findings: 7 change a conclusion (*), 1 worth fixing, 1 minor.
+References: 5 looked up (1 not found, 4 verified).
+Report: report/report.html
 ```
 
-然后在智能体里输入：
+- 41 项计算和联网核查，覆盖数字、统计、参考文献、图表、公开的代码和数据，清单见 [docs/checks.md](docs/checks.md)
+- 参考文献逐条查询 Crossref、OpenAlex、arXiv 和 doi.org：是否存在、DOI 是否对应、是否撤稿
+- 模型复核结论表述、报告规范（CONSORT、STROBE、PRISMA、ARRIVE、STARD、TRIPOD+AI、COREQ）和各类声明
+- 支持 PDF、Word、LaTeX 文件夹和 Overleaf 压缩包、Markdown；中英文论文
+- 输出 HTML、Markdown、JSON 三种报告
+- 只依赖 Python 3.9 标准库；稿件不会上传到任何地方
 
+<p align="center"><img src="docs/images/report-zh.png" width="85%" alt="一份中文核查报告"></p>
+
+完整示例：[原稿](examples/demo-zh/manuscript.md) · [报告](examples/demo-zh/report/report.md)（HTML 版在同一目录）
+
+## 安装
+
+作为 skill，用于 Claude Code、Codex、Cursor、OpenCode、Gemini CLI 等[智能体](https://github.com/vercel-labs/skills)：
+
+```console
+$ npx skills add Biajin-PKU/paperfactcheck
 ```
+
+作为 Claude Code 插件：
+
+```console
+/plugin marketplace add Biajin-PKU/paperfactcheck
+/plugin install paperfactcheck@paperfactcheck
+```
+
+从 [ClawHub](https://clawhub.ai) 安装（OpenClaw、Hermes）：
+
+```console
+$ clawhub install paperfactcheck
+```
+
+作为命令行工具：
+
+```console
+$ uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck paper.pdf
+```
+
+或者不安装，直接运行：
+
+```console
+$ git clone https://github.com/Biajin-PKU/paperfactcheck
+$ python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf
+```
+
+在 Claude 网页版中，从[最新发布页](https://github.com/Biajin-PKU/paperfactcheck/releases/latest)下载 `paperfactcheck-skill.zip`，在设置中作为自定义 skill 上传。在其他对话助手（ChatGPT、Kimi、豆包等）中，粘贴 [`prompt.zh-CN.md`](prompt.zh-CN.md) 并上传论文即可；没有脚本时，算术由模型自己完成。
+
+读取 PDF 需要 `pdftotext`（poppler）或 `pypdf`；两者都没有时，由智能体直接读 PDF。
+
+## 使用
+
+在智能体中：
+
+```console
 /paperfactcheck 论文.pdf
 /paperfactcheck overleaf项目.zip --code ./代码目录
 ```
 
-| 你在哪用 | 怎么装 |
+智能体会先运行检查，再回到原文逐条确认、剔除误读，然后对照[通读清单](skills/paperfactcheck/references/checklist.md)和相应的报告规范通读全文，最后生成报告。
+
+命令行：
+
+```console
+$ paperfactcheck [check] 论文 [--code 目录] [--out 目录] [--offline] [--lang auto|en|zh] [--json]
+$ paperfactcheck render 目录
+$ paperfactcheck mcp
+```
+
+| 参数 | |
 |---|---|
-| Claude Code 插件 | `/plugin marketplace add Biajin-PKU/paperfactcheck`，再 `/plugin install paperfactcheck@paperfactcheck` |
-| OpenClaw、Hermes 等 ClawHub 客户端 | `clawhub install paperfactcheck` |
-| Claude 网页版 | 从 Releases 下载 `paperfactcheck-skill.zip`，在 *设置 → Skills* 上传 |
-| 下载后直接运行 | `git clone https://github.com/Biajin-PKU/paperfactcheck && python3 paperfactcheck/skills/paperfactcheck/run.py 论文.pdf`（无需安装任何依赖） |
-| 命令行 | `uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck 论文.pdf` |
-| Claude 桌面版、Cursor 等支持 MCP 的应用 | `paperfactcheck mcp`（[配置方法](docs/mcp.md)） |
-| GitHub / Overleaf 的 git 同步 | [GitHub Action](docs/action.md)：每次推送自动检查 |
-| ChatGPT、Kimi、豆包等任意对话 | 复制 [`prompt.zh-CN.md`](prompt.zh-CN.md)，上传 PDF。无需安装；算术由模型自己做，查出的问题会少一些 |
+| `论文` | `.pdf`、`.docx`、`.tex`、LaTeX 文件夹、`.zip`、`.md` 或 `.txt` |
+| `--code 目录` | 公开的代码或数据；提供后才运行代码和数据相关的检查 |
+| `--out 目录` | 报告目录，默认 `paperfactcheck-<文件名>` |
+| `--offline` | 不联网查询参考文献 |
+| `--lang` | 报告语言；`auto` 跟随论文语言 |
+| `--json` | 以 JSON 输出发现 |
 
----
+在报告目录中加入 `review.json` 后，用 `render` 重新生成报告（[格式说明](skills/paperfactcheck/references/review-format.md)）。`mcp` 以 Model Context Protocol 提供检查（[配置](docs/mcp.md)）。[GitHub Action](docs/action.md) 可在每次推送时检查论文。
 
-## 查什么
+退出码：没有影响结论的发现时为 0，有则为 1，文件无法读取时为 3。
 
-**数字**
-- 同一个量在摘要、正文、表格、图注里写得不一样
-- "提高了 X%" 和它比较的两个数对不上
-- 百分比和分子分母对不上；各部分加起来不等于总数
+## 工作原理
 
-**统计**
-- 用 t、F、χ²、r、z 和自由度重算 p 值，并指出结论会不会因此翻转
-- 置信区间和 p 值互相矛盾；点估计落在自己的区间外
-- 用文中统计量重算效应量
-- 整数数据不可能得出的平均值和标准差（GRIM、GRIMMER）
-- 写"更好""显著"，但它自己的区间包含"无效应"
-- 结果规整得不像测量出来的
+1. **读取。** 各种格式统一转成文本；Word 和 Markdown 里的表格重建为表格，以便与正文比对。
+2. **计算。** 提取论文报告的统计量、百分比、变化幅度、均值和表格数值，按论文自己的数重算，并考虑印刷时的四舍五入。
+3. **查询。** 按 DOI、编号或引用文本在 Crossref、OpenAlex、arXiv 中匹配每条参考文献；撤稿信息来自 Crossref。
+4. **复核。** 作为 skill 运行时，模型回到原文逐条确认脚本的发现、剔除误读，再通读结论、报告规范条目和声明。
+5. **报告。** 按类别分组，每条给出原文、证据、算式和修改建议。
 
-**参考文献**
-- 每条文献是否存在，作者、年份、期刊、DOI 是否正确
-- 是否已被撤稿或发布了关注声明
-- 被引论文是否真的说了正文说它说的话
-- 正文引了但文献表没有，或文献表有但正文没引
+## 误报
 
-**图和表**
-- 提到了但不存在的子图；从未被正文提到的表和图
-- 图注描述的内容和图上画的不一致
+脚本的发现是候选。误报多数来自三种情况：把数字对应到了错误的表格行或实验条件、把参数设置当成结果、句子没写明的单侧检验。复核这一步就是为了剔除这些误报；被剔除的发现仍保留在报告中，并写明理由。
 
-**代码和数据**（提供了才查）
-- 运行附带代码，把输出和论文里的数逐个比对
-- 代码算的东西和方法部分写的不一样
-- 训练集和测试集泄漏；只可能得出"一致"的评估方式
-- 没有任何测试读过的结果文件
+在开发中从未用过的 182 篇近期 arXiv 论文上，脚本报出 25 条严重级发现，人工逐条核对后 5 条属实（引用键在文献库中不存在、正文引用的子图图注中没有），其余为误报。每批暴露的误报类型都在下一批之前修复，最后一批 50 篇只报出 1 条。细节和数据见 [benchmark/](benchmark/README.md)。
 
-**报告规范**
-- 识别研究类型，对照相应规范：CONSORT、STROBE、PRISMA、ARRIVE、STARD、TRIPOD+AI、COREQ
-- 伦理审批、知情同意、利益冲突、基金、数据与代码可得性、试验注册
-- 样本量依据、随机化、盲法
+## 范围
 
-**结论**
-- 观察性数据用了因果措辞；有保留的发现写成了确定的
-- 摘要说得比结果更满
-- 计划中的工作写成了已完成；事后挑选的亚组或阈值
+Paper Fact Check 报告论文与自身、与引用来源不一致的地方。它不做查重和 AI 生成率评分，不鉴定图片篡改，不评价创新性，也不判定是否存在学术不端。
 
-**AI 写作痕迹**
-- 没删掉的助手回复、占位符、`[citation needed]`
-- 扭曲短语：固定术语被同义词替换坏了
-- 同一个概念用了几个名字；缩写未定义就使用
+联网查询时只把参考文献条目发送给 Crossref、OpenAlex、arXiv 和 doi.org，不发送稿件。其余步骤都在本地和你正在使用的模型中完成。
 
----
+## 参与开发
 
-## 你会拿到什么
-
-一份浏览器直接打开的 HTML 报告，同时附 Markdown 和 JSON。
-
-- **总览**：几条会改变结论、几条值得改、哪些没法核实
-- **每一条发现**：原文引用和位置、矛盾的证据、算式、替换句、严重程度
-- **无法核实**：哪些没查、为什么没查（没提供代码、文献查询失败），不会悄悄跳过
-- 报告语言跟随你的提问语言
-
-![一份中文核查报告](docs/images/report-zh.png)
-
-完整示例：[示例报告（Markdown）](examples/demo-zh/report/report.md)，HTML 版在 `examples/demo-zh/report/report.html`，原稿在 [`examples/demo-zh/manuscript.md`](examples/demo-zh/manuscript.md)。
-
----
-
-## 为什么可以相信它的发现
-
-- **算出来，不是猜出来。** 凡是算术能判定的，都由脚本计算，这部分结果每次运行、换任何模型都一样。
-- **引原文，不转述。** 一条发现必须能指出原文，以及和它矛盾的证据，否则不报。
-- **只说不一致，不做指控。** 它只报告论文怎么写、哪里和它矛盾，从不推断动机。
-- **每条候选都要复核。** 模型会回到原文逐条确认脚本的发现，误读的在成稿前剔除。
-
-## 基准测试
-
-全部基于公开的 arXiv 论文源码，可以复现，详见 [`benchmark/`](benchmark/README.md)。下表只测脚本层（不含模型复核）。
-
-| 测试 | 结果 |
-|---|---|
-| 作者后来自己更正过数字的 14 篇论文 | 在更正前的版本上查出 1 篇（上文的 41.4% 案例）。多数更正是重跑实验后正文和表格一起改，更正前的版本内部并不矛盾 |
-| 开发中从未用过的 182 篇近期论文（3 批，不同学科） | 严重级发现共 25 条，人工逐条核对：5 条属实（引用键在文献库里不存在、正文引用的子图图注里没有），其余为误报；每批暴露的误报类型都已修复后再测下一批，最后一批 50 篇仅 1 条，为误报 |
-
-结论：脚本的发现是候选，必须经过上面的复核步骤，这也是它作为 skill 运行的原因。
-
----
-
-## 它不做什么
-
-- 查重和 AI 生成率评分。请使用学校或期刊指定的平台。
-- 图片篡改鉴定。
-- 评价创新性或重要性。
-- 判定是否存在学术不端。
-
-## 隐私
-
-稿件只留在你的电脑和你本来就在用的模型里。文献核查只把文献条目信息发给 Crossref、OpenAlex、arXiv、PubMed；加 `--offline` 可关闭。
-
-## 常见问题
-
-**和直接让 ChatGPT 审一遍有什么不同？**
-对话模型是读完给意见，每次给的都不一样。Paper Fact Check 会重算论文里的数、逐条查文献，只报告能引原文的问题。
-
-**会不会把没问题的地方报出来？**
-偶尔会，比如两个数不同其实是因为来自不同条件。每条发现都附证据，几秒钟就能判断要不要理会。
-
-**哪些学科能用？**
-凡是报告数字、统计结果或参考文献的论文都能用。报告规范部分覆盖临床、生物医学、社会科学和机器学习的常见研究类型。
-
-**支持哪些文件？**
-PDF、Word（.docx）、LaTeX 文件夹或 zip（含 Overleaf 导出）、Markdown。代码和数据文件夹可选。
+见 [CONTRIBUTING.md](CONTRIBUTING.md)。新增检查需要自带测试，并在未见过的论文上人工核对一轮。
 
 ## 许可证
 
