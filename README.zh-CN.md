@@ -48,6 +48,7 @@ npx skills add Biajin-PKU/paperfactcheck
 | 你在哪用 | 怎么装 |
 |---|---|
 | Claude Code 插件 | `/plugin marketplace add Biajin-PKU/paperfactcheck`，再 `/plugin install paperfactcheck@paperfactcheck` |
+| OpenClaw、Hermes 等 ClawHub 客户端 | `clawhub install paperfactcheck` |
 | Claude 网页版 | 从 Releases 下载 `paperfactcheck-skill.zip`，在 *设置 → Skills* 上传 |
 | 下载后直接运行 | `git clone https://github.com/Biajin-PKU/paperfactcheck && python3 paperfactcheck/skills/paperfactcheck/run.py 论文.pdf`（无需安装任何依赖） |
 | 命令行 | `uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck 论文.pdf` |

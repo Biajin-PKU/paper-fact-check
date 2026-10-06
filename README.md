@@ -48,6 +48,7 @@ then, in the agent:
 | Where you work | How to install |
 |---|---|
 | Claude Code plugin | `/plugin marketplace add Biajin-PKU/paperfactcheck`, then `/plugin install paperfactcheck@paperfactcheck` |
+| OpenClaw, Hermes and other ClawHub clients | `clawhub install paperfactcheck` |
 | Claude.ai | Download `paperfactcheck-skill.zip` from Releases, upload under *Settings → Skills* |
 | Clone and run | `git clone https://github.com/Biajin-PKU/paperfactcheck && python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf` (no dependencies) |
 | Command line | `uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck paper.pdf` |
