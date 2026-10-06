@@ -205,7 +205,7 @@ def html_report(r: dict[str, Any], lang: str) -> str:
         body.append(f'<h2 id="dismissed">{t["dismissed"]}</h2><table><tr><th></th><th>{t["findings"]}</th><th>{t["reason"]}</th></tr>'
                     + "".join(f'<tr><td>{_e(d["id"])}</td><td>{_e(d.get("title"))}<div class="muted">{_e(d.get("quote", "")[:160])}</div></td>'
                               f'<td>{_e(d.get("reason"))}</td></tr>' for d in r["dismissed"]) + "</table>")
-    body.append(f'<footer>{t["generated"]} {_e(r["version"])} · https://github.com/Biajin-PKU/paperfactcheck</footer>')
+    body.append(f'<footer>{t["generated"]} {_e(r["version"])} · https://github.com/Biajin-PKU/paper-fact-check</footer>')
     return (f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" '
             f'content="width=device-width,initial-scale=1"><title>{t["title"]}: {_e(r["paper"])}</title>'
             f'<style>{CSS}</style></head><body><nav>{"".join(nav)}</nav><main>{"".join(body)}</main></body></html>')

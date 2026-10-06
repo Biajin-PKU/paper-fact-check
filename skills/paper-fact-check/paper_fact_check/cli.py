@@ -1,10 +1,10 @@
-"""paperfactcheck: check a research paper against its own evidence.
+"""paper-fact-check: check a research paper against its own evidence.
 
-    paperfactcheck paper.pdf                       # same as: paperfactcheck check paper.pdf
-    paperfactcheck check paper.tex --code repo/    # also check a released code/data folder
-    paperfactcheck check paper.docx --offline      # skip reference lookups
-    paperfactcheck render <report-dir>             # rebuild the report after a review.json is added
-    paperfactcheck mcp                             # serve the checks over MCP (stdio)
+    paper-fact-check paper.pdf                       # same as: paper-fact-check check paper.pdf
+    paper-fact-check check paper.tex --code repo/    # also check a released code/data folder
+    paper-fact-check check paper.docx --offline      # skip reference lookups
+    paper-fact-check render <report-dir>             # rebuild the report after a review.json is added
+    paper-fact-check mcp                             # serve the checks over MCP (stdio)
 """
 from __future__ import annotations
 
@@ -190,7 +190,7 @@ def run_checks(doc: Doc, offline: bool = False, lang: str = "") -> dict[str, Any
     found.sort(key=lambda f: (groups.index(f["group"]), f["order"] != "first", SEVERITY.get(f["severity"], 3)))
     for i, f in enumerate(found, 1):
         f["id"] = f"S{i}"
-    return {"tool": "paperfactcheck", "version": __version__,
+    return {"tool": "paper-fact-check", "version": __version__,
             "generated": _dt.datetime.now().isoformat(timespec="seconds"),
             "paper": doc.path.name, "input": doc.kind, "language": lang,
             "findings": found, "references": refs, "statements": statements.scan(text),
@@ -238,10 +238,10 @@ def cmd_check(args: argparse.Namespace) -> int:
     try:
         doc = load(Path(args.paper), Path(args.code).expanduser() if args.code else None)
     except NeedsText as e:
-        print(f"paperfactcheck: {e}", file=sys.stderr)
+        print(f"paper-fact-check: {e}", file=sys.stderr)
         return 3
     result = run_checks(doc, offline=args.offline, lang="" if args.lang == "auto" else args.lang)
-    out = Path(args.out or f"paperfactcheck-{Path(args.paper).stem}").expanduser().resolve()
+    out = Path(args.out or f"paper-fact-check-{Path(args.paper).stem}").expanduser().resolve()
     out.mkdir(parents=True, exist_ok=True)
     (out / "findings.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "manuscript.txt").write_text(doc.text, encoding="utf-8")
@@ -266,13 +266,13 @@ def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
     if argv and argv[0] not in ("check", "render", "mcp", "-h", "--help", "--version"):
         argv.insert(0, "check")
-    ap = argparse.ArgumentParser(prog="paperfactcheck", description="Check a research paper against its own evidence.")
-    ap.add_argument("--version", action="version", version=f"paperfactcheck {__version__}")
+    ap = argparse.ArgumentParser(prog="paper-fact-check", description="Check a research paper against its own evidence.")
+    ap.add_argument("--version", action="version", version=f"paper-fact-check {__version__}")
     sub = ap.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("check", help="run every check and write the report")
     c.add_argument("paper", help="PDF, Word (.docx), LaTeX file/folder/zip, Markdown or text")
     c.add_argument("--code", help="released code/data folder")
-    c.add_argument("--out", help="report folder (default: ./paperfactcheck-<name>)")
+    c.add_argument("--out", help="report folder (default: ./paper-fact-check-<name>)")
     c.add_argument("--offline", action="store_true", help="skip reference lookups")
     c.add_argument("--lang", default="auto", choices=("auto", "en", "zh"), help="report language")
     c.add_argument("--json", action="store_true", help="print the findings as JSON")

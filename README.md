@@ -1,7 +1,7 @@
 # Paper Fact Check
 
-[![ci](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml)
-[![release](https://img.shields.io/github/v/release/Biajin-PKU/paperfactcheck)](https://github.com/Biajin-PKU/paperfactcheck/releases)
+[![ci](https://github.com/Biajin-PKU/paper-fact-check/actions/workflows/ci.yml/badge.svg)](https://github.com/Biajin-PKU/paper-fact-check/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/Biajin-PKU/paper-fact-check)](https://github.com/Biajin-PKU/paper-fact-check/releases)
 [![python](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -16,7 +16,7 @@ then reviews every finding and reads the paper for what arithmetic cannot settle
 its own from the command line.
 
 ```console
-$ paperfactcheck main.tex --offline
+$ paper-fact-check main.tex --offline
 main.tex
   S1  major    * Text and table give different values             Results
         The text gives 0.847 for 'our model', but no cell of its table row matches at that precision;
@@ -50,37 +50,37 @@ As a skill for Claude Code, Codex, Cursor, OpenCode, Gemini CLI and
 [other agents](https://github.com/vercel-labs/skills):
 
 ```console
-$ npx skills add Biajin-PKU/paperfactcheck
+$ npx skills add Biajin-PKU/paper-fact-check
 ```
 
 As a Claude Code plugin:
 
 ```console
-/plugin marketplace add Biajin-PKU/paperfactcheck
-/plugin install paperfactcheck@paperfactcheck
+/plugin marketplace add Biajin-PKU/paper-fact-check
+/plugin install paper-fact-check@paper-fact-check
 ```
 
 From [ClawHub](https://clawhub.ai), for OpenClaw and Hermes:
 
 ```console
-$ clawhub install paperfactcheck
+$ clawhub install paper-fact-check
 ```
 
 As a command-line tool:
 
 ```console
-$ uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck paper.pdf
+$ uvx --from git+https://github.com/Biajin-PKU/paper-fact-check paper-fact-check paper.pdf
 ```
 
 Or with no installation at all:
 
 ```console
-$ git clone https://github.com/Biajin-PKU/paperfactcheck
-$ python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf
+$ git clone https://github.com/Biajin-PKU/paper-fact-check
+$ python3 paper-fact-check/skills/paper-fact-check/run.py paper.pdf
 ```
 
-In Claude.ai, upload `paperfactcheck-skill.zip` from the
-[latest release](https://github.com/Biajin-PKU/paperfactcheck/releases/latest) as a custom skill in
+In Claude.ai, upload `paper-fact-check-skill.zip` from the
+[latest release](https://github.com/Biajin-PKU/paper-fact-check/releases/latest) as a custom skill in
 Settings. In any other chat assistant, paste [`prompt.md`](prompt.md) and
 attach the paper; without the script, the arithmetic is left to the model.
 
@@ -92,33 +92,33 @@ the agent reads the PDF itself.
 In an agent:
 
 ```console
-/paperfactcheck paper.pdf
-/paperfactcheck overleaf-project.zip --code ./repo
+/paper-fact-check paper.pdf
+/paper-fact-check overleaf-project.zip --code ./repo
 ```
 
 The agent runs the checks, confirms each finding against the paper and dismisses misreadings, reads
-the paper against the [reading checklist](skills/paperfactcheck/references/checklist.md) and the
+the paper against the [reading checklist](skills/paper-fact-check/references/checklist.md) and the
 matching reporting guideline, and writes the report.
 
 On the command line:
 
 ```console
-$ paperfactcheck [check] PAPER [--code DIR] [--out DIR] [--offline] [--lang auto|en|zh] [--json]
-$ paperfactcheck render DIR
-$ paperfactcheck mcp
+$ paper-fact-check [check] PAPER [--code DIR] [--out DIR] [--offline] [--lang auto|en|zh] [--json]
+$ paper-fact-check render DIR
+$ paper-fact-check mcp
 ```
 
 | Option | |
 |---|---|
 | `PAPER` | `.pdf`, `.docx`, `.tex`, a LaTeX folder, a `.zip`, `.md` or `.txt` |
 | `--code DIR` | Released code or data; enables the code and data checks |
-| `--out DIR` | Report folder, default `paperfactcheck-<name>` |
+| `--out DIR` | Report folder, default `paper-fact-check-<name>` |
 | `--offline` | Skip reference lookups |
 | `--lang` | Report language; `auto` follows the paper |
 | `--json` | Print the findings as JSON |
 
 `render` rebuilds the report after a `review.json` is added to the report folder
-([format](skills/paperfactcheck/references/review-format.md)). `mcp` serves the checks over the Model
+([format](skills/paper-fact-check/references/review-format.md)). `mcp` serves the checks over the Model
 Context Protocol ([setup](docs/mcp.md)). The [GitHub Action](docs/action.md) checks a paper on every
 push.
 

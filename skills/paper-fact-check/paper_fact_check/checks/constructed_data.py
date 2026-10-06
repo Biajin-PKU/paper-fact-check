@@ -8,7 +8,7 @@
 - Scores solved from the answer: a function that takes the true labels together with the metric
   value to reach, or loops a label-scored metric toward a value it was handed.
 
-    python3 -m paperfactcheck.checks.constructed_data <package-dir>
+    python3 -m paper_fact_check.checks.constructed_data <package-dir>
 """
 from __future__ import annotations
 

@@ -3,8 +3,8 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "paperfactcheck"
-version = "1.0.0"
+name = "paper-fact-check"
+version = "1.0.1"
 description = "Fact-check a research paper against its own evidence: statistics, numbers, references, figures, code and reporting standards."
 readme = "README.md"
 license = {text = "MIT"}
@@ -18,13 +18,13 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Biajin-PKU/paperfactcheck"
+Homepage = "https://github.com/Biajin-PKU/paper-fact-check"
 
 [project.scripts]
-paperfactcheck = "paperfactcheck.cli:main"
+paper-fact-check = "paper_fact_check.cli:main"
 
 [tool.setuptools]
-packages = ["paperfactcheck", "paperfactcheck.checks"]
+packages = ["paper_fact_check", "paper_fact_check.checks"]
 
 [tool.setuptools.package-dir]
-"" = "skills/paperfactcheck"
+"" = "skills/paper-fact-check"

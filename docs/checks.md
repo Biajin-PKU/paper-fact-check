@@ -1,6 +1,6 @@
 # Checks
 
-Every finding carries one of the IDs below. **Script** checks are computed and give the same result on every run; **lookup** checks query Crossref, OpenAlex, arXiv and doi.org (off with `--offline`); **review** checks are done by the model following [`SKILL.md`](../skills/paperfactcheck/SKILL.md) and [`checklist.md`](../skills/paperfactcheck/references/checklist.md).
+Every finding carries one of the IDs below. **Script** checks are computed and give the same result on every run; **lookup** checks query Crossref, OpenAlex, arXiv and doi.org (off with `--offline`); **review** checks are done by the model following [`SKILL.md`](../skills/paper-fact-check/SKILL.md) and [`checklist.md`](../skills/paper-fact-check/references/checklist.md).
 
 Severity is the default; the reviewer can change it. *First-order* means the finding can change what a reader concludes.
 

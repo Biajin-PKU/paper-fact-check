@@ -30,10 +30,10 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "skills" / "paperfactcheck"))
-from paperfactcheck.checks.number_agreement import read_tree  # noqa: E402
-from paperfactcheck.cli import run_checks  # noqa: E402
-from paperfactcheck.readers import Doc, normalize  # noqa: E402
+sys.path.insert(0, str(ROOT / "skills" / "paper-fact-check"))
+from paper_fact_check.checks.number_agreement import read_tree  # noqa: E402
+from paper_fact_check.cli import run_checks  # noqa: E402
+from paper_fact_check.readers import Doc, normalize  # noqa: E402
 
 CACHE = Path(__file__).resolve().parent / ".cache"
 QUERIES = [
@@ -51,7 +51,7 @@ def fetch(url: str) -> bytes:
     if key.exists():
         return key.read_bytes()
     time.sleep(max(0.0, 3.0 - (time.time() - _last[0])))
-    request = urllib.request.Request(url, headers={"User-Agent": "paperfactcheck-benchmark/1.0"})
+    request = urllib.request.Request(url, headers={"User-Agent": "paper-fact-check-benchmark/1.0"})
     with urllib.request.urlopen(request, timeout=120) as response:
         data = response.read()
     _last[0] = time.time()

@@ -169,7 +169,7 @@ def load(path: Path, code: Path | None = None) -> Doc:
     if not path.exists():
         raise NeedsText(f"{path} does not exist.")
     if path.suffix.lower() == ".zip":
-        tmp = Path(tempfile.mkdtemp(prefix="paperfactcheck-"))
+        tmp = Path(tempfile.mkdtemp(prefix="paper-fact-check-"))
         with zipfile.ZipFile(path) as z:
             for member in z.namelist():
                 target = (tmp / member).resolve()

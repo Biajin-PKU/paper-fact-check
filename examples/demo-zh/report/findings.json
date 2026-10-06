@@ -1,7 +1,7 @@
 {
- "tool": "paperfactcheck",
- "version": "1.0.0",
- "generated": "2026-10-06T21:58:42",
+ "tool": "paper-fact-check",
+ "version": "1.0.1",
+ "generated": "2026-10-06T22:18:42",
  "paper": "manuscript.md",
  "input": "markdown",
  "language": "zh",

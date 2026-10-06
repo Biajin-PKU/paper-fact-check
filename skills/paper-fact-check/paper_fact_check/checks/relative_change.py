@@ -5,7 +5,7 @@ by 71.4%") next to one pair of numbers ("800 vs 2800", "from A to B"): the perce
 change relative to A or to B, the ratio, or the difference in points, within the rounding printed.
 - The same change phrase ("% bandwidth reduction") quoted with different percentages.
 
-    python3 -m paperfactcheck.checks.relative_change <main.tex>
+    python3 -m paper_fact_check.checks.relative_change <main.tex>
 """
 from __future__ import annotations
 

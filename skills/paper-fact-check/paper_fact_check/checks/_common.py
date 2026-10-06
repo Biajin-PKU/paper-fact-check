@@ -77,7 +77,7 @@ def objection(
         "suggested_fix": suggested_fix,
         "numbers": [normalize_number(n) for n in (numbers or [])],
         "confidence": confidence,
-        "detector_origin": "paperfactcheck",
+        "detector_origin": "paper-fact-check",
     }
 
 

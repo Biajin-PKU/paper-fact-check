@@ -7,7 +7,7 @@ reported: the same match is repeated with every printed value moved one unit in 
 the real count must be at least twice that and at least 2 more. A package with no tests/ directory
 is skipped. A test that names a file and asserts nothing about it is not caught here.
 
-    python3 -m paperfactcheck.checks.companion_binding <package-dir> <main.tex>
+    python3 -m paper_fact_check.checks.companion_binding <package-dir> <main.tex>
 """
 from __future__ import annotations
 

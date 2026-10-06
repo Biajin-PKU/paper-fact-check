@@ -21,8 +21,8 @@ from typing import Any, Callable
 from . import __version__
 from .checks.citation_xref import _REF_HEAD, CITE_CMD
 
-UA = f"paperfactcheck/{__version__} (https://github.com/Biajin-PKU/paperfactcheck)"
-CACHE = Path.home() / ".cache" / "paperfactcheck" / "lookups.json"
+UA = f"paper-fact-check/{__version__} (https://github.com/Biajin-PKU/paper-fact-check)"
+CACHE = Path.home() / ".cache" / "paper-fact-check" / "lookups.json"
 MAX_REFS = 200
 
 _DOI = re.compile(r"\b(10\.\d{4,9}/[^\s\"'<>{}\\,;]+[^\s\"'<>{}\\,;.)\]])")

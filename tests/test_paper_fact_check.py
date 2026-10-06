@@ -1,4 +1,4 @@
-"""Self-checks: python3 tests/test_paperfactcheck.py (also runs under pytest). No network."""
+"""Self-checks: python3 tests/test_paper_fact_check.py (also runs under pytest). No network."""
 import json
 import sys
 import tempfile
@@ -6,15 +6,15 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "skills" / "paperfactcheck"))
+sys.path.insert(0, str(ROOT / "skills" / "paper-fact-check"))
 
-from paperfactcheck import checks, mcp, references  # noqa: E402
-from paperfactcheck.checks import (citation_xref, claim_interval, companion_binding, constructed_data,  # noqa: E402
+from paper_fact_check import checks, mcp, references  # noqa: E402
+from paper_fact_check.checks import (citation_xref, claim_interval, companion_binding, constructed_data,  # noqa: E402
                                    figure_panels, grimmer, number_agreement, relative_change, stat_recompute,
                                    statements, text_hygiene)
-from paperfactcheck.cli import main, run_checks  # noqa: E402
-from paperfactcheck.readers import load  # noqa: E402
-from paperfactcheck.report import render  # noqa: E402
+from paper_fact_check.cli import main, run_checks  # noqa: E402
+from paper_fact_check.readers import load  # noqa: E402
+from paper_fact_check.report import render  # noqa: E402
 
 assert checks is not None
 
@@ -127,7 +127,7 @@ def test_reference_verdicts_without_network():
 
 def test_mcp_handshake():
     init = mcp.handle({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-06-18"}})
-    assert init["result"]["serverInfo"]["name"] == "paperfactcheck"
+    assert init["result"]["serverInfo"]["name"] == "paper-fact-check"
     tools = mcp.handle({"jsonrpc": "2.0", "id": 2, "method": "tools/list"})["result"]["tools"]
     assert {t["name"] for t in tools} == {"check_paper", "render_report"}
     assert mcp.handle({"jsonrpc": "2.0", "method": "notifications/initialized"}) is None

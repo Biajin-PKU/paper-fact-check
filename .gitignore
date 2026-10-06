@@ -3,6 +3,6 @@ __pycache__/
 build/
 dist/
 .venv/
-paperfactcheck-*/
+paper-fact-check-*/
 benchmark/.cache/
 .DS_Store

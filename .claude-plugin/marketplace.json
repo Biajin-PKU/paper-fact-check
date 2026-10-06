@@ -1,13 +1,13 @@
 {
-  "name": "paperfactcheck",
+  "name": "paper-fact-check",
   "owner": {"name": "Biajin-PKU", "url": "https://github.com/Biajin-PKU"},
   "metadata": {"description": "Paper Fact Check: check a research paper against its own evidence."},
   "plugins": [
     {
-      "name": "paperfactcheck",
+      "name": "paper-fact-check",
       "source": "./",
       "description": "Fact-check a research paper against its own evidence: recomputed statistics, numbers, references, figures, code and reporting standards, with a fix for every finding.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "research"
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "name": "paperfactcheck",
-  "version": "1.0.0",
+  "name": "paper-fact-check",
+  "version": "1.0.1",
   "description": "Fact-check a research paper against its own evidence: recomputed statistics, numbers, references, figures, code and reporting standards, with a fix for every finding.",
   "author": {"name": "Biajin-PKU", "url": "https://github.com/Biajin-PKU"},
-  "homepage": "https://github.com/Biajin-PKU/paperfactcheck",
-  "repository": "https://github.com/Biajin-PKU/paperfactcheck",
+  "homepage": "https://github.com/Biajin-PKU/paper-fact-check",
+  "repository": "https://github.com/Biajin-PKU/paper-fact-check",
   "license": "MIT",
   "keywords": ["research", "paper", "manuscript", "fact-check", "statistics", "references", "peer-review"]
 }

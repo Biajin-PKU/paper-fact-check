@@ -1,5 +1,5 @@
 ---
-name: paperfactcheck
+name: paper-fact-check
 description: Fact-check a research paper against its own evidence. Recomputes p-values, percentages and changes from the paper's own numbers, compares text with tables, looks up every reference (does it exist, is it retracted, does it say what is cited), checks figures, released code and data, reporting guidelines (CONSORT, STROBE, PRISMA, ARRIVE, STARD, TRIPOD+AI, COREQ), declarations, overclaiming and traces of AI writing, then writes an HTML report where each finding quotes the paper, shows the arithmetic and gives a fix. Use when asked to check, verify, fact-check, pre-review or proofread a paper, manuscript, thesis or preprint for errors (PDF, Word, LaTeX, Overleaf zip, Markdown), in any field and in English or Chinese. 论文核查、投稿前检查、查论文里的错误、核对数据和参考文献。
 ---
 
@@ -19,7 +19,7 @@ python3 SKILL_DIR/run.py check <paper> --out <report-dir> [--code <code-or-data-
 - `<paper>`: PDF, .docx, .tex, a LaTeX folder, an Overleaf .zip, .md or .txt. Python 3.9+, no installs.
 - `--code`: the released code or data, if the user has it. Ask once if the paper mentions released code.
 - `--offline`: only if the user asks; otherwise every reference is looked up (Crossref, OpenAlex, arXiv).
-- Default `<report-dir>`: `paperfactcheck-<paper-name>` beside where you run it.
+- Default `<report-dir>`: `paper-fact-check-<paper-name>` beside where you run it.
 - Exit 0: no first-order findings. Exit 1: at least one. Exit 3: the file could not be read. For a PDF
   without `pdftotext`, read the PDF yourself, write its text to `<name>.md` with tables as Markdown
   tables, and run the script on that file.

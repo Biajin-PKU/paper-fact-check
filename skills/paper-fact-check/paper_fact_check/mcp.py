@@ -1,8 +1,8 @@
 """A Model Context Protocol server over stdio, standard library only.
 
 Tools: `check_paper` runs every check and writes the report; `render_report` rebuilds it after a
-review.json is added. Configure a client with: command `paperfactcheck`, args `["mcp"]`
-(or `python3 /path/to/skills/paperfactcheck/run.py mcp`).
+review.json is added. Configure a client with: command `paper-fact-check`, args `["mcp"]`
+(or `python3 /path/to/skills/paper-fact-check/run.py mcp`).
 """
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ def _call(name: str, args: dict[str, Any]) -> str:
     from .cli import main
     if name == "check_paper":
         paper = Path(args["path"]).expanduser()
-        out = args.get("out_dir") or str(paper.parent / f"paperfactcheck-{paper.stem}")
+        out = args.get("out_dir") or str(paper.parent / f"paper-fact-check-{paper.stem}")
         argv = ["check", str(paper), "--out", out, "--lang", args.get("lang", "auto")]
         if args.get("code"):
             argv += ["--code", args["code"]]
@@ -64,7 +64,7 @@ def handle(msg: dict[str, Any]) -> dict[str, Any] | None:
     if method == "initialize":
         version = (msg.get("params") or {}).get("protocolVersion", "2025-06-18")
         result: Any = {"protocolVersion": version, "capabilities": {"tools": {}},
-                       "serverInfo": {"name": "paperfactcheck", "version": __version__}}
+                       "serverInfo": {"name": "paper-fact-check", "version": __version__}}
     elif method == "ping":
         result = {}
     elif method == "tools/list":

@@ -10,9 +10,9 @@ Add to `claude_desktop_config.json` (Settings → Developer → Edit Config):
 ```json
 {
   "mcpServers": {
-    "paperfactcheck": {
+    "paper-fact-check": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/Biajin-PKU/paperfactcheck", "paperfactcheck", "mcp"]
+      "args": ["--from", "git+https://github.com/Biajin-PKU/paper-fact-check", "paper-fact-check", "mcp"]
     }
   }
 }
@@ -23,9 +23,9 @@ Without `uv`, clone the repository and point at the launcher instead:
 ```json
 {
   "mcpServers": {
-    "paperfactcheck": {
+    "paper-fact-check": {
       "command": "python3",
-      "args": ["/path/to/paperfactcheck/skills/paperfactcheck/run.py", "mcp"]
+      "args": ["/path/to/paper-fact-check/skills/paper-fact-check/run.py", "mcp"]
     }
   }
 }
@@ -38,7 +38,7 @@ Use the same `command` and `args` in the client's MCP settings.
 ## Claude Code
 
 ```bash
-claude mcp add paperfactcheck -- uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck mcp
+claude mcp add paper-fact-check -- uvx --from git+https://github.com/Biajin-PKU/paper-fact-check paper-fact-check mcp
 ```
 
 ## Tools
@@ -49,4 +49,4 @@ claude mcp add paperfactcheck -- uvx --from git+https://github.com/Biajin-PKU/pa
 | `render_report` | `out_dir` | Rebuilds the report, merging `review.json` |
 
 For the full review (reading the paper, reporting guidelines, reference support), give the model the
-instructions in [`skills/paperfactcheck/SKILL.md`](../skills/paperfactcheck/SKILL.md).
+instructions in [`skills/paper-fact-check/SKILL.md`](../skills/paper-fact-check/SKILL.md).

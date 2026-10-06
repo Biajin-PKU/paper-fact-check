@@ -5,7 +5,7 @@ was dropped and the sentence that cited it stayed. A figure's panels are the let
 marks: (a), \\textbf{a}, \\textbf{(a)}, and ranges written as (c--f). A caption marking fewer than
 two panels is skipped.
 
-    python3 -m paperfactcheck.checks.figure_panels <main.tex>
+    python3 -m paper_fact_check.checks.figure_panels <main.tex>
 """
 from __future__ import annotations
 

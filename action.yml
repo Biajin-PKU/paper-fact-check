@@ -41,21 +41,21 @@ runs:
         PFC_OFFLINE: ${{ inputs.offline }}
         PFC_FAIL: ${{ inputs.fail-on }}
       run: |
-        args=(check "$PFC_PAPER" --out paperfactcheck-report)
+        args=(check "$PFC_PAPER" --out paper-fact-check-report)
         [ -n "$PFC_CODE" ] && args+=(--code "$PFC_CODE")
         [ "$PFC_OFFLINE" = "true" ] && args+=(--offline)
         set +e
-        python3 "${{ github.action_path }}/skills/paperfactcheck/run.py" "${args[@]}" | tee paperfactcheck-summary.md
+        python3 "${{ github.action_path }}/skills/paper-fact-check/run.py" "${args[@]}" | tee paper-fact-check-summary.md
         status=${PIPESTATUS[0]}
         set -e
-        echo "report=paperfactcheck-report" >> "$GITHUB_OUTPUT"
-        cat paperfactcheck-report/report.md >> "$GITHUB_STEP_SUMMARY"
+        echo "report=paper-fact-check-report" >> "$GITHUB_OUTPUT"
+        cat paper-fact-check-report/report.md >> "$GITHUB_STEP_SUMMARY"
         if [ "$status" = "3" ]; then exit 3; fi
         if [ "$PFC_FAIL" = "first-order" ] && [ "$status" = "1" ]; then exit 1; fi
-        if [ "$PFC_FAIL" = "any" ] && python3 -c "import json,sys; sys.exit(0 if json.load(open('paperfactcheck-report/findings.json'))['findings'] else 1)"; then exit 1; fi
+        if [ "$PFC_FAIL" = "any" ] && python3 -c "import json,sys; sys.exit(0 if json.load(open('paper-fact-check-report/findings.json'))['findings'] else 1)"; then exit 1; fi
         exit 0
     - uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: paperfactcheck-report
-        path: paperfactcheck-report
+        name: paper-fact-check-report
+        path: paper-fact-check-report

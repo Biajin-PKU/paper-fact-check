@@ -1,7 +1,7 @@
 # Paper Fact Check
 
-[![ci](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/Biajin-PKU/paperfactcheck/actions/workflows/ci.yml)
-[![release](https://img.shields.io/github/v/release/Biajin-PKU/paperfactcheck)](https://github.com/Biajin-PKU/paperfactcheck/releases)
+[![ci](https://github.com/Biajin-PKU/paper-fact-check/actions/workflows/ci.yml/badge.svg)](https://github.com/Biajin-PKU/paper-fact-check/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/Biajin-PKU/paper-fact-check)](https://github.com/Biajin-PKU/paper-fact-check/releases)
 [![python](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -12,7 +12,7 @@
 它可以作为 skill 在 Claude Code、Codex、Cursor 等编程智能体里运行，由模型逐条复核发现，并通读算术判断不了的部分；也可以单独在命令行运行。
 
 ```console
-$ paperfactcheck manuscript.md
+$ paper-fact-check manuscript.md
 manuscript.md
   S1  major    * 正文和表格的数对不上        3.2 模型性能
         The text gives 0.868 for '深度学习模型', but no cell of its table row matches at that precision; the
@@ -45,36 +45,36 @@ Report: report/report.html
 作为 skill，用于 Claude Code、Codex、Cursor、OpenCode、Gemini CLI 等[智能体](https://github.com/vercel-labs/skills)：
 
 ```console
-$ npx skills add Biajin-PKU/paperfactcheck
+$ npx skills add Biajin-PKU/paper-fact-check
 ```
 
 作为 Claude Code 插件：
 
 ```console
-/plugin marketplace add Biajin-PKU/paperfactcheck
-/plugin install paperfactcheck@paperfactcheck
+/plugin marketplace add Biajin-PKU/paper-fact-check
+/plugin install paper-fact-check@paper-fact-check
 ```
 
 从 [ClawHub](https://clawhub.ai) 安装（OpenClaw、Hermes）：
 
 ```console
-$ clawhub install paperfactcheck
+$ clawhub install paper-fact-check
 ```
 
 作为命令行工具：
 
 ```console
-$ uvx --from git+https://github.com/Biajin-PKU/paperfactcheck paperfactcheck paper.pdf
+$ uvx --from git+https://github.com/Biajin-PKU/paper-fact-check paper-fact-check paper.pdf
 ```
 
 或者不安装，直接运行：
 
 ```console
-$ git clone https://github.com/Biajin-PKU/paperfactcheck
-$ python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf
+$ git clone https://github.com/Biajin-PKU/paper-fact-check
+$ python3 paper-fact-check/skills/paper-fact-check/run.py paper.pdf
 ```
 
-在 Claude 网页版中，从[最新发布页](https://github.com/Biajin-PKU/paperfactcheck/releases/latest)下载 `paperfactcheck-skill.zip`，在设置中作为自定义 skill 上传。在其他对话助手（ChatGPT、Kimi、豆包等）中，粘贴 [`prompt.zh-CN.md`](prompt.zh-CN.md) 并上传论文即可；没有脚本时，算术由模型自己完成。
+在 Claude 网页版中，从[最新发布页](https://github.com/Biajin-PKU/paper-fact-check/releases/latest)下载 `paper-fact-check-skill.zip`，在设置中作为自定义 skill 上传。在其他对话助手（ChatGPT、Kimi、豆包等）中，粘贴 [`prompt.zh-CN.md`](prompt.zh-CN.md) 并上传论文即可；没有脚本时，算术由模型自己完成。
 
 读取 PDF 需要 `pdftotext`（poppler）或 `pypdf`；两者都没有时，由智能体直接读 PDF。
 
@@ -83,30 +83,30 @@ $ python3 paperfactcheck/skills/paperfactcheck/run.py paper.pdf
 在智能体中：
 
 ```console
-/paperfactcheck 论文.pdf
-/paperfactcheck overleaf项目.zip --code ./代码目录
+/paper-fact-check 论文.pdf
+/paper-fact-check overleaf项目.zip --code ./代码目录
 ```
 
-智能体会先运行检查，再回到原文逐条确认、剔除误读，然后对照[通读清单](skills/paperfactcheck/references/checklist.md)和相应的报告规范通读全文，最后生成报告。
+智能体会先运行检查，再回到原文逐条确认、剔除误读，然后对照[通读清单](skills/paper-fact-check/references/checklist.md)和相应的报告规范通读全文，最后生成报告。
 
 命令行：
 
 ```console
-$ paperfactcheck [check] 论文 [--code 目录] [--out 目录] [--offline] [--lang auto|en|zh] [--json]
-$ paperfactcheck render 目录
-$ paperfactcheck mcp
+$ paper-fact-check [check] 论文 [--code 目录] [--out 目录] [--offline] [--lang auto|en|zh] [--json]
+$ paper-fact-check render 目录
+$ paper-fact-check mcp
 ```
 
 | 参数 | |
 |---|---|
 | `论文` | `.pdf`、`.docx`、`.tex`、LaTeX 文件夹、`.zip`、`.md` 或 `.txt` |
 | `--code 目录` | 公开的代码或数据；提供后才运行代码和数据相关的检查 |
-| `--out 目录` | 报告目录，默认 `paperfactcheck-<文件名>` |
+| `--out 目录` | 报告目录，默认 `paper-fact-check-<文件名>` |
 | `--offline` | 不联网查询参考文献 |
 | `--lang` | 报告语言；`auto` 跟随论文语言 |
 | `--json` | 以 JSON 输出发现 |
 
-在报告目录中加入 `review.json` 后，用 `render` 重新生成报告（[格式说明](skills/paperfactcheck/references/review-format.md)）。`mcp` 以 Model Context Protocol 提供检查（[配置](docs/mcp.md)）。[GitHub Action](docs/action.md) 可在每次推送时检查论文。
+在报告目录中加入 `review.json` 后，用 `render` 重新生成报告（[格式说明](skills/paper-fact-check/references/review-format.md)）。`mcp` 以 Model Context Protocol 提供检查（[配置](docs/mcp.md)）。[GitHub Action](docs/action.md) 可在每次推送时检查论文。
 
 退出码：没有影响结论的发现时为 0，有则为 1，文件无法读取时为 3。
 
