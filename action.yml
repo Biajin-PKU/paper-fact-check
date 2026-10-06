@@ -1,0 +1,61 @@
+name: Paper Fact Check
+description: Fact-check a research paper against its own evidence and upload the report.
+branding:
+  icon: check-square
+  color: blue
+inputs:
+  paper:
+    description: Path to the manuscript (PDF, .docx, .tex, LaTeX folder, .zip, .md)
+    required: true
+  code:
+    description: Optional folder with the released code or data
+    required: false
+    default: ""
+  offline:
+    description: Skip reference lookups ("true" or "false")
+    required: false
+    default: "false"
+  fail-on:
+    description: Fail the step on "first-order" findings, on "any" finding, or "never"
+    required: false
+    default: "never"
+outputs:
+  report:
+    description: Folder holding report.html, report.md and findings.json
+    value: ${{ steps.check.outputs.report }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Install pdftotext
+      if: endsWith(inputs.paper, '.pdf')
+      shell: bash
+      run: sudo apt-get install -y -qq poppler-utils >/dev/null
+    - id: check
+      shell: bash
+      env:
+        PFC_PAPER: ${{ inputs.paper }}
+        PFC_CODE: ${{ inputs.code }}
+        PFC_OFFLINE: ${{ inputs.offline }}
+        PFC_FAIL: ${{ inputs.fail-on }}
+      run: |
+        args=(check "$PFC_PAPER" --out paperfactcheck-report)
+        [ -n "$PFC_CODE" ] && args+=(--code "$PFC_CODE")
+        [ "$PFC_OFFLINE" = "true" ] && args+=(--offline)
+        set +e
+        python3 "${{ github.action_path }}/skills/paperfactcheck/run.py" "${args[@]}" | tee paperfactcheck-summary.md
+        status=${PIPESTATUS[0]}
+        set -e
+        echo "report=paperfactcheck-report" >> "$GITHUB_OUTPUT"
+        cat paperfactcheck-report/report.md >> "$GITHUB_STEP_SUMMARY"
+        if [ "$status" = "3" ]; then exit 3; fi
+        if [ "$PFC_FAIL" = "first-order" ] && [ "$status" = "1" ]; then exit 1; fi
+        if [ "$PFC_FAIL" = "any" ] && python3 -c "import json,sys; sys.exit(0 if json.load(open('paperfactcheck-report/findings.json'))['findings'] else 1)"; then exit 1; fi
+        exit 0
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: paperfactcheck-report
+        path: paperfactcheck-report

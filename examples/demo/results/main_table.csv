@@ -1,0 +1,3 @@
+method,accuracy,f1
+ours,0.851,0.802
+baseline,0.812,0.774

@@ -1,0 +1,321 @@
+{
+ "tool": "paperfactcheck",
+ "version": "1.0.0",
+ "generated": "2026-10-06T21:18:01",
+ "paper": "manuscript.md",
+ "input": "markdown",
+ "language": "zh",
+ "findings": [
+  {
+   "source": "script",
+   "check": "number_agreement",
+   "category": "prose_table_number_disagreement",
+   "group": "numbers",
+   "title": "正文和表格的数对不上",
+   "severity": "major",
+   "order": "first",
+   "where": "3.2 模型性能",
+   "quote": "深度学习模型的 AUC 为 0.868, 显著优于 CURB-65 评分。",
+   "context": "深度学习模型的 AUC 为 0.868, 显著优于 CURB-65 评分。年龄每增加 10 岁, 重症风险增加(OR = 1.45, 95%CI 1.12 1.88, P = 0.21)。",
+   "evidence": "The text gives 0.868 for '深度学习模型', but no cell of its table row matches at that precision; the nearest row value is 0.873.",
+   "calculation": "",
+   "fix": "Make the prose and the table report the same value, or name the derivation.",
+   "numbers": [
+    "0.868",
+    "0.873"
+   ],
+   "id": "S1"
+  },
+  {
+   "source": "script",
+   "check": "relative_change",
+   "category": "relative_change_mismatch",
+   "group": "numbers",
+   "title": "相对变化和它自己给的两个数对不上",
+   "severity": "major",
+   "order": "first",
+   "where": "摘要",
+   "quote": "模型的 AUC 为 0.873, 较传统 CURB-65 评分(AUC 0.712)提高了 18.4%。",
+   "context": "本研究纳入 2019 年至 2023 年某三甲医院收治的 412 例社区获得性肺炎患者, 构建深度学习模型预测 28 天内转入重症监护病房的风险。模型的 AUC 为 0.873, 较传统 CURB-65 评分(AUC 0.712)提高了 18.4%。",
+   "evidence": "The sentence gives a 18.4% change of 0.873 over 0.712, but relative to 0.712 those numbers give 22.6%.",
+   "calculation": "|0.873 - 0.712| / 0.712 = 22.6%;  |0.873 - 0.712| / 0.873 = 18.4%;  stated: 18.4%",
+   "fix": "Recompute the percentage from 0.873 and 0.712 and correct it wherever it is quoted.",
+   "numbers": [
+    "18.4",
+    "0.873",
+    "0.712"
+   ],
+   "id": "S2"
+  },
+  {
+   "source": "script",
+   "check": "grimmer",
+   "category": "percent_count_mismatch",
+   "group": "numbers",
+   "title": "百分比和计数对不上",
+   "severity": "major",
+   "order": "first",
+   "where": "2.1 研究对象",
+   "quote": "412例中有 98 例(25.8%)在 28 天内转入重症监护病房。",
+   "context": "共纳入 412 例患者, 其中男性 236 例(57.3%), 女性 176 例(42.7%)。412例中有 98 例(25.8%)在 28 天内转入重症监护病房。",
+   "evidence": "98 of 412 is 23.8%, not 25.8%.",
+   "calculation": "98 / 412 = 23.79%;  stated: 25.8%",
+   "fix": "Correct the percentage to 23.8%, or the count or denominator if one of those is the typo.",
+   "numbers": [
+    "25.8",
+    "98",
+    "412"
+   ],
+   "id": "S3"
+  },
+  {
+   "source": "script",
+   "check": "stat_recompute",
+   "category": "pvalue_recompute_mismatch",
+   "group": "statistics",
+   "title": "p 值和检验统计量算不回来",
+   "severity": "major",
+   "order": "first",
+   "where": "3.1 基线特征",
+   "quote": "重症组患者年龄显著高于非重症组(71.2 ± 9.8 岁 vs 63.5 ± 12.1 岁, t = 1.21, P = 0.002)。",
+   "context": "重症组患者年龄显著高于非重症组(71.2 ± 9.8 岁 vs 63.5 ± 12.1 岁, t = 1.21, P = 0.002)。两组吸烟史比例差异无统计学意义(χ²(1) = 2.85, P = 0.091)。",
+   "evidence": "t = 1.21 cannot give p = 0.002: whatever the degrees of freedom, its two-sided p is at least .224. The result is not significant at 0.05.",
+   "calculation": "",
+   "fix": "Recompute p from t and its degrees of freedom, and report the degrees of freedom.",
+   "numbers": [
+    "0.002",
+    "1.21"
+   ],
+   "id": "S4"
+  },
+  {
+   "source": "script",
+   "check": "stat_recompute",
+   "category": "interval_p_contradiction",
+   "group": "statistics",
+   "title": "置信区间和 p 值互相矛盾",
+   "severity": "major",
+   "order": "first",
+   "where": "3.2 模型性能",
+   "quote": "年龄每增加 10 岁, 重症风险增加(OR = 1.45, 95%CI 1.12 1.88, P = 0.21)。",
+   "context": "深度学习模型的 AUC 为 0.868, 显著优于 CURB-65 评分。年龄每增加 10 岁, 重症风险增加(OR = 1.45, 95%CI 1.12 1.88, P = 0.21)。",
+   "evidence": "The interval 1.12 to 1.88 excludes the null value 1, but p = 0.21 says the opposite at 0.05. A 95% interval and a two-sided p from the same estimate agree on significance.",
+   "calculation": "",
+   "fix": "Recheck the interval and the p-value against the analysis output and correct the one that is wrong; if they come from different models, say so.",
+   "numbers": [
+    "1.12",
+    "1.88",
+    "0.21"
+   ],
+   "id": "S5"
+  },
+  {
+   "source": "script",
+   "check": "references",
+   "category": "reference_not_found",
+   "group": "references",
+   "title": "查不到这篇文献",
+   "severity": "major",
+   "order": "first",
+   "where": "参考文献",
+   "quote": "[3] Zhang H, Liu Y, Chen W. Quantum graph attention networks for predicting pneumonia mortality in rural cohorts. Lancet Digit Health. 2022;4(3):e211-e219.",
+   "context": "e Med. 2019;200(7):e45-e67. doi:10.1164/rccm.201908-1581ST [2] Lim WS, van der Eerden MM, Laing R, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-382. [3] Zhang H, Liu Y, Chen W. Quantum graph attention networks for predicting pneumonia mortality in rural cohorts. Lancet Digit Health. 2022;4(3):e211-e219. [4] Rajkomar A, Dean J, Kohane I. Machine learning in medicine. N Engl J Med. 2019;380(14):1347-1358. do",
+   "evidence": "No work matching this reference is in Crossref, OpenAlex or arXiv. It may be mis-cited, or it may not exist (language models invent plausible references).",
+   "calculation": "",
+   "fix": "Find the work and copy its details from the publisher's page; remove it if it cannot be found.",
+   "numbers": [],
+   "id": "S6"
+  },
+  {
+   "source": "script",
+   "check": "citation_xref",
+   "category": "reference_never_cited",
+   "group": "references",
+   "title": "文献表里有但正文没引",
+   "severity": "minor",
+   "order": "second",
+   "where": "",
+   "quote": "[5]",
+   "context": "",
+   "evidence": "Reference list entries [5] are never cited in the text.",
+   "calculation": "",
+   "fix": "Cite each where it is relevant, or remove it from the list.",
+   "numbers": [],
+   "id": "S7"
+  },
+  {
+   "source": "script",
+   "check": "claim_interval",
+   "category": "directional_claim_against_interval",
+   "group": "claims",
+   "title": "结论比它自己的区间说得更满",
+   "severity": "major",
+   "order": "first",
+   "where": "3.2 模型性能",
+   "quote": "年龄每增加 10 岁, 重症风险增加(OR = 1.45, 95%CI 1.12 1.88, P = 0.21)。",
+   "context": "深度学习模型的 AUC 为 0.868, 显著优于 CURB-65 评分。年龄每增加 10 岁, 重症风险增加(OR = 1.45, 95%CI 1.12 1.88, P = 0.21)。",
+   "evidence": "The sentence asserts a direction ('增加') but its own evidence does not exclude no effect: P = 0.21. Either the comparative word predates the current numbers or the claim overreaches the test.",
+   "calculation": "",
+   "fix": "Reword to what the interval supports (no detectable difference / direction not established), or report the test that does exclude zero",
+   "numbers": [
+    "0.21"
+   ],
+   "id": "S8"
+  },
+  {
+   "source": "script",
+   "check": "text_hygiene",
+   "category": "assistant_residue",
+   "group": "writing",
+   "title": "论文里残留的 AI 回复或占位符",
+   "severity": "major",
+   "order": "second",
+   "where": "",
+   "quote": "当然, 以下是",
+   "context": "",
+   "evidence": "This is the opening of a chatbot reply, left in the manuscript: \"...究表明, CURB-65 评分对重症的预测能力有限[2,3]。近年来, 深度学习方法在临床风险预测中得到广泛应用[4]。当然, 以下是修改后的引言段落。本研究采用的 SHAP 方法用于解释模型。 2 方法: \\section{2.1...\"",
+   "calculation": "",
+   "fix": "Delete it, or replace the placeholder with the real content.",
+   "numbers": [],
+   "id": "S9"
+  }
+ ],
+ "references": {
+  "total": 5,
+  "items": [
+   {
+    "label": "[1]",
+    "reference": "[1] Metlay JP, Waterer GW, Long AC, et al. Diagnosis and treatment of adults with community-acquired pneumonia. An official clinical practice guideline of the American Thoracic Society and Infectious Diseases Society of America. Am J Respir Crit Care Med. 2019;200(7):e45-e67. doi:10.1164/rccm.201908",
+    "status": "verified",
+    "matched": {
+     "doi": "10.1164/rccm.201908-1581st",
+     "title": "Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America",
+     "year": "2019"
+    },
+    "reason": "",
+    "abstract": "Abstract Background This document provides evidence-based clinical practice guidelines on the management of adult patients with community-acquired pneumonia. Methods A multidisciplinary panel conducted pragmatic systematic reviews of the relevant research and applied Grading of Recommendations, Assessment, Development, and Evaluation methodology for clinical recommendations. Results The panel addressed 16 specific areas for recommendations spanning questions of diagnostic testing, determination of site of care, selection of initial empiric antibiotic therapy, and subsequent management decisions. Although some recommendations remain unchanged from the 2007 guideline, the availability of results from new therapeutic trials and epidemiological investigations led to revised recommendations for empiric treatment strategies and additional management decisions. Conclusions The panel formulated and provided the rationale for recommendations on selected diagnostic and treatment strategies for adult patients with community-acquired pneumonia.",
+    "cited_in": [
+     "社区获得性肺炎(community-acquired pneumonia, CAP)是常见的感染性疾病[1]。既往研究表明, CURB-65 评分对重症的预测能力有限[2,3]。近年来, 深度学习方法在临床风险预测中得到广泛应用[4]。当然, 以下是修改后的引言段落。本研究采用的 SHAP 方法用于解释模型。 \\section{2 方法} \\section{2.1 研究对象} 共纳入 412 例患者, 其中男性 236 例(57.3\\%), 女性 176 例(42.7\\%)。412例中有 98 例(25.8\\%)在 28 天内转入重症监护病房。 \\section{2.2 统计分析} 计量资料以均值 ± 标准差表示, 组间比较采用 t 检验; 计数资料以例数(百分比)表示, 组间比较采用",
+     "[1] Metlay JP, Waterer GW, Long AC, et al."
+    ]
+   },
+   {
+    "label": "[2]",
+    "reference": "[2] Lim WS, van der Eerden MM, Laing R, et al. Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study. Thorax. 2003;58(5):377-382.",
+    "status": "verified",
+    "matched": {
+     "doi": "10.1136/thorax.58.5.377",
+     "title": "Defining community acquired pneumonia severity on presentation to hospital: an international derivation and validation study",
+     "year": "2003"
+    },
+    "reason": "",
+    "abstract": "BACKGROUND: In the assessment of severity in community acquired pneumonia (CAP), the modified British Thoracic Society (mBTS) rule identifies patients with severe pneumonia but not patients who might be suitable for home management. A multicentre study was conducted to derive and validate a practical severity assessment model for stratifying adults hospitalised with CAP into different management groups. METHODS: Data from three prospective studies of CAP conducted in the UK, New Zealand, and the Netherlands were combined. A derivation cohort comprising 80% of the data was used to develop the model. Prognostic variables were identified using multiple logistic regression with 30 day mortality as the outcome measure. The final model was tested against the validation cohort. RESULTS: 1068 patients were studied (mean age 64 years, 51.5% male, 30 day mortality 9%). Age >/=65 years (OR 3.5, 95% CI 1.6 to 8.0) and albumin <30 g/dl (OR 4.7, 95% CI 2.5 to 8.7) were independently associated with mortality over and above the mBTS rule (OR 5.2, 95% CI 2.7 to 10). A six point score, one point for each of Confusion, Urea >7 mmol/l, Respiratory rate >/=30/min, low systolic(<90 mm Hg) or diastolic (</=60 mm Hg) Blood pressure), age >/=65 years (CURB-65 score) based on information available at initial hospital assessment, enabled patients to be stratified according to increasing risk of mortality: score 0, 0.7%; score 1, 3.2%; score 2, 3%; score 3, 17%; score 4, 41.5% and score 5, 57%. The val",
+    "cited_in": [
+     "社区获得性肺炎(community-acquired pneumonia, CAP)是常见的感染性疾病[1]。既往研究表明, CURB-65 评分对重症的预测能力有限[2,3]。近年来, 深度学习方法在临床风险预测中得到广泛应用[4]。当然, 以下是修改后的引言段落。本研究采用的 SHAP 方法用于解释模型。 \\section{2 方法} \\section{2.1 研究对象} 共纳入 412 例患者, 其中男性 236 例(57.3\\%), 女性 176 例(42.7\\%)。412例中有 98 例(25.8\\%)在 28 天内转入重症监护病房。 \\section{2.2 统计分析} 计量资料以均值 ± 标准差表示, 组间比较采用 t 检验; 计数资料以例数(百分比)表示, 组间比较采用 χ² 检验。以 P<0.05 为差异有统计学意义。 \\sec",
+     "doi:10.1164/rccm.201908-1581ST [2] Lim WS, van der Eerden MM, Laing R, et al."
+    ]
+   },
+   {
+    "label": "[3]",
+    "reference": "[3] Zhang H, Liu Y, Chen W. Quantum graph attention networks for predicting pneumonia mortality in rural cohorts. Lancet Digit Health. 2022;4(3):e211-e219.",
+    "status": "not_found",
+    "matched": null,
+    "reason": "",
+    "abstract": "",
+    "cited_in": [
+     "社区获得性肺炎(community-acquired pneumonia, CAP)是常见的感染性疾病[1]。既往研究表明, CURB-65 评分对重症的预测能力有限[2,3]。近年来, 深度学习方法在临床风险预测中得到广泛应用[4]。当然, 以下是修改后的引言段落。本研究采用的 SHAP 方法用于解释模型。 \\section{2 方法} \\section{2.1 研究对象} 共纳入 412 例患者, 其中男性 236 例(57.3\\%), 女性 176 例(42.7\\%)。412例中有 98 例(25.8\\%)在 28 天内转入重症监护病房。 \\section{2.2 统计分析} 计量资料以均值 ± 标准差表示, 组间比较采用 t 检验; 计数资料以例数(百分比)表示, 组间比较采用 χ² 检验。以 P<0.05 为差异有统计学意义。 \\sec",
+     "2003;58(5):377-382. [3] Zhang H, Liu Y, Chen W."
+    ]
+   },
+   {
+    "label": "[4]",
+    "reference": "[4] Rajkomar A, Dean J, Kohane I. Machine learning in medicine. N Engl J Med. 2019;380(14):1347-1358. doi:10.1056/NEJMra1814259",
+    "status": "verified",
+    "matched": {
+     "doi": "10.1056/nejmra1814259",
+     "title": "Machine Learning in Medicine",
+     "year": "2019"
+    },
+    "reason": "",
+    "abstract": "Interview with Dr. Isaac Kohane on machine learning in medicine. (16:31)Download In this view of the future of medicine, patient–provider interactions are informed and supported by massive amounts of data from interactions with similar patients. These data are collected and curated to provide the latest evidence-based assessment and recommendations.",
+    "cited_in": [
+     "社区获得性肺炎(community-acquired pneumonia, CAP)是常见的感染性疾病[1]。既往研究表明, CURB-65 评分对重症的预测能力有限[2,3]。近年来, 深度学习方法在临床风险预测中得到广泛应用[4]。当然, 以下是修改后的引言段落。本研究采用的 SHAP 方法用于解释模型。 \\section{2 方法} \\section{2.1 研究对象} 共纳入 412 例患者, 其中男性 236 例(57.3\\%), 女性 176 例(42.7\\%)。412例中有 98 例(25.8\\%)在 28 天内转入重症监护病房。 \\section{2.2 统计分析} 计量资料以均值 ± 标准差表示, 组间比较采用 t 检验; 计数资料以例数(百分比)表示, 组间比较采用 χ² 检验。以 P<0.05 为差异有统计学意义。 \\section{3 结果} \\section{3.1 基线特征}",
+     "2022;4(3):e211-e219. [4] Rajkomar A, Dean J, Kohane I."
+    ]
+   },
+   {
+    "label": "[5]",
+    "reference": "[5] Lundberg SM, Lee SI. A unified approach to interpreting model predictions. Advances in Neural Information Processing Systems. 2017;30.",
+    "status": "verified",
+    "matched": {
+     "doi": "10.48550/arxiv.1705.07874",
+     "title": "A Unified Approach to Interpreting Model Predictions",
+     "year": "2017"
+    },
+    "reason": "",
+    "abstract": "Understanding why a model makes a certain prediction can be as crucial as the prediction's accuracy in many applications. However, the highest accuracy for large modern datasets is often achieved by complex models that even experts struggle to interpret, such as ensemble or deep learning models, creating a tension between accuracy and interpretability. In response, various methods have recently been proposed to help users interpret the predictions of complex models, but it is often unclear how these methods are related and when one method is preferable over another. To address this problem, we present a unified framework for interpreting predictions, SHAP (SHapley Additive exPlanations). SHAP assigns each feature an importance value for a particular prediction. Its novel components include: (1) the identification of a new class of additive feature importance measures, and (2) theoretical results showing there is a unique solution in this class with a set of desirable properties. The new class unifies six existing methods, notable because several recent methods in the class lack the proposed desirable properties. Based on insights from this unification, we present new methods that show improved computational performance and/or better consistency with human intuition than previous approaches.",
+    "cited_in": [
+     "doi:10.1056/NEJMra1814259 [5] Lundberg SM, Lee SI."
+    ]
+   }
+  ]
+ },
+ "statements": [
+  {
+   "statement": "ethics_approval",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "informed_consent",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "conflict_of_interest",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "funding",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "data_availability",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "code_availability",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "trial_registration",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "author_contributions",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "ai_use_disclosure",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "reporting_guideline",
+   "found": false,
+   "quote": ""
+  }
+ ],
+ "not_verified": [
+  {
+   "item": "代码和数据",
+   "reason": "没有提供代码或数据文件夹（--code）"
+  }
+ ]
+}

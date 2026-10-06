@@ -1,0 +1,221 @@
+{
+ "tool": "paperfactcheck",
+ "version": "1.0.0",
+ "generated": "2026-10-06T21:18:52",
+ "paper": "main.tex",
+ "input": "latex",
+ "language": "en",
+ "findings": [
+  {
+   "source": "script",
+   "check": "number_agreement",
+   "category": "prose_table_number_disagreement",
+   "group": "numbers",
+   "title": "Text and table give different values",
+   "severity": "major",
+   "order": "first",
+   "where": "Results",
+   "quote": "Our model reached an accuracy of 0.847 (Table [tab:main]).",
+   "context": "Results: The N=18 participants gave a mean usefulness rating of 5.19 on a 1--7 scale. Our model reached an accuracy of 0.847 (Table [tab:main]). The ensemble outperformed the strongest baseline by 1.4 points (95% CI -0.3 to 3.1). The difference was significant ( t = 1.20 , p = 0.003 ). Calibration improved across horizons (Figure \\ref{f",
+   "evidence": "The text gives 0.847 for 'our model', but no cell of its table row matches at that precision; the nearest row value is 0.851.",
+   "calculation": "",
+   "fix": "Make the prose and the table report the same value, or name the derivation.",
+   "numbers": [
+    "0.847",
+    "0.851"
+   ],
+   "id": "S1"
+  },
+  {
+   "source": "script",
+   "check": "grim",
+   "category": "grim_infeasible_mean",
+   "group": "statistics",
+   "title": "Mean impossible for its sample size (GRIM)",
+   "severity": "major",
+   "order": "first",
+   "where": "Results",
+   "quote": "The N=18 participants gave a mean usefulness rating of 5.19 on a 1--7 scale.",
+   "context": "Results: The N=18 participants gave a mean usefulness rating of 5.19 on a 1--7 scale. Our model reached an accuracy of 0.847 (Table [tab:main]). The ensemble outperformed the strongest baseline by 1.4 points (95% CI -0.3 to 3.1). The difference was significant ( t",
+   "evidence": "Mean 5.19 to 2 dp is not achievable from any integer total over N=18 items (GRIM test) — the reported mean is arithmetically impossible for that N.",
+   "calculation": "",
+   "fix": "Recompute the mean from the raw item sum, or correct N",
+   "numbers": [
+    "5.19"
+   ],
+   "id": "S2"
+  },
+  {
+   "source": "script",
+   "check": "stat_recompute",
+   "category": "pvalue_recompute_mismatch",
+   "group": "statistics",
+   "title": "p-value does not follow from its test statistic",
+   "severity": "major",
+   "order": "first",
+   "where": "Results",
+   "quote": "The difference was significant ( t = 1.20 , p = 0.003 ).",
+   "context": "ants gave a mean usefulness rating of 5.19 on a 1--7 scale. Our model reached an accuracy of 0.847 (Table [tab:main]). The ensemble outperformed the strongest baseline by 1.4 points (95% CI -0.3 to 3.1). The difference was significant ( t = 1.20 , p = 0.003 ). Calibration improved across horizons (Figure [fig:cal]d), with Brier scores listed in the released results.",
+   "evidence": "t = 1.20 cannot give p = 0.003: whatever the degrees of freedom, its two-sided p is at least .228. The result is not significant at 0.05.",
+   "calculation": "",
+   "fix": "Recompute p from t and its degrees of freedom, and report the degrees of freedom.",
+   "numbers": [
+    "0.003",
+    "1.2"
+   ],
+   "id": "S3"
+  },
+  {
+   "source": "script",
+   "check": "figure_panels",
+   "category": "panel_reference_beyond_caption",
+   "group": "figures",
+   "title": "Text refers to a panel the figure does not have",
+   "severity": "major",
+   "order": "second",
+   "where": "Results",
+   "quote": "Calibration improved across horizons (Figure [fig:cal]d), with Brier scores listed in the released results.",
+   "context": "cale. Our model reached an accuracy of 0.847 (Table [tab:main]). The ensemble outperformed the strongest baseline by 1.4 points (95% CI -0.3 to 3.1). The difference was significant ( t = 1.20 , p = 0.003 ). Calibration improved across horizons (Figure [fig:cal]d), with Brier scores listed in the released results.",
+   "evidence": "The text points to panel d of fig:cal, but its caption marks panels a-c only. Either the panel was dropped and this sentence still cites it, or the caption no longer describes the figure.",
+   "calculation": "",
+   "fix": "Point the sentence at the panel that shows this result, or restore the panel and its caption entry.",
+   "numbers": [],
+   "id": "S4"
+  },
+  {
+   "source": "script",
+   "check": "constructed_data",
+   "category": "constructed_series_json",
+   "group": "code",
+   "title": "Released results step by an exact constant",
+   "severity": "major",
+   "order": "first",
+   "where": "brier_by_horizon.json",
+   "quote": "",
+   "context": "",
+   "evidence": "brier_by_horizon.json: 'ours' is an arithmetic sequence — 4 values a constant 0.004 apart. Independent measurements do not vary that way. Ask how each value was measured, and for the raw outputs behind it.",
+   "calculation": "",
+   "fix": "",
+   "numbers": [],
+   "id": "S5"
+  },
+  {
+   "source": "script",
+   "check": "constructed_data",
+   "category": "constructed_series_json",
+   "group": "code",
+   "title": "Released results step by an exact constant",
+   "severity": "major",
+   "order": "first",
+   "where": "brier_by_horizon.json",
+   "quote": "",
+   "context": "",
+   "evidence": "brier_by_horizon.json: 'baseline' is an arithmetic sequence — 4 values a constant 0.004 apart. Independent measurements do not vary that way. Ask how each value was measured, and for the raw outputs behind it.",
+   "calculation": "",
+   "fix": "",
+   "numbers": [],
+   "id": "S6"
+  },
+  {
+   "source": "script",
+   "check": "companion_binding",
+   "category": "unbound_released_record",
+   "group": "code",
+   "title": "Released result file that no test reads",
+   "severity": "minor",
+   "order": "second",
+   "where": "",
+   "quote": "results/main_table.csv",
+   "context": "",
+   "evidence": "The manuscript prints 4 values held in results/main_table.csv (0.774, 0.802, 0.812, 0.851), and no shipped test names that file: the page and the file can drift apart while every test still passes.",
+   "calculation": "",
+   "fix": "Add a test that regenerates the file from code/ and data/, or that reads it and checks the values the manuscript prints.",
+   "numbers": [],
+   "id": "S7"
+  },
+  {
+   "source": "script",
+   "check": "claim_interval",
+   "category": "directional_claim_against_interval",
+   "group": "claims",
+   "title": "Claim stronger than its own interval",
+   "severity": "major",
+   "order": "first",
+   "where": "Results",
+   "quote": "The ensemble outperformed the strongest baseline by 1.4 points (95% CI -0.3 to 3.1).",
+   "context": "Results: The N=18 participants gave a mean usefulness rating of 5.19 on a 1--7 scale. Our model reached an accuracy of 0.847 (Table [tab:main]). The ensemble outperformed the strongest baseline by 1.4 points (95% CI -0.3 to 3.1). The difference was significant ( t = 1.20 , p = 0.003 ). Calibration improved across horizons (Figure [fig:cal]d), with Brier scores listed in the released results.",
+   "evidence": "The sentence asserts a direction ('outperformed') but its own evidence does not exclude no effect: 95% CI -0.3 to 3.1 includes 0. Either the comparative word predates the current numbers or the claim overreaches the test.",
+   "calculation": "",
+   "fix": "Reword to what the interval supports (no detectable difference / direction not established), or report the test that does exclude zero",
+   "numbers": [
+    "-0.3",
+    "3.1"
+   ],
+   "id": "S8"
+  }
+ ],
+ "references": {
+  "total": 0,
+  "items": [],
+  "findings": [],
+  "not_verified": []
+ },
+ "statements": [
+  {
+   "statement": "ethics_approval",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "informed_consent",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "conflict_of_interest",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "funding",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "data_availability",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "code_availability",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "trial_registration",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "author_contributions",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "ai_use_disclosure",
+   "found": false,
+   "quote": ""
+  },
+  {
+   "statement": "reporting_guideline",
+   "found": false,
+   "quote": ""
+  }
+ ],
+ "not_verified": [
+  {
+   "item": "References",
+   "reason": "lookups turned off (--offline)"
+  }
+ ]
+}

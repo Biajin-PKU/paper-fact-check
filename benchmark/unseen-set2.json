@@ -1,0 +1,2138 @@
+{
+ "summary": {
+  "papers": 53,
+  "papers_with_findings": 46,
+  "majors": 8,
+  "by_check": {
+   "benford": 10,
+   "citation_xref": 56,
+   "claim_interval": 112,
+   "text_hygiene": 42,
+   "relative_change": 1,
+   "number_agreement": 3,
+   "grimmer": 1,
+   "figure_panels": 1
+  }
+ },
+ "papers": [
+  {
+   "id": "2610.06641v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 214 result numbers deviates strongly from uniform (chi2=43.6, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "murali2021active / murali_iros_21",
+     "evidence": "Two bibliography entries, murali2021active and murali_iros_21, have the same title (\"Active Visuo-Tactile Point Cloud Registration for Accurate Pose Estimation of Ob\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "murali2022active / murali_interactive",
+     "evidence": "Two bibliography entries, murali2022active and murali_interactive, have the same title (\"Active Visuo-Tactile Interactive Robotic Perception for Accurate Object Pose Est\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kaboli2019auro / kaboli2019tactile",
+     "evidence": "Two bibliography entries, kaboli2019auro and kaboli2019tactile, have the same title (\"Tactile-based active object discrimination and target object search in an unknow\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "duchi2007derivations / kl_gauss",
+     "evidence": "Two bibliography entries, duchi2007derivations and kl_gauss, have the same title (\"Derivations for linear algebra and optimization\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The planner jointly uses a high-fidelity cloth model (p-cRVAE) with a reduced-order robot model (ROM) to generate feasible hand and base trajectories while following the user and avoiding cloth–obstacle collisions.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06598v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "li2026lingbotva / li2026lingbot-vla",
+     "evidence": "Two bibliography entries, li2026lingbotva and li2026lingbot-vla, have the same title (\"Causal world modeling for robot control\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "directional_claim_against_interval",
+     "severity": "major",
+     "order": "first",
+     "quote": "& & & & & & 0.3 & 25.014 & 0.8578 & 26.68 & 144.19 & 0.0687 ;",
+     "evidence": "The sentence asserts a direction ('better') but its own evidence does not exclude no effect: P = 0.3; P = 0.7. Either the comparative word predates the current numbers or the claim overreaches the test."
+    },
+    {
+     "check": "claim_interval",
+     "category": "directional_claim_against_interval",
+     "severity": "major",
+     "order": "first",
+     "quote": "% Sources (relative to repository root): % runs/bridge_real_syn_cond_real_v12_delta_core_cond_aux_s2_0813_224_1e-4/ % p=0.0: 2026-09-25_16-10-00/eval_v12_cfg_sweep_vali_realwm-as-simwm/step_008000/summary.json % p=0.3: 2026-09-25_12-59-19/eval_v12_cfg_sweep_vali_realwm-as-simwm/step_008520/summary.j",
+     "evidence": "The sentence asserts a direction ('outperforms') but its own evidence does not exclude no effect: P = 0.7. Either the comparative word predates the current numbers or the claim overreaches the test."
+    }
+   ]
+  },
+  {
+   "id": "2610.06511v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\captionof{figure}{Dichotomous key of SH generated bots} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Artifacts win by pushing opponents off an elevated ring or pinning them under the arena's rules, grounding evaluation in the physical performance of what models create.} % \\vspace{-5mm} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.60\\linewidth} All harnesses \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.32\\linewidth} \\hyphenpenalty=10000 Design Lab (DLH) \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.32\\linewidth} \\raggedright\\hyphenpenalty=10000 Sampling (SH) \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.32\\linewidth} \\hyphenpenalty=10000 Verifier-Grounded Refinement (VGH) \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The density determines geometry mass from volume, while the friction coefficient determines the sliding contact friction assigned to robot geometries.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "DLH",
+     "evidence": "\"DLH\" is used (\"...gentic search using a Design Lab Harness \\textsc{(DLH)}. We compute-match in terms of API calls on thes...\") before it is defined as \"Design Lab Harness (DLH)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SH",
+     "evidence": "\"SH\" is used (\"...plemented as harnesses: Sampling Harness\\textsc{ (SH)}, Verifier Grounded Refinement Harness\\textsc{ (...\") before it is defined as \"Sampling Harness (SH)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06510v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.32\\textwidth} Original HM3D top-down view. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.33\\textwidth} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.36\\textwidth} Reconstructed 3D model. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.33\\textwidth} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.3\\textwidth} Top-down rendering of the reconstructed model. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.3\\textwidth} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06469v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "}",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06427v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "NO-CITE / SharedMental_TDM",
+     "evidence": "Two bibliography entries, NO-CITE and SharedMental_TDM, have the same title (\"Shared mental models in expert team decision making.\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MutualModelling / MACEMutual",
+     "evidence": "Two bibliography entries, MutualModelling and MACEMutual, have the same title (\"Implementing Distributed AI Systems Using MACE\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fernandez_multis / MiguelMultiS",
+     "evidence": "Two bibliography entries, fernandez_multis and MiguelMultiS, have the same title (\"Multi S-Graphs: An Efficient Distributed Semantic-Relational Collaborative SLAM\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Salas_SA / SalasTSA1995",
+     "evidence": "Two bibliography entries, Salas_SA and SalasTSA1995, have the same title (\"Situation Awareness in Team Performance: Implications for Measurement and Traini\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_two_expansions",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SA",
+     "evidence": "\"SA\" is expanded in two ways: \"about Situation Awareness\" / \"of Situation Awareness\" / \"situational awareness\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MA",
+     "evidence": "\"MA\" is used (\"...ystem. We argue this conflation is consequential: MA, SSA, and TSA differ both in the scope of what ag...\") before it is defined as \"Mutual Awareness (MA)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SSA",
+     "evidence": "\"SSA\" is used (\"...m. We argue this conflation is consequential: MA, SSA, and TSA differ both in the scope of what agents...\") before it is defined as \"Shared Situational Awareness (SSA)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TSA",
+     "evidence": "\"TSA\" is used (\"...ue this conflation is consequential: MA, SSA, and TSA differ both in the scope of what agents must know...\") before it is defined as \"Team Situational Awareness (TSA)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06400v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "directional_claim_against_interval",
+     "severity": "major",
+     "order": "first",
+     "quote": "{@{}ccccc@{}} Comparison & Difference & p-Value & Confidence Interval (95%) & Significant ; CEM vs LiDAR & -0.53 & 0.2008 & [-1.2575, 0.1975] & No; CMA-ES vs LiDAR & -1.47 & 0.0 & [-2.1975, -0.7425] & Yes; CMA-ES vs CEM & -0.94 & 0.0072 & [-1.6675, -0.2125] & Yes; \\end{",
+     "evidence": "The sentence asserts a direction ('exceeds') but its own evidence does not exclude no effect: 95% CI -1.2575 to 0.1975 includes 0. Either the comparative word predates the current numbers or the claim overreaches the test."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "KL",
+     "evidence": "\"KL\" is used (\"...its_{i = 1}^{M}(x_{i} - g^{\\prime}(z_{i}))^{2}} + KL, where the Kullback-Leibler (KL)...\") before it is defined as \"where the Kullback-Leibler (KL)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06376v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "QD",
+     "evidence": "\"QD\" is used (\"...ward tasks. More specifically, Quality-Diversity (QD) algorithms have been designed to efficiently exp...\") before it is defined as \"Using Quality-Diversity (QD)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06349v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 429 result numbers deviates strongly from uniform (chi2=62.4, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "chen2025robotwin2 / robotwin2025benchmark",
+     "evidence": "Two bibliography entries, chen2025robotwin2 and robotwin2025benchmark, have the same title (\"{RoboTwin 2.0}: A Scalable Data Generator and Benchmark with Strong Domain Rando\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[p] \\caption{Additional qualitative rollout comparisons (2/3). Wan2.2 and KineWorld outputs for retained episode identifiers 391, 488, 586, 704, and 732, using the same deterministic frame-sampling rule as Figure [fig:appendix_gallery_1].} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The weighting branch is used only during training, while the inherited action expert remains unchanged.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Eleven uniformly sampled frame indices are shown.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MS",
+     "evidence": "\"MS\" is used (\"...; \\operatorname{FL} : Flow Score; \\operatorname{MS} : Motion Smoothness; \\operatorname{BG} : Backgr...\") before it is defined as \"motion smoothness (MS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SC",
+     "evidence": "\"SC\" is used (\"...w & \\operatorname{BG}\\uparrow & \\operatorname{SC}\\uparrow & \\operatorname{PC}\\uparrow & \\opera...\") before it is defined as \"subject consistency (SC)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "PC",
+     "evidence": "\"PC\" is used (\"...w & \\operatorname{SC}\\uparrow & \\operatorname{PC}\\uparrow & \\operatorname{INT}\\uparrow & \\oper...\") before it is defined as \"photometric consistency (PC)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TA",
+     "evidence": "\"TA\" is used (\"... & \\operatorname{INT}\\uparrow & \\operatorname{TA}\\uparrow & \\operatorname{Params\\ (B)}\\downarrow...\") before it is defined as \"trajectory accuracy (TA)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "IF",
+     "evidence": "\"IF\" is used (\"... & \\operatorname{PER}\\uparrow & \\operatorname{IF}\\uparrow ; Wan2.2-TI2V-5B & 42.10 &...\") before it is defined as \"instruction following (IF)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SA",
+     "evidence": "\"SA\" is used (\"...rname{IF} : Instruction Following; \\operatorname{SA} : Semantic Alignment. Original score scales are...\") before it is defined as \"and semantic alignment (SA)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06331v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tian2026kilohertz / tian2026kilohertzsafescalableframeworkconstrained",
+     "evidence": "Two bibliography entries, tian2026kilohertz and tian2026kilohertzsafescalableframeworkconstrained, have the same title (\"Kilohertz-Safe: A Scalable Framework for Constrained Dexterous Retargeting\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "wang2026contactgaussianwmlearningphysicsgroundedworld / wang2026contactgaussian",
+     "evidence": "Two bibliography entries, wang2026contactgaussianwmlearningphysicsgroundedworld and wang2026contactgaussian, have the same title (\"Contactgaussian-wm: Learning physics-grounded world model from videos\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "paulus2026differentiable / paulus2026differentiablesimulationhardcontacts",
+     "evidence": "Two bibliography entries, paulus2026differentiable and paulus2026differentiablesimulationhardcontacts, have the same title (\"Differentiable Simulation of Hard Contacts with Soft Gradients for Learning and \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.48\\linewidth} Object position error \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.48\\linewidth} Object rotation error \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "BVH",
+     "evidence": "\"BVH\" is used (\"...and then an optional soft mode. \\noindentBVH Construction. We construct binary bounding volum...\") before it is defined as \"binary bounding volume hierarchies (BVH)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06327v1",
+   "field": "cs.RO",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "KL",
+     "evidence": "\"KL\" is used (\"...1}^{N}(x_i - \\tilde{g}(z_i))^{2}} + \\mathcal{D}_{KL}(\\mathcal{N}(f(x_i), h(x_i)), \\mathcal{N}(0, I))....\") before it is defined as \"is the Kullback-Leibler (KL)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06306v1",
+   "field": "cs.RO",
+   "findings": []
+  },
+  {
+   "id": "2610.06702v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "% } The input string split into columns \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "% } One copy of H for each column \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06590v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "relative_change",
+     "category": "relative_change_mismatch",
+     "severity": "major",
+     "order": "first",
+     "quote": "On \\movielens, SPRIG is comparable in size to KGGLM ( 56.1 M vs. 57.8 M parameters) yet uses 11% fewer FLOPs per step, w",
+     "evidence": "The sentence gives a 11% change for 56.1 against 57.8, but those numbers give 2.9% relative to 57.8 or 3.0% relative to 56.1, and no usual reading gives 11%."
+    }
+   ]
+  },
+  {
+   "id": "2610.06582v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 66 result numbers deviates strongly from uniform (chi2=38.5, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "karamzade2024reinforcement / art:2024:worldmodel-delay-rl",
+     "evidence": "Two bibliography entries, karamzade2024reinforcement and art:2024:worldmodel-delay-rl, have the same title (\"Reinforcement Learning from Delayed Observations via World Models\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bouteiller2020reinforcement / art:2021:rl-random-delays",
+     "evidence": "Two bibliography entries, bouteiller2020reinforcement and art:2021:rl-random-delays, have the same title (\"Reinforcement Learning with Random Delays\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kaiser2019model / art:2020:mbrl-atari",
+     "evidence": "Two bibliography entries, kaiser2019model and art:2020:mbrl-atari, have the same title (\"Model Based Reinforcement Learning for Atari\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "firoiu2018human / art:2018:rt-action-delay",
+     "evidence": "Two bibliography entries, firoiu2018human and art:2018:rt-action-delay, have the same title (\"At Human Speed: Deep Reinforcement Learning with Action Delay\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "walsh2009learning / art:2008:delay-rl",
+     "evidence": "Two bibliography entries, walsh2009learning and art:2008:delay-rl, have the same title (\"Learning and planning in environments with delayed feedback\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "katsikopoulos2003markov / art:2003:delayed-mdp",
+     "evidence": "Two bibliography entries, katsikopoulos2003markov and art:2003:delayed-mdp, have the same title (\"Markov decision processes with delays and asynchronous cost collection\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Under asynchronous execution, (b) TD-MPC2 suffers from future-action timeline mismatch, while (c) DreamerV3 can suffer from previous-action attribution mismatch.} \\vspace{-6pt} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06205v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Each bar uses the full size of its own category as denominator.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fig:mix",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06060v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 326 result numbers deviates strongly from uniform (chi2=46.4, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Zerhoudi2022 / 10.1145/3511808.3557711",
+     "evidence": "Two bibliography entries, Zerhoudi2022 and 10.1145/3511808.3557711, have the same title (\"The SimIIR 2.0 Framework: User Types, Markov Model-Based Interaction Simulation,\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Yang2018 / DBLP:journals/ir/YangDLZ18",
+     "evidence": "Two bibliography entries, Yang2018 and DBLP:journals/ir/YangDLZ18, have the same title (\"Session search modeling by partially observable Markov decision process\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "cgal / cgal:lp-gi-20a-condensed",
+     "evidence": "Two bibliography entries, cgal and cgal:lp-gi-20a-condensed, have the same title (\"The Computational Geometry Algorithms Library\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{\\linewidth} TIPPS data \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{\\linewidth} LISP data \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[a]{\\linewidth} TREC data \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "IR",
+     "evidence": "\"IR\" is used (\"...rovide valuable, user-centric insights , much of IR evaluation relies on system-oriented methods that...\") before it is defined as \"in information retrieval (IR)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06050v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Offline item-embedding generation and initial-history replay are excluded.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Existing strategies may overemphasize either long-term history or recent behavior, motivating a balanced user model that preserves what lasts while adapting to what changes.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05945v1",
+   "field": "cs.IR",
+   "findings": []
+  },
+  {
+   "id": "2610.05807v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "AP",
+     "evidence": "\"AP\" is used (\"...s and keeps the epoch with the highest validation AP. HDFS sequences are truncated at 50 events, of wh...\") before it is defined as \"Average precision (AP)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05787v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] Architecture of the Proposed W-SCAR Framework \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Summary of job-market dataset characteristics. \\setlength{\\tabcolsep}{4pt} \\renewcommand{\\arraystretch}{0.95} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SR",
+     "evidence": "\"SR\" is used (\"...rms, local job titles, and abbreviations such as `SR' for Sales Representative or `FMCG' for fast-movi...\") before it is defined as \"Sales Representative (SR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_two_expansions",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SR",
+     "evidence": "\"SR\" is expanded in two ways: \"Sales Representative\" / \"Sales Rep\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05750v1",
+   "field": "cs.IR",
+   "findings": []
+  },
+  {
+   "id": "2610.05732v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 443 result numbers deviates strongly from uniform (chi2=1469.9, df=9)."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t] Implementation of the PACMI ablations. \\resizebox{\\columnwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Higher is better except for stale memory reuse.} \\resizebox{\\columnwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t] \\scriptsize \\setlength{\\tabcolsep}{3pt} Case-bootstrap intervals for all numeric cells of the ablation table. \\resizebox{\\textwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t] Ablation results for PACMI: final-answer accuracy by query type. \\resizebox{\\columnwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Per assumption A3, the Affected Recall and Under-Invalidation columns verify propagation correctness rather than comparative advantage.} \\resizebox{\\columnwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "As with Affected Recall, these figures verify propagation correctness under assumption A3.} \\resizebox{\\columnwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t] \\scriptsize \\setlength{\\tabcolsep}{3pt} Case-bootstrap intervals for the query-type and answer-level cells of the main-results table. \\resizebox{\\textwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "``--'' denotes a method-inapplicable metric.} \\resizebox{\\textwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Discordant counts are reported as PACMI-only correct / comparison-method-only correct.} \\resizebox{\\textwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Q2 is the positive class; Q1 and Q3 are negative.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05670v1",
+   "field": "cs.IR",
+   "findings": []
+  },
+  {
+   "id": "2610.05619v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "GRPO",
+     "evidence": "\"GRPO\" is used (\"...ne; the returned inventory yields the reward, and GRPO internalizes supply-awareness into the policy wei...\") before it is defined as \"using Group Relative Policy Optimization (GRPO)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05559v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TPU",
+     "evidence": "\"TPU\" is used (\"...stributed data-parallel training across an 8-chip TPU slice ( 2\\times 4 topology), even with a moderat...\") before it is defined as \"on Tensor Processing Units (TPU)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05432v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "wang2025internvl3 / wang2025internvl35advancingopensourcemultimodal",
+     "evidence": "Two bibliography entries, wang2025internvl3 and wang2025internvl35advancingopensourcemultimodal, have the same title (\"InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "li2024llavaonevision / li2024llavaonevisioneasyvisualtask",
+     "evidence": "Two bibliography entries, li2024llavaonevision and li2024llavaonevisioneasyvisualtask, have the same title (\"LLaVA-OneVision: Easy Visual Task Transfer\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.05348v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "number_agreement",
+     "category": "prose_table_number_disagreement",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Table [tab:wording] confirms the following findings: (i) The explanation beats the bare token: 83.7% versus 79.5% abstention averaged over the two compliant agents (Haiku and Qwen3-8B).",
+     "evidence": "The text gives 83.7 for 'qwen3-8b', but no cell of its table row matches at that precision; the nearest row value is 84.3."
+    },
+    {
+     "check": "number_agreement",
+     "category": "prose_table_number_disagreement",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Table [tab:wording] confirms the following findings: (i) The explanation beats the bare token: 83.7% versus 79.5% abstention averaged over the two compliant agents (Haiku and Qwen3-8B).",
+     "evidence": "The text gives 79.5 for 'qwen3-8b', but no cell of its table row matches at that precision; the nearest row value is 79.0."
+    },
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 294 result numbers deviates strongly from uniform (chi2=155.9, df=9)."
+    }
+   ]
+  },
+  {
+   "id": "2610.05343v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "A signed packet binds the output of preparation; it is not a public implementation of the private source-to-packet pipeline.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The official event-ordering \\tau metric was not computed.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\caption{Category counts for the LongMemEval-S configurations in Table [tab:campaignarms].} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "OD denotes open-domain.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Up/down counts are label transitions relative to reference-only grading, not reader improvements.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Temporal reasoning decreases by one correct \\CL answer despite the overall increase.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The large evaluation shifts must not be presented as new retrieval or reader gains.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Each category uses the unchanged denominator N .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Historical token accounting is not asserted to be an identical tokenizer-level capacity intervention.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05285v1",
+   "field": "cs.IR",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kwon2023pagedattention / kwon2023vllm",
+     "evidence": "Two bibliography entries, kwon2023pagedattention and kwon2023vllm, have the same title (\"Efficient Memory Management for Large Language Model Serving with\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[7]{r}{0.45\\textwidth} \\vspace{-10pt} \\vspace{-25pt} Time and objective versus \\nu . \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05512v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ramsay2005functional / wang2016functional",
+     "evidence": "Two bibliography entries, ramsay2005functional and wang2016functional, have the same title (\"Functional data analysis\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.04806v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 22 result numbers deviates strongly from uniform (chi2=62.5, df=9)."
+    }
+   ]
+  },
+  {
+   "id": "2610.04773v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Figure [fig:vertex-dim](d) shows the 40 -mode mixture at d=30 .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Same layout as Figure [fig:sigma-convergence-logconcave].} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Same layout as Figure [fig:sigma-convergence-logconcave].} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.04748v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "PSIS",
+     "evidence": "\"PSIS\" is used (\"...followed by Pareto smoothed importance sampling (PSIS, ) with the so-called k -statistic to flag obse...\") before it is defined as \"with Pareto Smoothed Importance Sampling (PSIS)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.04668v1",
+   "field": "stat.CO",
+   "findings": []
+  },
+  {
+   "id": "2610.04568v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "salimans2021ebm / salimans2021should",
+     "evidence": "Two bibliography entries, salimans2021ebm and salimans2021should, have the same title (\"Should {EBM}s Model the Energy or the Score?\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nesterov2017zeroth / nesterov2017random",
+     "evidence": "Two bibliography entries, nesterov2017zeroth and nesterov2017random, have the same title (\"Random Gradient-Free Minimization of Convex Functions\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "% ---------------------------------------------------------------",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "supp:lemmas",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "supp:rough-quant",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\E_\\theta denotes an energy, p a density, \\lambda>0 a tempering exponent.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SPSA",
+     "evidence": "\"SPSA\" is used (\"...al budget of 8192 forward measurements per run: SPSA , Spall's two-measurement simultaneous perturbat...\") before it is defined as \"simultaneous-perturbation stochastic approximation (SPSA)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "EMA",
+     "evidence": "\"EMA\" is used (\"...s noise levels with a denoising objective and its EMA weights are used at test time. Decoding 50{,}000...\") before it is defined as \"an exponential moving average (EMA)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.04163v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CKKS",
+     "evidence": "\"CKKS\" is used (\"...HE schemes the packages support, with emphasis on CKKS for real-valued statistical computation, and clos...\") before it is defined as \"The Cheon--Kim--Kim--Song (CKKS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "DLBCL",
+     "evidence": "\"DLBCL\" is used (\"...mph{transport} of intermediate sums. DLBCL lymphoma cohort: We use the diffuse large-B-cel...\") before it is defined as \"We use the diffuse large-B-cell lymphoma (DLBCL)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.03990v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "courcoul1_2024 / courcoul_SIM_2025",
+     "evidence": "Two bibliography entries, courcoul1_2024 and courcoul_SIM_2025, have the same title (\"A Location-Scale Joint Model for Studying the Link Between the Time-Dependent Su\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "hedecker_2013 / hedeker_20131",
+     "evidence": "Two bibliography entries, hedecker_2013 and hedeker_20131, have the same title (\"MIXREGLS: A Program for Mixed-Effects Location Scale Analysis\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "X_i(t) and Z_i(t) are the design matrices for individual i at time t .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_two_expansions",
+     "severity": "minor",
+     "order": "second",
+     "quote": "LSMM",
+     "evidence": "\"LSMM\" is expanded in two ways: \"The location-scale mixed models\" / \"typically called location-scale mixed model\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "LSJM",
+     "evidence": "\"LSJM\" is used (\"...more flexible joint models, we developed the \\pkg{LSJM} package, designed to estimate joint models with...\") before it is defined as \"The location-scale joint models (LSJM)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "AIC",
+     "evidence": "\"AIC\" is used (\"...-of-fit statistics: Likelihood: -5027.3 AIC: 10074.599 Maximum Likelihood Estimates: Longi...\") before it is defined as \"the Akaike information criteria (AIC)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.02377v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "LipmanEtAl2023 / LipmanEtAl2023PP",
+     "evidence": "Two bibliography entries, LipmanEtAl2023 and LipmanEtAl2023PP, have the same title (\"Flow Matching for Generative Modeling\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Neal1996 / Neal1995",
+     "evidence": "Two bibliography entries, Neal1996 and Neal1995, have the same title (\"Bayesian learning for neural networks\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kruger2026well / krueger2026",
+     "evidence": "Two bibliography entries, kruger2026well and krueger2026, have the same title (\"How Well Do Generative Models Solve Inverse Problems? A Benchmark Study\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tab:iat",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.02085v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "hoeffding1963probability / Hoeffding1994",
+     "evidence": "Two bibliography entries, hoeffding1963probability and Hoeffding1994, have the same title (\"Probability Inequalities for sums of Bounded Random Variables\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bombieri2006riemann / conrey2003riemann",
+     "evidence": "Two bibliography entries, bombieri2006riemann and conrey2003riemann, have the same title (\"The {Riemann} hypothesis\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fristedt2013modern / FristedtGray1997",
+     "evidence": "Two bibliography entries, fristedt2013modern and FristedtGray1997, have the same title (\"A modern approach to probability theory\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zhou2015spatio / Zhouetal2015",
+     "evidence": "Two bibliography entries, zhou2015spatio and Zhouetal2015, have the same title (\"A Spatio-Temporal Point Process Model for Ambulance Demand\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Gelfand2010 / r174",
+     "evidence": "Two bibliography entries, Gelfand2010 and r174, have the same title (\"Handbook of spatial statistics\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Karvonen23 / Karvonenetal23",
+     "evidence": "Two bibliography entries, Karvonen23 and Karvonenetal23, have the same title (\"A probabilistic Taylor expansion with Gaussian processes\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zhou2015spatio / Zhouetal2015",
+     "evidence": "Two bibliography entries, zhou2015spatio and Zhouetal2015, have the same title (\"A Spatio-Temporal Point Process Model for Ambulance Demand\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Cockayneetal2019a / Cockayneetal2019",
+     "evidence": "Two bibliography entries, Cockayneetal2019a and Cockayneetal2019, have the same title (\"A {Bayesian} conjugate gradient method (with discussion)\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Gelfand2010 / r174",
+     "evidence": "Two bibliography entries, Gelfand2010 and r174, have the same title (\"Handbook of spatial statistics\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Karvonen23 / Karvonenetal23",
+     "evidence": "Two bibliography entries, Karvonen23 and Karvonenetal23, have the same title (\"A probabilistic {Taylor} expansion with {Gaussian} processes\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "r145 / Moller2010",
+     "evidence": "Two bibliography entries, r145 and Moller2010, have the same title (\"Likelihood inference for unions of interacting discs\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Williams2006 / r148",
+     "evidence": "Two bibliography entries, Williams2006 and r148, have the same title (\"Gaussian processes for machine learning\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.01907v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} \\caption{\\texttt{bernoulli\\_exp1}: z = 11.3 , p \\approx 10^{-29} .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} \\caption{\\texttt{bernoulli\\_exp1}: z = 1.80 , p = 0.073 .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} \\caption{\\texttt{bernoulli\\_exp}: z = 11.3 , p \\approx 10^{-29} .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} \\caption{\\texttt{bernoulli\\_exp}: z = 1.80 , p = 0.073 .} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} Rational Bernoulli: z = 0.66 , p = 0.51 . \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} Standard Bernoulli: z = 0.58 , p = 0.56 . \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} Geometric fast: fails with visible periodic artifacts. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} Geometric slow: good fit to the theoretical model. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} \\caption{\\texttt{sample\\_uniform\\_ubig\\_below} uniformity fit with upper bound 10.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.4\\textwidth} Uniformity fit on the last digit of sampled values. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "PLRV",
+     "evidence": "\"PLRV\" is used (\"...penDP v0.14.2]{ } \\caption{Empirical PLRV from the output distributions of two neighboring...\") before it is defined as \"empirical Privacy Loss Random Variable (PLRV)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.01659v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "GHC",
+     "evidence": "\"GHC\" is used (\"...b=b^*_P for both the generalised harmonic chain (GHC; p=2 and p=4 ) and 1D soft-disk model. Green...\") before it is defined as \"the generalised harmonic chain (GHC)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.01651v1",
+   "field": "stat.CO",
+   "findings": []
+  },
+  {
+   "id": "2610.01641v1",
+   "field": "stat.CO",
+   "findings": [
+    {
+     "check": "number_agreement",
+     "category": "prose_table_number_disagreement",
+     "severity": "major",
+     "order": "first",
+     "quote": "\\begingroup \\setlength{\\LTleft}{0pt} \\setlength{\\LTright}{0pt} \\setlength{\\LTpre}{2pt} \\setlength{\\LTpost}{0pt} \\setlength{\\tabcolsep}{2pt} \\renewcommand{\\arraystretch}{0.88} \\begin{longtable}{ @{}p{0.18\\textwidth} p{0.21\\text",
+     "evidence": "The text gives 0.88 for 'mcir', but no cell of its table row matches at that precision; the nearest row value is 0.825."
+    },
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 1163 result numbers deviates strongly from uniform (chi2=379.9, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "citation_undefined",
+     "severity": "major",
+     "order": "second",
+     "quote": "Region-weighted LOCO & Regional predictive-loss change, aggregated over data-dependent subpopulations & Evaluates LOCO effects within identified regions of the feature space [amoukou2025regional] & Can reveal heterogeneous omission effects, but does not itself establish feature-level conditional-red",
+     "evidence": "[amoukou2025regional] has no entry in the reference list; the compiled paper prints [?] here."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\caption{Higher-order dependence diagnostic: (a) recovery of the relevant feature set and (b) ranking agreement with interaction-informed MCIR.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Negative agreement for marginal baselines indicates that they target a different ordering.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The reference- \\Phi row is not a recovery baseline.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Values are means over ten independent runs; the numerical uncertainty summaries are reported in Table [tab:loco-shapley-houseenergy].} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "(b) Cumulative R^2 -drop AUC under the common training-mean replacement protocol; higher values indicate faster cumulative predictive degradation.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t] Measured runtime of screening, threshold calibration, and final MCIR evaluation. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Error bars denote standard errors of total runtime.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Error bars denote standard errors over five repetitions.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Entries are mean \\pm standard error over 30 repetitions.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Entries are mean seconds over five repetitions.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[htbp] \\scriptsize \\setlength{\\tabcolsep}{4pt} \\renewcommand{\\arraystretch}{0.96} Exact and group-level Jaccard@ 30 under subsampling. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[htbp] \\scriptsize \\setlength{\\tabcolsep}{4pt} \\renewcommand{\\arraystretch}{0.96} Interpretation of the higher-order failure-case diagnostic. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[htbp] \\scriptsize \\setlength{\\tabcolsep}{4pt} \\renewcommand{\\arraystretch}{0.96} Exact and group-level Jaccard@ 30 under subsampling. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "In panel (a), entries are Exact/Group-Jaccard@ 30 .} \\vspace{-1.5mm}",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The statistics compare distinct importance targets and do not measure attribution correctness.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The interaction-informed \\Phi row is a ranking reference, not a deployable recovery baseline.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Higher values indicate faster cumulative predictive degradation.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Times exclude model fitting and are hardware- and implementation-specific.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[htbp] \\scriptsize \\setlength{\\tabcolsep}{3pt} \\renewcommand{\\arraystretch}{0.92} Supplementary notation. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Each cell summarizes 30 subsamples.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Larger values indicate greater overlap under the grouping induced by that row's threshold.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tab:xxx",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CMI",
+     "evidence": "\"CMI\" is used (\"...onditional SHAP , SAGE , marginal MI , HSIC , CMI, and CIR-family scores may therefore produce di...\") before it is defined as \"population conditional mutual information (CMI)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MCIR",
+     "evidence": "\"MCIR\" is used (\"...a fixed predictive model. For each input feature, MCIR identifies a small neighbourhood of related predi...\") before it is defined as \"Mutual Correlation Impact Ratio (MCIR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "HAR",
+     "evidence": "\"HAR\" is used (\"...pendence.} We evaluate controlled redundancy, UCI HAR, HouseEnergy-Sim, CIFAR-10 representations, and N...\") before it is defined as \"UCI Human Activity Recognition (HAR)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.01121v1",
+   "field": "stat.CO",
+   "findings": []
+  },
+  {
+   "id": "2610.04945v1",
+   "field": "q-bio.GN",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 737 result numbers deviates strongly from uniform (chi2=34.3, df=9)."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The curves are synthetic ODE trajectories, not reconstructed biological lineages.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Timing is seconds per 1,000 generated cells.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The final row also includes PCA-50 and PCA-100.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "This single-seed analysis is not used for the main compound-disjoint claim.} \\scriptsize \\setlength{\\tabcolsep}{3.5pt} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Cross-row differences do not isolate an OT component effect.} \\scriptsize \\setlength{\\tabcolsep}{2.6pt} \\resizebox{\\linewidth}{!}{% \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Both methods read held-out Day 3 expression and are excluded from the external-method ranking.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Values follow the main temporal test-repeat protocol: mean \\pm sample standard deviation over test seeds 42, 123, and 2026.} \\setlength{\\tabcolsep}{4pt} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MMD",
+     "evidence": "\"MMD\" is used (\"...retraining lowers Energy from 0.139 to 0.135 and MMD from 0.397 to 0.378 with context, although effect...\") before it is defined as \"and maximum mean discrepancy (MMD)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SD",
+     "evidence": "\"SD\" is used (\"...and 2026). Mean \\pm sample standard deviation (SD) summarizes run-level aggregates; genetic tables...\") before it is defined as \"sample standard deviations (SD)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.04763v1",
+   "field": "q-bio.GN",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "supp:aligned",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "supp:development",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "supp:window",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06566v1",
+   "field": "physics.med-ph",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SNR",
+     "evidence": "\"SNR\" is used (\"...nable imaging over depth . Acquisition speed and SNR saw major improvements with the development of Fo...\") before it is defined as \"and lower signal-to-noise ratio (SNR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "NA",
+     "evidence": "\"NA\" is used (\"...ventional FF-FD-OCT. All data were acquired at an NA of 0.13 . The setup is synchronized using an Ard...\") before it is defined as \"the numerical aperture (NA)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06457v1",
+   "field": "physics.med-ph",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CC",
+     "evidence": "\"CC\" is used (\"...ted previously , and the present study focuses on CC and the resulting field-shaping hardware. \\secti...\") before it is defined as \"Collimator Creator (CC)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06097v1",
+   "field": "physics.med-ph",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "jorgensen2023data / subramanian2022ensemble",
+     "evidence": "Two bibliography entries, jorgensen2023data and subramanian2022ensemble, have the same title (\"Ensemble inversion for brain tumor growth models with mass effect\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "balcerakphysics / balcerak2024physics",
+     "evidence": "Two bibliography entries, balcerakphysics and balcerak2024physics, have the same title (\"Physics-regularized multi-modal image assimilation for brain tumor localization\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "balcerak2025individualizing / Balcerak2025GliODIL",
+     "evidence": "Two bibliography entries, balcerak2025individualizing and Balcerak2025GliODIL, have the same title (\"Individualizing glioma radiotherapy planning by optimization of a data and physi\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.02136v1",
+   "field": "physics.med-ph",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 4714 result numbers deviates strongly from uniform (chi2=218.0, df=9)."
+    },
+    {
+     "check": "grimmer",
+     "category": "grimmer_infeasible_sd",
+     "severity": "major",
+     "order": "first",
+     "quote": "The anti-location rate is the share of subjects with AUROC <0.5 .",
+     "evidence": "With N = 60 integer responses, no set of responses gives mean 0.50 together with SD 0.02: the sum and the sum of squares would have to be integers of the same parity, and none fall inside the printed rounding (GRIMMER test)."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fig:M",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MAD",
+     "evidence": "\"MAD\" is used (\"...or per subject by linear interpolation in \\FP . MAD is retained as the recommended aggregation only i...\") before it is defined as \"absolute deviation across channels (MAD)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.01930v1",
+   "field": "physics.med-ph",
+   "findings": [
+    {
+     "check": "figure_panels",
+     "category": "panel_reference_beyond_caption",
+     "severity": "major",
+     "order": "second",
+     "quote": "[fig:fig2] (g)-(h), and to the corresponding data-set on top of the structured (coherent) phase-encoding.",
+     "evidence": "The text points to panel g of fig:fig2, but its caption marks panels a-f only. Either the panel was dropped and this sentence still cites it, or the caption no longer describes the figure."
+    }
+   ]
+  },
+  {
+   "id": "2610.01330v1",
+   "field": "physics.med-ph",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b52",
+     "evidence": "The reference list holds \\bibitem{bib_b52}, which the text never cites."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b53",
+     "evidence": "The reference list holds \\bibitem{bib_b53}, which the text never cites."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b54",
+     "evidence": "The reference list holds \\bibitem{bib_b54}, which the text never cites."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b55",
+     "evidence": "The reference list holds \\bibitem{bib_b55}, which the text never cites."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b56",
+     "evidence": "The reference list holds \\bibitem{bib_b56}, which the text never cites."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b57",
+     "evidence": "The reference list holds \\bibitem{bib_b57}, which the text never cites."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bib_b58",
+     "evidence": "The reference list holds \\bibitem{bib_b58}, which the text never cites."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "PETRA",
+     "evidence": "\"PETRA\" is used (\"...or modern clinical MRI in the early 2010s through PETRA and ZTE. Excitation occurs with the readout grad...\") before it is defined as \"encoding time reduction with radial acquisition (PETRA)\"."
+    }
+   ]
+  }
+ ]
+}

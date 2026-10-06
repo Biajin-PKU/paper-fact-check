@@ -1,0 +1,2814 @@
+{
+ "summary": {
+  "papers": 50,
+  "papers_with_findings": 36,
+  "majors": 1,
+  "by_check": {
+   "benford": 7,
+   "citation_xref": 192,
+   "claim_interval": 63,
+   "text_hygiene": 51,
+   "number_agreement": 1
+  }
+ },
+ "papers": [
+  {
+   "id": "2610.06444v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 415 result numbers deviates strongly from uniform (chi2=111.1, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "aho72 / aho73",
+     "evidence": "Two bibliography entries, aho72 and aho73, have the same title (\"The Theory of Parsing, Translation and Compiling\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "cer89 / cer90",
+     "evidence": "Two bibliography entries, cer89 and cer90, have the same title (\"Logic Programming and Databases\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fel99 / fel00a",
+     "evidence": "Two bibliography entries, fel99 and fel00a, have the same title (\"Consistency based diagnosis of configuration knowledge bases\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri90c / fri90cc",
+     "evidence": "Two bibliography entries, fri90c and fri90cc, have the same title (\"Hypothesis Classification, Abductive Diagnosis and Therapy\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri90 / fri90e",
+     "evidence": "Two bibliography entries, fri90 and fri90e, have the same title (\"Redefining the Candidate Space in Model-based Diagnosis\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri91b / fri91bb",
+     "evidence": "Two bibliography entries, fri91b and fri91bb, have the same title (\"Formalizing the Repair Process\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri91d / fri91e",
+     "evidence": "Two bibliography entries, fri91d and fri91e, have the same title (\"Choosing Observations and Actions in Model-Based Diagnosis-Repair System\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri91b / fri92b",
+     "evidence": "Two bibliography entries, fri91b and fri92b, have the same title (\"Formalizing the Repair Process\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri91d / fri92c",
+     "evidence": "Two bibliography entries, fri91d and fri92c, have the same title (\"Choosing Observations and Actions in Model-Based Diagnosis-Repair System\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fri92e / fri92g",
+     "evidence": "Two bibliography entries, fri92e and fri92g, have the same title (\"Formalizing the Repair Process -- Extended Report\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fsw95a / fsw95b",
+     "evidence": "Two bibliography entries, fsw95a and fsw95b, have the same title (\"Model-Based Diagnosis of Hardware Designs\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fsw95a / fsw96",
+     "evidence": "Two bibliography entries, fsw95a and fsw96, have the same title (\"Model-Based Diagnosis of Hardware Designs\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fsw95a / fsw99",
+     "evidence": "Two bibliography entries, fsw95a and fsw99, have the same title (\"Model-based Diagnosis of Hardware Designs\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "got00 / got99",
+     "evidence": "Two bibliography entries, got00 and got99, have the same title (\"A Comparison of Structural CSP Decomposition Methods\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "hunt96 / hunt98",
+     "evidence": "Two bibliography entries, hunt96 and hunt98, have the same title (\"Model-{B}ased {S}oftware {D}iagnosis\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kle87 / kle87short",
+     "evidence": "Two bibliography entries, kle87 and kle87short, have the same title (\"Diagnosing Multiple Faults\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "lac91c / lac91d",
+     "evidence": "Two bibliography entries, lac91c and lac91d, have the same title (\"Integrating Model-Based Monitoring and Diagnosis of Complex Dynamic Syst\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "lac92 / lac92b",
+     "evidence": "Two bibliography entries, lac92 and lac92b, have the same title (\"{DIAMON}: A Model-Based Troubleshooter Based on Qualitative Reasoning\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "leh89 / leh91",
+     "evidence": "Two bibliography entries, leh89 and leh91, have the same title (\"What does a Conditional Knowledge Base Entail?\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nej89 / nej89c",
+     "evidence": "Two bibliography entries, nej89 and nej89c, have the same title (\"Revising Domain Theories in Model-Based Reasoning Systems\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nej91 / nej91c",
+     "evidence": "Two bibliography entries, nej91 and nej91c, have the same title (\"The {P-Systems}: A Systematic Classification of Logics of Nonmonotonicit\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nej91d / nej92",
+     "evidence": "Two bibliography entries, nej91d and nej92, have the same title (\"Asking About Possibilities --- Revision and Update Semantics for Subjunc\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "pfa91 / pfa92",
+     "evidence": "Two bibliography entries, pfa91 and pfa92, have the same title (\"Integrating Model-Based and Heuristic Features in a Realtime Expert Syst\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "pfa92b / pfa92c",
+     "evidence": "Two bibliography entries, pfa92b and pfa92c, have the same title (\"Process-Oriented Techniques in an Expert System for Power System Diagnos\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "got90 / pha88",
+     "evidence": "Two bibliography entries, got90 and pha88, have the same title (\"Expert Systems in Engineering\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "sac86 / sac88",
+     "evidence": "Two bibliography entries, sac86 and sac88, have the same title (\"The Generalized Counting Method for Recursive Logic Queries\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "trmbd06r:96 / sw96b",
+     "evidence": "Two bibliography entries, trmbd06r:96 and sw96b, have the same title (\"Model-Based Program Debugging and Repair\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "trmbd07:96 / sw96c",
+     "evidence": "Two bibliography entries, trmbd07:96 and sw96c, have the same title (\"Model-Based Diagnosis of Hardware Description Languages\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "trmbd06:96 / sw96d",
+     "evidence": "Two bibliography entries, trmbd06:96 and sw96d, have the same title (\"A Model-Based Approach to Software Debugging\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "sw97a / sw97b",
+     "evidence": "Two bibliography entries, sw97a and sw97b, have the same title (\"Diagnosing Tree-Structured Systems\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "trmbd09:98 / sw98a",
+     "evidence": "Two bibliography entries, trmbd09:98 and sw98a, have the same title (\"{VHDLDIAG}+:{V}alue-level {D}iagnosis of {VHDL\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fshsw00a / fssw00",
+     "evidence": "Two bibliography entries, fshsw00a and fssw00, have the same title (\"An {E}nvironment and {L}anguage for {I}ndustrial {U}se of {M}o\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "sw97a / sw01a",
+     "evidence": "Two bibliography entries, sw97a and sw01a, have the same title (\"Diagnosing Tree-Structured Systems\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tsu86 / ull85",
+     "evidence": "Two bibliography entries, tsu86 and ull85, have the same title (\"Implementation of Logical Query Languages for Databases\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ull88 / ull89",
+     "evidence": "Two bibliography entries, ull88 and ull89, have the same title (\"Principles of Database and Knowledge-Base Systems\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "die87 / wag86",
+     "evidence": "Two bibliography entries, die87 and wag86, have the same title (\"Extension Tables: Memo Relations in Logic Programming\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "dbaitr9924 / wot99a",
+     "evidence": "Two bibliography entries, dbaitr9924 and wot99a, have the same title (\"New {D}irections in {D}ebugging {H}ardware {D}esigns\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "wotawa18_AD_TR_001 / wotawa2018_ICTSS",
+     "evidence": "Two bibliography entries, wotawa18_AD_TR_001 and wotawa2018_ICTSS, have the same title (\"From Ontologies to Input Models for Combinatorial Testing\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "(NR = NOT REPORTED)}; Paper ID & \\shortstack{Chiller/; AHU} & Summary & Method & TPR/Recall & TPR note & FPR & FPR note & TN & TP & FN & FP ; \\endfirsthead Paper ID & \\shortstack{Chiller/; AHU} & Paper summary & Method & TPR/Recall & TPR note & FPR & FPR note & \\textbf{TN",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "(NR = NOT REPORTED)}; Paper ID & \\shortstack{Chiller/; AHU} & Summary & Method & TPR/Recall & TPR note & FPR & FPR note & TN & TP & FN & FP ; \\endfirsthead Paper ID & \\shortstack{Chiller/; AHU} & Paper summary & Method & TPR/Recall & TPR note & FPR & \\textbf{FPR",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TP",
+     "evidence": "\"TP\" is used (\"...nd false negatives and store this information in TP , TN , FP , and FN , respectively. In the rest...\") before it is defined as \"True positives (TP)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TN",
+     "evidence": "\"TN\" is used (\"...se negatives and store this information in TP , TN , FP , and FN , respectively. In the rest of th...\") before it is defined as \"True negatives (TN)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "FP",
+     "evidence": "\"FP\" is used (\"...atives and store this information in TP , TN , FP , and FN , respectively. In the rest of this sub...\") before it is defined as \"False positives (FP)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "FN",
+     "evidence": "\"FN\" is used (\"...store this information in TP , TN , FP , and FN , respectively. In the rest of this subsection, w...\") before it is defined as \"False negatives (FN)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06366v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 248 result numbers deviates strongly from uniform (chi2=409.5, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "10.1145/565816.503274 / SLAM",
+     "evidence": "Two bibliography entries, 10.1145/565816.503274 and SLAM, have the same title (\"The SLAM project: debugging system software via static analysis\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "strom1986typestate / StromY86",
+     "evidence": "Two bibliography entries, strom1986typestate and StromY86, have the same title (\"Typestate: {A} Programming Language Concept for Enhancing Software \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Du2024VulRAG / du2026vul",
+     "evidence": "Two bibliography entries, Du2024VulRAG and du2026vul, have the same title (\"Vul-rag: Enhancing llm-based vulnerability detection via knowledge-level rag\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "10.1145/1273442.1250746 / valgrind",
+     "evidence": "Two bibliography entries, 10.1145/1273442.1250746 and valgrind, have the same title (\"Valgrind: a framework for heavyweight dynamic binary instrumentation\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "VanGundy07 / VanGundy08",
+     "evidence": "Two bibliography entries, VanGundy07 and VanGundy08, have the same title (\"Catch me, if you can: Evading network signatures with web-based polymorphic worm\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "VanGundy07 / VanGundy09",
+     "evidence": "Two bibliography entries, VanGundy07 and VanGundy09, have the same title (\"Catch me, if you can: Evading network signatures with web-based polymorphic worm\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "897367 / Buss:1987:VTB:897367",
+     "evidence": "Two bibliography entries, 897367 and Buss:1987:VTB:897367, have the same title (\"Vertex Types in Book-Embeddings\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Clarkson85 / Clarkson:1985:ACP:911891",
+     "evidence": "Two bibliography entries, Clarkson85 and Clarkson:1985:ACP:911891, have the same title (\"Algorithms for Closest-Point Problems (Computational Geometry)\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Petrie:1986:NAD:899644 / Petrie:1986:NAD:12345",
+     "evidence": "Two bibliography entries, Petrie:1986:NAD:899644 and Petrie:1986:NAD:12345, have the same title (\"New Algorithms for Dependency-Directed Backtracking (Master's thesis)\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "book-minimal / test",
+     "evidence": "Two bibliography entries, book-minimal and test, have the same title (\"Seminumerical Algorithms\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "}",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\setlength{\\tabcolsep}{4pt} \\resizebox{\\linewidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\setlength{\\tabcolsep}{3pt} \\subcaptionbox{SRR construction success rate per detection model.",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "}[0.52\\linewidth]{ \\scalebox{0.8}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SRR",
+     "evidence": "\"SRR\" is used (\"...detection LLM to structure its reasoning into an SRR, then audits it with a multi-stage judge, produci...\") before it is defined as \"Structured Reasoning Record (SRR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "VERA",
+     "evidence": "\"VERA\" is used (\"...\\textwidth} \\vspace{-13pt} \\caption{Overview of VERA. VERA asks the detection LLM to structure its rea...\") before it is defined as \"call Vulnerability Evidence Reasoning Auditor (VERA)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "FP",
+     "evidence": "\"FP\" is used (\"...ary Acc.} & CWE recall & FP & Both V%\\textsuperscript{a} &...\") before it is defined as \"recall and false-positive (FP)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06255v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ICLR",
+     "evidence": "\"ICLR\" is used (\"...perrus, M. On Randomness in Agentic Evals. ICLR 2026 Workshop on Agents in the Wild. arXiv:2602.0...\") before it is defined as \"International Conference on Learning Representations (ICLR)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06193v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 232 result numbers deviates strongly from uniform (chi2=36.0, df=9)."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[h] Conditions for a rule to be in scope. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[h] Evidence Type. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[h] Failure modes observed during rule extraction. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[h] What a patch-only harness does and does not produce. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[h] \\caption{Routes to must.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[h] \\caption{Routes to should.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06163v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.06142v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.06132v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "LLOC",
+     "evidence": "\"LLOC\" is used (\"...Version & Files & Total LLOC & Ann LLOC & LLOC% & \\textbf{...\") before it is defined as \"in logical lines of code (LLOC)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06055v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.06049v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ahlersInverseSurrogateModel2025 / ahlersInverseSurrogateModel2025a",
+     "evidence": "Two bibliography entries, ahlersInverseSurrogateModel2025 and ahlersInverseSurrogateModel2025a, have the same title (\"Inverse Surrogate Model of a Soft X-Ray Spectrometer Using Domain Adaptation\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "baderOptimizingMemoryAllocation2025 / baderOptimizingMemoryAllocation2025a",
+     "evidence": "Two bibliography entries, baderOptimizingMemoryAllocation2025 and baderOptimizingMemoryAllocation2025a, have the same title (\"Optimizing Memory Allocation in Distributed Clusters with Predictive Modeling\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "baderOptimizingMemoryAllocation2025 / baderOptimizingMemoryAllocation2026",
+     "evidence": "Two bibliography entries, baderOptimizingMemoryAllocation2025 and baderOptimizingMemoryAllocation2026, have the same title (\"Optimizing Memory Allocation in Distributed Clusters with Predictive Modeling\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bagdasaryanHowBackdoorFederated2020 / bagdasaryanHowBackdoorFederated2020a",
+     "evidence": "Two bibliography entries, bagdasaryanHowBackdoorFederated2020 and bagdasaryanHowBackdoorFederated2020a, have the same title (\"How {{To Backdoor Federated Learning}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "buccheriExcitingtoolsExcitingWorkflow2023 / buccheriExcitingtoolsExcitingWorkflow2023a",
+     "evidence": "Two bibliography entries, buccheriExcitingtoolsExcitingWorkflow2023 and buccheriExcitingtoolsExcitingWorkflow2023a, have the same title (\"Excitingtools: {{An}} Exciting {{Workflow Tool}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "erdemRAYXOpticsSimulation2025 / erdemRAYXOpticsSimulation2025a",
+     "evidence": "Two bibliography entries, erdemRAYXOpticsSimulation2025 and erdemRAYXOpticsSimulation2025a, have the same title (\"{{RAYX}}---{{An}} Optics Simulation Software for Synchrotron Applications\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The resulting latent features are often more interpretable than the original model neurons and can be used to identify concepts or behaviors represented inside the model [cunninghamSparseAutoencodersFind2023,gaoScalingEvaluatingSparse2025].",
+     "evidence": "Two bibliography entries, cunninghamSparseAutoencodersFind2023 and hubenSparseAutoencodersFind2024, have the same title (\"Sparse {{Autoencoders Find Highly Interpretable Features}} in {{Language Models}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "jiangCriticalPathBasedBackdoor2024 / jiangCriticalPathBasedBackdoor2024a",
+     "evidence": "Two bibliography entries, jiangCriticalPathBasedBackdoor2024 and jiangCriticalPathBasedBackdoor2024a, have the same title (\"Critical {{Path-Based Backdoor Detection}} for {{Deep Neural Networks}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kondratevaParameterPrioritizationEfficient2023 / kondratevaParameterPrioritizationEfficient2023a",
+     "evidence": "Two bibliography entries, kondratevaParameterPrioritizationEfficient2023 and kondratevaParameterPrioritizationEfficient2023a, have the same title (\"Parameter Prioritization for Efficient Transmission of Neural Networks in Small \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kubanDensityofstatesSimilarityDescriptor / kubanDensityofstatesSimilarityDescriptor2022",
+     "evidence": "Two bibliography entries, kubanDensityofstatesSimilarityDescriptor and kubanDensityofstatesSimilarityDescriptor2022, have the same title (\"Density-of-States Similarity Descriptor for Unsupervised Learning from Materials\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kubanSimilarityMaterialsDataquality2022 / kubanSimilarityMaterialsDataquality2022a",
+     "evidence": "Two bibliography entries, kubanSimilarityMaterialsDataquality2022 and kubanSimilarityMaterialsDataquality2022a, have the same title (\"Similarity of Materials and Data-Quality Assessment by Fingerprinting\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "kulikRoadmapMachineLearning2022 / kulikRoadmapMachineLearning2022a",
+     "evidence": "Two bibliography entries, kulikRoadmapMachineLearning2022 and kulikRoadmapMachineLearning2022a, have the same title (\"Roadmap on {{Machine}} Learning in Electronic Structure\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Language models exhibit the same vulnerability pattern, with backdoors introduced through poisoned training data, full-parameter fine-tuning, parameter-efficient adapters, manipulated embeddings, or prompt- and context-level interventions [shuExploitabilityInstructionTuning2023,hubingerSleeperAgents",
+     "evidence": "Two bibliography entries, kuritaWeightPoisoningAttacks2020 and kuritaWeightPoisoningAttacks2020a, have the same title (\"Weight {{Poisoning Attacks}} on {{Pretrained Models}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "lewinskaUsableObservationsEurope2023 / lewinskaUsableObservationsEurope2024",
+     "evidence": "Two bibliography entries, lewinskaUsableObservationsEurope2023 and lewinskaUsableObservationsEurope2024, have the same title (\"Usable Observations over {{Europe}}: {{Evaluation}} of Compositing Windows for {\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "liRethinkingTriggerBackdoor2020 / liRethinkingTriggerBackdoor2021",
+     "evidence": "Two bibliography entries, liRethinkingTriggerBackdoor2020 and liRethinkingTriggerBackdoor2021, have the same title (\"Rethinking the {{Trigger}} of {{Backdoor Attack}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "losserBottleModModelingData2022 / losserBottleModModelingData2025",
+     "evidence": "Two bibliography entries, losserBottleModModelingData2022 and losserBottleModModelingData2025, have the same title (\"{{BottleMod}}: {{Modeling}} Data Flows and Tasks for Fast Bottleneck Analysis\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "moRobustBackdoorDetection2024 / moRobustBackdoorDetection2024a",
+     "evidence": "Two bibliography entries, moRobustBackdoorDetection2024 and moRobustBackdoorDetection2024a, have the same title (\"Robust {{Backdoor Detection}} for {{Deep Learning}} via {{Topological Evolution \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "rumbergerACTISImprovingData / rumbergerACTISImprovingData2023",
+     "evidence": "Two bibliography entries, rumbergerACTISImprovingData and rumbergerACTISImprovingData2023, have the same title (\"{{ACTIS}}: {{Improving}} Data Efficiency by Leveraging Semi-Supervised Augmentat\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "schintkeValidityConstraintsData2023 / schintkeValidityConstraintsData2024",
+     "evidence": "Two bibliography entries, schintkeValidityConstraintsData2023 and schintkeValidityConstraintsData2024, have the same title (\"Validity Constraints for Data Analysis Workflows\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "sunMaskRestoreBlind2023 / sunMaskRestoreBlind2025",
+     "evidence": "Two bibliography entries, sunMaskRestoreBlind2023 and sunMaskRestoreBlind2025, have the same title (\"Mask and {{Restore}}: {{Blind Backdoor Defense}} at {{Test Time}} with {{Masked \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "usmanNNREPAIRConstraintbasedRepair / usmanNNrepairConstraintbasedRepair2021",
+     "evidence": "Two bibliography entries, usmanNNREPAIRConstraintbasedRepair and usmanNNrepairConstraintbasedRepair2021, have the same title (\"{{NNrepair}}: {{Constraint-based Repair}} of {{Neural Network Classifiers}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zhuClassConditionalNeuralPolarizer2025 / zhuClassConditionalNeuralPolarizer2025a",
+     "evidence": "Two bibliography entries, zhuClassConditionalNeuralPolarizer2025 and zhuClassConditionalNeuralPolarizer2025a, have the same title (\"Class-{{Conditional Neural Polarizer}}: {{A Lightweight}} and {{Effective Backdo\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "A common approach is to add a direction associated with a desired property to the residual stream or another hidden representation [zouRepresentationEngineeringTopDown2025].",
+     "evidence": "Two bibliography entries, zouRepresentationEngineeringTopDown2023 and zouRepresentationEngineeringTopDown2025, have the same title (\"Representation {{Engineering}}: {{A Top-Down Approach}} to {{AI Transparency}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tahimicMechanisticInterpretabilityCode2025 / tahimic2026code",
+     "evidence": "Two bibliography entries, tahimicMechanisticInterpretabilityCode2025 and tahimic2026code, have the same title (\"Mechanistic Interpretability of Code Correctness in LLMs via Sparse \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "schusterYouAutocompleteMe2021 / schuster2021autocomplete",
+     "evidence": "Two bibliography entries, schusterYouAutocompleteMe2021 and schuster2021autocomplete, have the same title (\"You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "aghakhaniTrojanPuzzleCovertlyPoisoning2024a / aghakhani2024trojanpuzzle",
+     "evidence": "Two bibliography entries, aghakhaniTrojanPuzzleCovertlyPoisoning2024a and aghakhani2024trojanpuzzle, have the same title (\"TrojanPuzzle: Covertly Poisoning Code-Suggestion Models\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ASR",
+     "evidence": "\"ASR\" is used (\"...experiment, we additionally report executed-print ASR: the fraction of all 139 held-out tasks whose gen...\") before it is defined as \"compute attack success rate (ASR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "LR",
+     "evidence": "\"LR\" is used (\"...& \\multirow{2}{*}{Layer} & \\multicolumn{3}{c}{LR (%)} & & \\multicolumn{2}{c}{ L_0 } &...\") before it is defined as \"reports loss recovered (LR)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06047v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "meade2012careless / meade2012identifying",
+     "evidence": "Two bibliography entries, meade2012careless and meade2012identifying, have the same title (\"Identifying Careless Responses in Survey Data\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "anthropic2026consumertraining / anthropic2026commercialtraining",
+     "evidence": "Two bibliography entries, anthropic2026consumertraining and anthropic2026commercialtraining, have the same title (\"Is My Data Used for Model Training?\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.06004v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.06001v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05999v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "li2025tiaozhuan / li2024tiaozhuan",
+     "evidence": "Two bibliography entries, li2025tiaozhuan and li2024tiaozhuan, have the same title (\"Tiaozhuan: A General and Efficient Indirect Branch Optimization for Binary Trans\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "FPU",
+     "evidence": "\"FPU\" is used (\"...perations is limited, as we currently exclude x87 FPU instructions. Limitations and future works are fu...\") before it is defined as \"Floating Point Unit (FPU)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05991v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\caption{Unintended process: staff member Eve is not authorized to handle a claim for the article hat without a replacement order} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05981v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "One out-of-window row carries the \\S[sec:shadow] false positive.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Per-incident observer scope over the 24 labeled postmortems. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Offline scorecard at the study cutoff. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Layer-1 signals and their incident lineage. \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05949v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.05947v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.05858v1",
+   "field": "cs.SE",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 297 result numbers deviates strongly from uniform (chi2=41.3, df=9)."
+    }
+   ]
+  },
+  {
+   "id": "2610.05788v1",
+   "field": "cs.SE",
+   "findings": []
+  },
+  {
+   "id": "2610.05740v1",
+   "field": "q-fin.ST",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Dotted lines mark quarterly expiries, and labels report trading days per contract.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] Canonical analysis choices and their paired checks. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] Realised-variation quantities and forecast-horizon specification. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] Comparison of Log-Euclidean and affine-invariant covariance geometry. \\scriptsize \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] Isolation Forest anomaly-feature inventory. \\scriptsize \\setlength{\\tabcolsep}{3pt} \\renewcommand{\\arraystretch}{1.08} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] Composition of the 143-variable window store by feature family. \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "directional_claim_against_interval",
+     "severity": "major",
+     "order": "first",
+     "quote": "Across expanding-year folds, the pooled LE gain declines from \\(+0.02919\\) for macro bands to \\(-0.00124\\) for micro-sub bands, whose confidence interval \\([-0.00692, 0.00469]\\) includes zero.",
+     "evidence": "The sentence asserts a direction ('gain') but its own evidence does not exclude no effect: 95% CI -0.00692 to 0.00469 includes 0. Either the comparative word predates the current numbers or the claim overreaches the test."
+    }
+   ]
+  },
+  {
+   "id": "2610.06839v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.3\\textwidth}\\centeringBD-RIS: b -bit control\\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.3\\textwidth}\\centeringSIM: b -bit control\\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.3\\textwidth}\\centeringBD-RIS: SNR sweep\\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{0.3\\textwidth}\\centeringSIM: SNR sweep\\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "DoA",
+     "evidence": "\"DoA\" is used (\"...from the output aperture: in reported wave-domain DoA systems, the surface is fitted to a DFT and the a...\") before it is defined as \"single-source direction-of-arrival (DoA)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06656v1",
+   "field": "eess.SP",
+   "findings": []
+  },
+  {
+   "id": "2610.06613v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MTDSP",
+     "evidence": "\"MTDSP\" is used (\"...re*}[t] \\vspace{-0.6cm} \\caption{MTDSP dataset. (a) Observed buoy target. (b)-(e) Radar...\") before it is defined as \"the Maritime Target Detection Shared Program (MTDSP)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "UAV",
+     "evidence": "\"UAV\" is used (\"...M350; (e) DJI Wu 2; (f) DJI M600; (g) fixed-wing UAV.} \\vspace{-0.5cm} \\subsection{...\") before it is defined as \"of unmanned aerial vehicle (UAV)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06583v1",
+   "field": "eess.SP",
+   "findings": []
+  },
+  {
+   "id": "2610.06565v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "jiang2021learning / 2021JiangtJSAC",
+     "evidence": "Two bibliography entries, jiang2021learning and 2021JiangtJSAC, have the same title (\"Learning to Reflect and to Beamform for Intelligent Reflecting Surface With Impl\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "wu2020beamforming / wu2019beamforming",
+     "evidence": "Two bibliography entries, wu2020beamforming and wu2019beamforming, have the same title (\"Beamforming optimization for wireless network aided by intelligent reflecting su\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "xu2023coordinating / Xu2024Coordinating",
+     "evidence": "Two bibliography entries, xu2023coordinating and Xu2024Coordinating, have the same title (\"Coordinating Multiple Intelligent Reflecting Surfaces Without Channel Informatio\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zhang2022configuring / zhang2022optimal",
+     "evidence": "Two bibliography entries, zhang2022configuring and zhang2022optimal, have the same title (\"Configuring Intelligent Reflecting Surface With Performance Guarantees: Optimal \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ren2022linear / ren2023optimal",
+     "evidence": "Two bibliography entries, ren2022linear and ren2023optimal, have the same title (\"A Linear Time Algorithm for the Optimal Discrete {IRS} Beamforming\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Finally, the preference variables are updated by stochastic gradient ascent.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CSM",
+     "evidence": "\"CSM\" is used (\"...ed SNR in block t ; Q_n^t(\\varphi) & CSM value of phase shift \\varphi for RE in block t...\") before it is defined as \"the conditional sample mean (CSM)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.06492v1",
+   "field": "eess.SP",
+   "findings": []
+  },
+  {
+   "id": "2610.06407v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "(b) Discrete-ray method to calculate geometric spreading and pointing losses.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "(b) Evolution of beam alignment at different time steps.} \\vspace{-0.35cm} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "(b) Geometric representation of the controllable beam steering and divergence angles.} \\vspace{-0.4cm} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[b]{0.44\\columnwidth} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06356v1",
+   "field": "eess.SP",
+   "findings": []
+  },
+  {
+   "id": "2610.06073v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ghasemi2007fundamental / 4100173",
+     "evidence": "Two bibliography entries, ghasemi2007fundamental and 4100173, have the same title (\"Fundamental limits of spectrum-sharing in fading environments\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "4291825 / karagiannidis2007n",
+     "evidence": "Two bibliography entries, 4291825 and karagiannidis2007n, have the same title (\"N\\^{}* {N}akagami: A Novel Stochastic Model for Cascaded Fading Channels\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "6356935 / lei2012impact",
+     "evidence": "Two bibliography entries, 6356935 and lei2012impact, have the same title (\"Impact of outdated channel state information on multiuser cooperative relay netw\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "chen2004distribution / 1356206",
+     "evidence": "Two bibliography entries, chen2004distribution and 1356206, have the same title (\"Distribution functions of selection combiner output in equally correlated {R}ayl\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "chen2005analysis / 1492684",
+     "evidence": "Two bibliography entries, chen2005analysis and 1492684, have the same title (\"Analysis of Transmit Antenna Selection/Maximal-Ratio Combining in {R}ayleigh Fad\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "khedhiri2014first / 6966085",
+     "evidence": "Two bibliography entries, khedhiri2014first and 6966085, have the same title (\"On the First- and Second-Order Statistics of Selective Combining over Double {N}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "gong2011ser / 5648737",
+     "evidence": "Two bibliography entries, gong2011ser and 5648737, have the same title (\"{SER} Analysis of the Mobile-Relay-Based {M2M} Communication over Double {N}akag\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "abu1994switched / 330159",
+     "evidence": "Two bibliography entries, abu1994switched and 330159, have the same title (\"Switched diversity on microcellular {R}icean channels\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "J:Zogas_infinite_series_rician / 1532472",
+     "evidence": "Two bibliography entries, J:Zogas_infinite_series_rician and 1532472, have the same title (\"Infinite-series representations associated with the bivariate {R}ician distribut\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "6094281 / beaulieu2011novel",
+     "evidence": "Two bibliography entries, 6094281 and beaulieu2011novel, have the same title (\"Novel simple representations for Gaussian class multivariate distributions with \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "4067122 / yacoub2007alpha",
+     "evidence": "Two bibliography entries, 4067122 and yacoub2007alpha, have the same title (\"The \\alpha -\\mu Distribution: A Physical Fading Model for the Stacy Distribut\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\caption{{Absolute CDF difference |F_{\\bf I_1}(\\gamma_{\\rm th})-F_{\\bf I_2}(\\gamma_{\\rm th})| versus the IG shaping parameter and the number of RVs K .}} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.06071v1",
+   "field": "eess.SP",
+   "findings": []
+  },
+  {
+   "id": "2610.05979v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 125 result numbers deviates strongly from uniform (chi2=46.1, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "abbas2024radioFull / abbas2024radio",
+     "evidence": "Two bibliography entries, abbas2024radioFull and abbas2024radio, have the same title (\"Radio frequency fingerprinting techniques for device identification: a survey\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zhang2025openFull / zhang2025open",
+     "evidence": "Two bibliography entries, zhang2025openFull and zhang2025open, have the same title (\"An Open-Set Few-Shot Class Incremental Learning Framework for Specific Emitter I\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "jian2021radioFull / jian2021radio",
+     "evidence": "Two bibliography entries, jian2021radioFull and jian2021radio, have the same title (\"Radio frequency fingerprinting on the edge\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zhang2021radioFull / zhang2021radio",
+     "evidence": "Two bibliography entries, zhang2021radioFull and zhang2021radio, have the same title (\"Radio frequency fingerprint identification for narrowband systems, modelling and\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "wang2022fewFull / wang2022few",
+     "evidence": "Two bibliography entries, wang2022fewFull and wang2022few, have the same title (\"Few-shot specific emitter identification via deep metric ensemble learning\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "yao2023fewFull / yao2023few",
+     "evidence": "Two bibliography entries, yao2023fewFull and yao2023few, have the same title (\"Few-shot specific emitter identification using asymmetric masked auto-encoder\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "liu2023overcomingFull / liu2023overcoming",
+     "evidence": "Two bibliography entries, liu2023overcomingFull and liu2023overcoming, have the same title (\"Overcoming data limitations: A few-shot specific emitter identification method u\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "sankhe2019oracleFull / sankhe2019oracle",
+     "evidence": "Two bibliography entries, sankhe2019oracleFull and sankhe2019oracle, have the same title (\"{ORACLE}: Optimized radio classification through convolutional neural networks\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "saadouni2025identificationFull / saadouni2025identification",
+     "evidence": "Two bibliography entries, saadouni2025identificationFull and saadouni2025identification, have the same title (\"Identification techniques in the internet of things: Survey, taxonomy and resear\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "shlezinger2020model / shlezinger2023model",
+     "evidence": "Two bibliography entries, shlezinger2020model and shlezinger2023model, have the same title (\"Model-Based Deep Learning\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "fifty2024restructuringFull / fifty2024restructuring",
+     "evidence": "Two bibliography entries, fifty2024restructuringFull and fifty2024restructuring, have the same title (\"Restructuring Vector Quantization with the Rotation Trick\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "cai2025openFull / cai2025open",
+     "evidence": "Two bibliography entries, cai2025openFull and cai2025open, have the same title (\"Open set {RF} fingerprinting identification: A joint prediction and Siamese comp\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ester1996densityFull / ester1996density",
+     "evidence": "Two bibliography entries, ester1996densityFull and ester1996density, have the same title (\"A density-based algorithm for discovering clusters in large spatial databases wi\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "khosla2020supervised / khosla2020supervisedFull",
+     "evidence": "Two bibliography entries, khosla2020supervised and khosla2020supervisedFull, have the same title (\"Supervised Contrastive Learning\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\subfloat[LoRa]{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\subfloat[WiSig]{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\subfloat[LoRa]{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\subfloat[WiSig]{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05936v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SLS",
+     "evidence": "\"SLS\" is used (\"...rning-based features into our industry-grade \\gls{SLS}, which combines accurate link-level and system-l...\") before it is defined as \"industry-grade System-Level Simulator (SLS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "LLS",
+     "evidence": "\"LLS\" is used (\"...interface has to be replaced with the proper \\gls{LLS} approach, which can accurately simulate differen...\") before it is defined as \"Link-Level Simulator (LLS)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05906v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The commissioned RBC-DEKF activates its residual loop after the 300 s handover, and no estimator receives the fault-onset time.}} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Shading denotes the 180--600 s range over which the correction RMSE remains at its observed minimum level, and the orange point marks the retained 300 s setting.}} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Startup provisional outputs are included.} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] \\color{revisionyellow} Covariance treatment in the sequential RBC-DEKF and conventional five-dimensional joint EKF. \\setlength{\\tabcolsep}{4pt} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[H] \\color{revisionyellow} Bounds supplied for the 14-parameter A123 LFP/graphite identification and selected values used in this study. \\scriptsize \\setlength{\\tabcolsep}{4pt} \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Common-horizon RMSE uses t\\geq600 s for every window.} \\scriptsize \\setlength{\\tabcolsep}{3pt} \\resizebox{\\textwidth}{!}{ \\begin{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SPM",
+     "evidence": "\"SPM\" is used (\"...asis for state estimation} Classical SPM foundation: The electrochemical backbone adopted...\") before it is defined as \"Classical continuous-time single-particle model (SPM)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "EKF",
+     "evidence": "\"EKF\" is used (\"...defined as \\begin{equation} SOC_{EKF}(t)=\\tfrac{1}{2}\\big(SOC_p(t)+\\mathrm{S...\") before it is defined as \"conventional extended Kalman filter (EKF)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05876v1",
+   "field": "eess.SP",
+   "findings": []
+  },
+  {
+   "id": "2610.05751v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "In-vivo Carotid Long} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    }
+   ]
+  },
+  {
+   "id": "2610.05694v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TR",
+     "evidence": "\"TR\" is used (\"...fication machinery (top panel): SIs and WIs carry TRs and TSs through the three-stage flow (requirement...\") before it is defined as \"in Technical Reports (TR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TS",
+     "evidence": "\"TS\" is used (\"...machinery (top panel): SIs and WIs carry TRs and TSs through the three-stage flow (requirements, archi...\") before it is defined as \"produce Technical Specifications (TS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "WG",
+     "evidence": "\"WG\" is used (\"...ols) across the RAN, SA, and CT TSGs and their 16 WGs; the principal cross-TSG dependency is that Stage...\") before it is defined as \"Sixteen Working Groups (WG)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "KPI",
+     "evidence": "\"KPI\" is used (\"...the most active, together with representative new KPIs; (ii) The SA2 system-architecture study...\") before it is defined as \"new key performance indicators (KPI)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MIMO",
+     "evidence": "\"MIMO\" is used (\"...um frontier; the June-2026 RAN decisions; and the MIMO evolution from fourth-generation (4G) to 6G. Of t...\") before it is defined as \"Multiple-input multiple-output (MIMO)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05658v1",
+   "field": "eess.SP",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TCN",
+     "evidence": "\"TCN\" is used (\"...ly phase targets support external training of the TCN. The selected tracker is then returned for interf...\") before it is defined as \"learned temporal convolutional network (TCN)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05820v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Carpenter2014_SBP / Carpenter2014",
+     "evidence": "Two bibliography entries, Carpenter2014_SBP and Carpenter2014, have the same title (\"Entropy Stable Spectral Collocation Schemes for the {N}avier--{S}tokes Equations\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "gassner2016shallowwater / GASSNER2016291",
+     "evidence": "Two bibliography entries, gassner2016shallowwater and GASSNER2016291, have the same title (\"A well balanced and entropy conservative discontinuous {G}alerkin spectral eleme\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ECChandra / chandrashekar2013",
+     "evidence": "Two bibliography entries, ECChandra and chandrashekar2013, have the same title (\"Kinetic Energy Preserving and Entropy Stable Finite Volume Schemes for Compressi\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "DELREYFERNANDEZ2014171 / fernandez2014review",
+     "evidence": "Two bibliography entries, DELREYFERNANDEZ2014171 and fernandez2014review, have the same title (\"Review of summation-by-parts operators with simultaneous approxim\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "STRAND199447 / strand1994summation",
+     "evidence": "Two bibliography entries, STRAND199447 and strand1994summation, have the same title (\"Summation by Parts for Finite Difference Approximations for { d/d\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "NORDSTROM2001237 / nordstrom2001finite",
+     "evidence": "Two bibliography entries, NORDSTROM2001237 and nordstrom2001finite, have the same title (\"Finite volume approximations and strict stability for hyperbolic problems\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Abgrall2020 / abgrall2020analysisI",
+     "evidence": "Two bibliography entries, Abgrall2020 and abgrall2020analysisI, have the same title (\"Analysis of the {SBP-SAT} Stabilization for Finite Element Methods \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Carpenter2014_SBP / carpenter2014entropy",
+     "evidence": "Two bibliography entries, Carpenter2014_SBP and carpenter2014entropy, have the same title (\"Entropy Stable Spectral Collocation Schemes for the {N}avier-{S}t\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Huynh2007 / huynh2007flux",
+     "evidence": "Two bibliography entries, Huynh2007 and huynh2007flux, have the same title (\"A Flux Reconstruction Approach to High-Order Schemes Including \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "RANOCHA2016299 / ranocha2016summation",
+     "evidence": "Two bibliography entries, RANOCHA2016299 and ranocha2016summation, have the same title (\"Summation-by-parts operators for correction procedure via recon\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Winters2020 / winters2020entropy",
+     "evidence": "Two bibliography entries, Winters2020 and winters2020entropy, have the same title (\"Entropy stable numerical approximations for the isothermal and po\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.05203v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_never_cited",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\bibitem{Rodgers1966} C. D.",
+     "evidence": "The reference list holds \\bibitem{Rodgers1966}, which the text never cites."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_two_expansions",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TCR",
+     "evidence": "\"TCR\" is expanded in two ways: \"pure Transient Climate Response\" / \"the Transient Climate Response\" / \"to medium-term climate responses\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.04558v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 28 result numbers deviates strongly from uniform (chi2=82.7, df=9)."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The degree of confidence we place in these models depends on whether we can quantify the uncertainty in their projections [allenQuantifyingUncertaintyForecasts2000,knuttiClimateModelProjection2017].",
+     "evidence": "Two bibliography entries, allenQuantifyingUncertaintyForecasts2000 and allenQuantifyingUncertaintyForecasts2000a, have the same title (\"Quantifying the Uncertainty in Forecasts of Anthropogenic Climate Change\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Emulators of this kind have since proven remarkably effective at reproducing global and regional patterns of temperature and precipitation response to forcing scenarios [bouabidFaIRGPBayesianEnergy2024,mathisonRapidapplicationEmissionstoimpactsTool2025,tebaldiEmulatorsClimateModel2025], but are, by ",
+     "evidence": "Two bibliography entries, bouabidFaIRGPBayesianEnergy2024 and bouabidFaIRGPBayesianEnergy2024a, have the same title (\"{{FaIRGP}}: {{A Bayesian Energy Balance Model}} for {{Surface Temperatures Emula\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Emulators of this kind have since proven remarkably effective at reproducing global and regional patterns of temperature and precipitation response to forcing scenarios [bouabidFaIRGPBayesianEnergy2024,mathisonRapidapplicationEmissionstoimpactsTool2025,tebaldiEmulatorsClimateModel2025], but are, by ",
+     "evidence": "Two bibliography entries, bouabidFaIRGPBayesianEnergy2024 and bouabidFaIRGPBayesianEnergy2024b, have the same title (\"{{FaIRGP}}: {{A Bayesian Energy Balance Model}} for {{Surface Temperatures Emula\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CloudComputingParallel2008 / evangelinos_cloud_2008",
+     "evidence": "Two bibliography entries, CloudComputingParallel2008 and evangelinos_cloud_2008, have the same title (\"Cloud {{Computing}} for Parallel {{Scientific HPC Applications}}: {{Feasibility}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nts: paired tropical-Pacific SST-patch experiments following the GFMIP protocol (an extended diagnostic, as they rely on prescribed-SST integrations), whose east--west contrast in global radiative response per unit local warming is robustly positive in CMIP6 models and observational reconstructions ",
+     "evidence": "Two bibliography entries, forsterEarthsEnergyBudget2021 and forsterEarthsEnergyBudget2021a, have the same title (\"The {{Earth}}'s {{Energy Budget}}, {{Climate Feedbacks}}, and {{Climate Sensitiv\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "gettelmanHasReducingShip2024 / gettelmanHasReducingShip2024a",
+     "evidence": "Two bibliography entries, gettelmanHasReducingShip2024 and gettelmanHasReducingShip2024a, have the same title (\"Has {{Reducing Ship Emissions Brought Forward Global Warming}}?\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "gettelmanInteractionClimateForcing2024 / gettelmanInteractionClimateForcing2024a",
+     "evidence": "Two bibliography entries, gettelmanInteractionClimateForcing2024 and gettelmanInteractionClimateForcing2024a, have the same title (\"The {{Interaction Between Climate Forcing}} and {{Feedbacks}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Hall19z / hallProgressingEmergentConstraints2019",
+     "evidence": "Two bibliography entries, Hall19z and hallProgressingEmergentConstraints2019, have the same title (\"Progressing Emergent Constraints on Future Climate Change\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "AeroComInitialAssessment2005 / kinneAeroComInitialAssessment2006",
+     "evidence": "Two bibliography entries, AeroComInitialAssessment2005 and kinneAeroComInitialAssessment2006, have the same title (\"An {{AeroCom}} Initial Assessment -- Optical Properties in Aerosol Component Mod\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "\\citeA{glecklerPerformanceMetricsClimate2008} and \\citeA{reichlerHowWellDo2008} showed that model rankings vary considerably across variables, cautioning against any single index of performance, and \\citeA{knuttiChallengesCombiningProjections2010} demonstrated that present-day skill (at the time of ",
+     "evidence": "Two bibliography entries, knuttiChallengesCombiningProjections2010 and knuttiChallengesCombiningProjections2010a, have the same title (\"Challenges in {{Combining Projections}} from {{Multiple Climate Models}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "knuttiEquilibriumClimateSensitivity2017 / knuttiEquilibriumClimateSensitivity2017a",
+     "evidence": "Two bibliography entries, knuttiEquilibriumClimateSensitivity2017 and knuttiEquilibriumClimateSensitivity2017a, have the same title (\"Beyond Equilibrium Climate Sensitivity\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "luid dynamics with process-based parameterizations; data-driven models, which learn their dynamics and/or parameterizations directly from simulation output or observations with no a priori commitment to physical structure (encompassing emulators and AI weather and climate models); and hybrid models,",
+     "evidence": "Two bibliography entries, kochkovNeuralGeneralCirculation2024 and kochkovNeuralGeneralCirculation2024a, have the same title (\"Neural General Circulation Models for Weather and Climate\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "gordonLargeSimulatedRadiative2018 / LargeSimulatedRadiative",
+     "evidence": "Two bibliography entries, gordonLargeSimulatedRadiative2018 and LargeSimulatedRadiative, have the same title (\"Large Simulated Radiative Effects of Smoke in the South East Atlantic\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "JASMINSuperdatacluster2012 / lawrence_jasmin_2012",
+     "evidence": "Two bibliography entries, JASMINSuperdatacluster2012 and lawrence_jasmin_2012, have the same title (\"The {{JASMIN}} Super-Data-Cluster\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ItsOkayBe1999 / maneewongvatana_its_1999",
+     "evidence": "Two bibliography entries, ItsOkayBe1999 and maneewongvatana_its_1999, have the same title (\"It's {{Okay}} to {{Be Skinny}}, {{If Your Friends Are Fat}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "IrisPythonLibrary / metoffice_iris",
+     "evidence": "Two bibliography entries, IrisPythonLibrary and metoffice_iris, have the same title (\"Iris: {{A Python}} Library for Analysing and Visualising Meteorological and Ocea\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "boucherClimateChange20132013 / myhreClimateChange20132013",
+     "evidence": "Two bibliography entries, boucherClimateChange20132013 and myhreClimateChange20132013, have the same title (\"Climate {{Change}} 2013: {{The Physical Science Basis}}. {{Contribution}} of {{W\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "IrisPythonLibrary / officeIrisPythonLibrary2020",
+     "evidence": "Two bibliography entries, IrisPythonLibrary and officeIrisPythonLibrary2020, have the same title (\"Iris: {{A Python}} Library for Analysing and Visualising Meteorological and Ocea\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ottoLognormalSizeDistribution1999 / parkLognormalSizeDistribution1999",
+     "evidence": "Two bibliography entries, ottoLognormalSizeDistribution1999 and parkLognormalSizeDistribution1999, have the same title (\"The Log-Normal Size Distribution Theory of Brownian Aerosol Coagulation for the \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "pierrehumbertThermostatsRadiatorFins / pierrehumbertThermostatsRadiatorFins1995",
+     "evidence": "Two bibliography entries, pierrehumbertThermostatsRadiatorFins and pierrehumbertThermostatsRadiatorFins1995, have the same title (\"Thermostats, {{Radiator Fins}}, and the {{Local Runaway Greenhouse}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "reddingtonAnalysisParticulateEmissions2016 / reddingtonAnalysisParticulateEmissions2016a",
+     "evidence": "Two bibliography entries, reddingtonAnalysisParticulateEmissions2016 and reddingtonAnalysisParticulateEmissions2016a, have the same title (\"Analysis of Particulate Emissions from Tropical Biomass Burning Using a Global A\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "regayreIdentifyingClimateModel2023 / regayreIdentifyingClimateModel2023a",
+     "evidence": "Two bibliography entries, regayreIdentifyingClimateModel2023 and regayreIdentifyingClimateModel2023a, have the same title (\"Identifying Climate Model Structural Inconsistencies Allows for Tight Constraint\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "schlundEmergentConstraintsEquilibrium2020 / schlundEmergentConstraintsEquilibrium2020a",
+     "evidence": "Two bibliography entries, schlundEmergentConstraintsEquilibrium2020 and schlundEmergentConstraintsEquilibrium2020a, have the same title (\"Emergent Constraints on Equilibrium Climate Sensitivity in {{CMIP5}}: Do They Ho\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "schlundEmergentConstraintsEquilibrium2020 / schlundEmergentConstraintsEquilibrium2020b",
+     "evidence": "Two bibliography entries, schlundEmergentConstraintsEquilibrium2020 and schlundEmergentConstraintsEquilibrium2020b, have the same title (\"Emergent Constraints on Equilibrium Climate Sensitivity in {{CMIP5}}: Do They Ho\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "schutgens_importance_2015 / schutgensImportanceTemporalCollocation2016",
+     "evidence": "Two bibliography entries, schutgens_importance_2015 and schutgensImportanceTemporalCollocation2016, have the same title (\"The Importance of Temporal Collocation for the Evaluation of Aerosol Models with\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "jones_scipy_2001 / SciPyOpenSource2001",
+     "evidence": "Two bibliography entries, jones_scipy_2001 and SciPyOpenSource2001, have the same title (\"{{SciPy}}: {{Open}} Source Scientific Tools for {{Python}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "singhChemistryTransportPollution2009 / singhChemistryTransportPollution2009a",
+     "evidence": "Two bibliography entries, singhChemistryTransportPollution2009 and singhChemistryTransportPollution2009a, have the same title (\"Chemistry and Transport of Pollution over the {{Gulf}} of {{Mexico}} and the {{P\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "The CMIP6 results in Figure [fig:tier1hist] therefore report each test over the models for which it could be evaluated rather than as a joint pass rate, and for new submissions alternative routes to the same quantities (e.g., RFMIP-style fixed-SST forcing diagnostics; \\citeNP{smithEffectiveRadiative",
+     "evidence": "Two bibliography entries, smithEffectiveRadiativeForcing2020 and smithEffectiveRadiativeForcing2020a, have the same title (\"Effective Radiative Forcing and Adjustments in {{CMIP6}} Models\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "stier_aerosol_2007-1 / stierAerosolAbsorptionRadiative2007",
+     "evidence": "Two bibliography entries, stier_aerosol_2007-1 and stierAerosolAbsorptionRadiative2007, have the same title (\"Aerosol Absorption and Radiative Forcing\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "boucherClimateChange20132013 / stocker_climate_2013",
+     "evidence": "Two bibliography entries, boucherClimateChange20132013 and stocker_climate_2013, have the same title (\"Climate {{Change}} 2013: {{The Physical Science Basis}}. {{Contribution}} of {{W\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "BlueMarbleNext / stockli2005blue",
+     "evidence": "Two bibliography entries, BlueMarbleNext and stockli2005blue, have the same title (\"The {{Blue Marble Next Generation-A}} True Color Earth Dataset Including Seasona\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Emulators of this kind have since proven remarkably effective at reproducing global and regional patterns of temperature and precipitation response to forcing scenarios [bouabidFaIRGPBayesianEnergy2024,mathisonRapidapplicationEmissionstoimpactsTool2025,tebaldiEmulatorsClimateModel2025], but are, by ",
+     "evidence": "Two bibliography entries, tebaldiEmulatorsClimateModel2025 and tebaldiEmulatorsClimateModel2025a, have the same title (\"Emulators of {{Climate Model Output}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "beck_testdriven_2003 / TestDrivenDevelopmentExample2003",
+     "evidence": "Two bibliography entries, beck_testdriven_2003 and TestDrivenDevelopmentExample2003, have the same title (\"Test-{{Driven Development}} by {{Example}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "flato_evaluation_2013 / tfstockerEvaluationClimateModels2013",
+     "evidence": "Two bibliography entries, flato_evaluation_2013 and tfstockerEvaluationClimateModels2013, have the same title (\"Evaluation of {{Climate Models}}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tokarskaPastWarmingTrend2020 / tokarskaWarmingTrendConstrains2019",
+     "evidence": "Two bibliography entries, tokarskaPastWarmingTrend2020 and tokarskaWarmingTrendConstrains2019, have the same title (\"Past Warming Trend Constrains Future Warming in {{CMIP6}} Models.\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "oreskesVerificationValidationConfirmation1994 / VerificationValidationConfirmation2016",
+     "evidence": "Two bibliography entries, oreskesVerificationValidationConfirmation1994 and VerificationValidationConfirmation2016, have the same title (\"Verification, {{Validation}}, and {{Confirmation}} of {{Numerical Models}} in th\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "watson-parris_energy_2010 / watson-parrisEnergyLandscapeCarrier2010",
+     "evidence": "Two bibliography entries, watson-parris_energy_2010 and watson-parrisEnergyLandscapeCarrier2010, have the same title (\"Energy Landscape and Carrier Wave-functions in {{InGaN}}/{{GaN}} Quantum Wells\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "For models that generate their own climates -- whether physical ESMs, data-driven models of the atmosphere [watt-meyerACE2AccuratelyLearning2025] or ocean [dheeshjithSamudraAIGlobal2025], coupled data-driven systems combining the two [cresswell-clayDeepLearningEarth2025,duncanSamudrACEFastAccurate20",
+     "evidence": "Two bibliography entries, watt-meyerACE2AccuratelyLearning2024 and watt-meyerACE2AccuratelyLearning2025, have the same title (\"{{ACE2}}: Accurately Learning Subseasonal to Decadal Atmospheric Variability and\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "knuttiEquilibriumClimateSensitivity2017 / knuttiBeyondEquilibriumClimate2017",
+     "evidence": "Two bibliography entries, knuttiEquilibriumClimateSensitivity2017 and knuttiBeyondEquilibriumClimate2017, have the same title (\"Beyond equilibrium climate sensitivity\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "northTheoryEnergyBalanceClimate1975 / northTheoryEnergyBalance1975",
+     "evidence": "Two bibliography entries, northTheoryEnergyBalanceClimate1975 and northTheoryEnergyBalance1975, have the same title (\"Theory of Energy-Balance Climate Models\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Following the approach of \\citeA{watson-parrisIntegratingTopDown2025}, we represent the climate system with a probabilistic version of the FaIR impulse-response model [leachFaIRv200GeneralizedImpulse2021,bouabidFaIRGPBayesianEnergy2024], treat the equilibrium climate sensitivity and the amplitude of",
+     "evidence": "Two bibliography entries, watson-parrisIntegratingTopDownEnergetic2025 and watson-parrisIntegratingTopDown2025, have the same title (\"Integrating Top-Down Energetic Constraints With Bottom-Up Process-Based Constrai\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "selandOverviewNorwegianEarth2020 / selandOverviewNorESM22020",
+     "evidence": "Two bibliography entries, selandOverviewNorwegianEarth2020 and selandOverviewNorESM22020, have the same title (\"Overview of the Norwegian Earth System Model ({NorESM2}) and key climate respons\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Out-of-sample evaluations of climate projections have previously been possible only in retrospect, decades after the projections were made and long after the models themselves had been superseded [hausfatherEvaluatingPerformancePast2020].",
+     "evidence": "Two bibliography entries, hausfatherEvaluatingPerformanceClimate2020 and hausfatherEvaluatingPerformancePast2020, have the same title (\"Evaluating the Performance of Past Climate Model Projections\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "moriceUpdatedAssessmentNearSurface2021 / moriceUpdatedAssessmentNear2021",
+     "evidence": "Two bibliography entries, moriceUpdatedAssessmentNearSurface2021 and moriceUpdatedAssessmentNear2021, have the same title (\"An Updated Assessment of Near-Surface Temperature Change From 1850: The {HadCRUT\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "Sea-ice extent, a scalar series, has no projection and is omitted.} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ECS",
+     "evidence": "\"ECS\" is used (\"...and have been used to narrow the upper bound of ECS , with some evidence that models with very high...\") before it is defined as \"over equilibrium climate sensitivity (ECS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ERF",
+     "evidence": "\"ERF\" is used (\"...& Extended ; Fast CO _2 forcing & amip-4xCO2 & ERF \\in [6.5, 9.0] W m ^{-2} & Required ; ENSO am...\") before it is defined as \"aerosol effective radiative forcing (ERF)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CRPS",
+     "evidence": "\"CRPS\" is used (\"...y five provide five or more), so neither the fair CRPS nor the leave-one-out reference score (Section )...\") before it is defined as \"the continuous ranked probability score (CRPS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TCR",
+     "evidence": "\"TCR\" is used (\"...cations can substantially shift ECS while leaving TCR essentially unchanged . Taken together with the...\") before it is defined as \"the transient climate response (TCR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "TOA",
+     "evidence": "\"TOA\" is used (\"...he failures in Figure , notably in the piControl TOA imbalance and the aerosol forcing, reflect known...\") before it is defined as \"from the net top-of-atmosphere (TOA)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "GFMIP",
+     "evidence": "\"GFMIP\" is used (\"...pical-Pacific SST-patch experiments following the GFMIP protocol (an extended diagnostic, as they rely on...\") before it is defined as \"the Greens Function Model Intercomparison Project (GFMIP)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ECCO",
+     "evidence": "\"ECCO\" is used (\"...ely, at magnitudes consistent with estimates from ECCO and ERA5 (Table ; ). A model that achieves real...\") before it is defined as \"and Climate of the Ocean (ECCO)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.03355v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "du2024increase / du2023dataset",
+     "evidence": "Two bibliography entries, du2024increase and du2023dataset, have the same title (\"Increase in MJO Predictability Under Global Warming\"); if both are cited the paper lists one work twice."
+    }
+   ]
+  },
+  {
+   "id": "2610.03314v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{\\textwidth} \\caption{Filtering: DAISI vs DAWIS Filter } \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{\\textwidth} \\caption{Filtering: DAISI vs DAWIS Filter } \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "[t]{\\textwidth} \\caption{Smoothing: SDA vs DAWIS Block Smoother} \\end{",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SQG",
+     "evidence": "\"SQG\" is used (\"... Experiments: We evaluate DAWIS on the SQG system and the \\texttt{SEVIR} dataset with multip...\") before it is defined as \"Surface Quasi-Geostrophic (SQG)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "MMPS",
+     "evidence": "\"MMPS\" is used (\"...DPS) , moment matching posterior sampling [Rozet_Andry_Lanusse_Louppe_2024], and recent...\") before it is defined as \"Moment-Matching Posterior Sampling (MMPS)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.03313v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "tab:sqg",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "RMSE",
+     "evidence": "\"RMSE\" is used (\"...ve flow-matching baseline, SDECast obtains higher RMSE and CRPS, but maintains an almost ideal spread-sk...\") before it is defined as \"Root-mean-square error (RMSE)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CRPS",
+     "evidence": "\"CRPS\" is used (\"...atching baseline, SDECast obtains higher RMSE and CRPS, but maintains an almost ideal spread-skill ratio...\") before it is defined as \"Continuous ranked probability score (CRPS)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.03106v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "RPSS",
+     "evidence": "\"RPSS\" is used (\"...by the fair ranked probability skill score (fair RPSS) of quintile forecasts, the metric of the ECMWF A...\") before it is defined as \"fair ranked probability skill score (RPSS)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "EMA",
+     "evidence": "\"EMA\" is used (\"...s to the embedding of the true next week under an EMA target encoder, which receives no gradient. (b) S...\") before it is defined as \"week by an exponential-moving-average (EMA)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.02553v1",
+   "field": "physics.ao-ph",
+   "findings": []
+  },
+  {
+   "id": "2610.02069v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_two_expansions",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SSW",
+     "evidence": "\"SSW\" is expanded in two ways: \"Sudden Stratospheric Warmings\" / \"during sudden stratospheric warming\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_two_expansions",
+     "severity": "minor",
+     "order": "second",
+     "quote": "KDE",
+     "evidence": "\"KDE\" is expanded in two ways: \"the kernel density estimate\" / \"are kernel density estimates\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CCDF",
+     "evidence": "\"CCDF\" is used (\"...ementary cumulative distribution function ( CCDF(\\tau)=1-CDF(\\tau)=\\mathbb{P}\\{\\text{retur...\") before it is defined as \"Complementary cumulative distribution functions (CCDF)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.01835v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ingstad2026a / ingstad2026",
+     "evidence": "Two bibliography entries, ingstad2026a and ingstad2026, have the same title (\"{HourGlass}: {A} probabilistic data-driven temporal downscaler for global and re\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "miralles2026 / miralles2026a",
+     "evidence": "Two bibliography entries, miralles2026 and miralles2026a, have the same title (\"Pointwise is {Pointless}? {A} {Multimodal} {Ablation} {Study} for {Precipitation\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "vaswani2023a / vaswani2023",
+     "evidence": "Two bibliography entries, vaswani2023a and vaswani2023, have the same title (\"Attention {Is} {All} {You} {Need}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "moldovan2026gmda / moldovan2026gmd",
+     "evidence": "Two bibliography entries, moldovan2026gmda and moldovan2026gmd, have the same title (\"{AIFS} {Single} 1.1.0: an update to {ECMWF}'s machine-learned weather forecast m\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "vaswani2023a / vaswani2017anips",
+     "evidence": "Two bibliography entries, vaswani2023a and vaswani2017anips, have the same title (\"Attention is {All} you {Need}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "bao2024nna / bao2024nn",
+     "evidence": "Two bibliography entries, bao2024nna and bao2024nn, have the same title (\"Spatial multi-attention conditional neural processes\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "gao2023 / gao",
+     "evidence": "Two bibliography entries, gao2023 and gao, have the same title (\"Earthformer: {Exploring} {Space}-{Time} {Transformers} for {Earth} {System} {For\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "qin2024b / qin2024c",
+     "evidence": "Two bibliography entries, qin2024b and qin2024c, have the same title (\"Toward a {Better} {Understanding} of {Fourier} {Neural} {Operators} from a {Spec\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "pathak2026sa / pathak2026saa",
+     "evidence": "Two bibliography entries, pathak2026sa and pathak2026saa, have the same title (\"Kilometer-scale convection-allowing model emulation using generative diffusion m\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "pathak / pathaka",
+     "evidence": "Two bibliography entries, pathak and pathaka, have the same title (\"Learning {Accurate} {Storm}-{Scale} {Evolution} from {Observations}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "pathak / pathakb",
+     "evidence": "Two bibliography entries, pathak and pathakb, have the same title (\"Learning {Accurate} {Storm}-{Scale} {Evolution} from {Observations}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "schreck2025 / schreck2025a",
+     "evidence": "Two bibliography entries, schreck2025 and schreck2025a, have the same title (\"Controllable {Probabilistic} {Forecasting} with {Stochastic} {Decomposition} {La\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "chen2025 / chen2025a",
+     "evidence": "Two bibliography entries, chen2025 and chen2025a, have the same title (\"{FuXi}-{Nowcast}: {Meet} the longstanding challenge of convective initiation in \"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nipen2025aies / nipen2024a",
+     "evidence": "Two bibliography entries, nipen2025aies and nipen2024a, have the same title (\"Regional data-driven weather modeling with a global stretched-grid\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zotero-item-5034 / lam2023sa",
+     "evidence": "Two bibliography entries, zotero-item-5034 and lam2023sa, have the same title (\"Learning skillful medium-range global weather forecasting\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "qin2024b / qin2024a",
+     "evidence": "Two bibliography entries, qin2024b and qin2024a, have the same title (\"Toward a {Better} {Understanding} of {Fourier} {Neural} {Operators} from a {Spec\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "adamov2025b / adamov2025a",
+     "evidence": "Two bibliography entries, adamov2025b and adamov2025a, have the same title (\"Building {Machine} {Learning} {Limited} {Area} {Models}: {Kilometer}-{Scale} {We\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "andrae2025a / andrae2024",
+     "evidence": "Two bibliography entries, andrae2025a and andrae2024, have the same title (\"Continuous {Ensemble} {Weather} {Forecasting} with {Diffusion} models\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "miralles2022aiesa / miralles2022aies",
+     "evidence": "Two bibliography entries, miralles2022aiesa and miralles2022aies, have the same title (\"Downscaling of {Historical} {Wind} {Fields} over {Switzerland} {Using} {Generati\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "andrae2025a / andrae2025",
+     "evidence": "Two bibliography entries, andrae2025a and andrae2025, have the same title (\"Continuous {Ensemble} {Weather} {Forecasting} with {Diffusion} models\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "parthipan2024a / parthipan2024",
+     "evidence": "Two bibliography entries, parthipan2024a and parthipan2024, have the same title (\"Defining error accumulation in {ML} atmospheric simulators\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "adamov2025b / adamov2025",
+     "evidence": "Two bibliography entries, adamov2025b and adamov2025, have the same title (\"Building {Machine} {Learning} {Limited} {Area} {Models}: {Kilometer}-{Scale} {We\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "oskarsson2023a / oskarsson2023",
+     "evidence": "Two bibliography entries, oskarsson2023a and oskarsson2023, have the same title (\"Graph-based {Neural} {Weather} {Prediction} for {Limited} {Area} {Modeling}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "lang2026nai / lang2024a",
+     "evidence": "Two bibliography entries, lang2026nai and lang2024a, have the same title (\"{AIFS}-{CRPS}: {Ensemble} forecasting using a model trained with a loss function\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "nipen2025aies / nipen2024",
+     "evidence": "Two bibliography entries, nipen2025aies and nipen2024, have the same title (\"Regional data-driven weather modeling with a global stretched-grid\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "andrychowicz2023a / andrychowicz2023",
+     "evidence": "Two bibliography entries, andrychowicz2023a and andrychowicz2023, have the same title (\"Deep {Learning} for {Day} {Forecasts} from {Sparse} {Observations}\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "charlton-perez2024ncasa / charlton-perez2024ncas",
+     "evidence": "Two bibliography entries, charlton-perez2024ncasa and charlton-perez2024ncas, have the same title (\"Do {AI} models produce better weather forecasts than physics-based models? {A} q\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "citation_xref",
+     "category": "reference_duplicate",
+     "severity": "minor",
+     "order": "second",
+     "quote": "zotero-item-5034 / lam2023s",
+     "evidence": "Two bibliography entries, zotero-item-5034 and lam2023s, have the same title (\"Learning skillful medium-range global weather forecasting\"); if both are cited the paper lists one work twice."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "RMSE",
+     "evidence": "\"RMSE\" is used (\"...argest skill improvement of the whole curriculum: RMSE and bias both distinctly decrease for many surfac...\") before it is defined as \"the root-mean-squared error (RMSE)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "ETS",
+     "evidence": "\"ETS\" is used (\"...AIFS v1.1. RMSE (top row), bias (second row) and ETS (bottom rows) have been computed against the oper...\") before it is defined as \"the equitable threat score (ETS)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.01095v1",
+   "field": "physics.ao-ph",
+   "findings": [
+    {
+     "check": "number_agreement",
+     "category": "prose_table_number_disagreement",
+     "severity": "minor",
+     "order": "second",
+     "quote": "At a 12-month lead, baseline robustness and coherence scores fall to 0.38 -- 0.55 , whereas AGOP XAI retains a robustness score of 0.80 and a coherence score of 0.72 .",
+     "evidence": "The text gives 0.72 for 'agop', but no cell of its table row matches at that precision; the nearest row value is 0.67."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "AGOP",
+     "evidence": "\"AGOP\" is used (\"...omparing XAI methods. Our second contribution is AGOP XAI, an explanation method based on the average g...\") before it is defined as \"the average gradient outer product (AGOP)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "SST",
+     "evidence": "\"SST\" is used (\"... 126.5625^\\circ E-- 81.5625^\\circ W). We use SST anomaly, thermocline-depth anomaly, and zonal and...\") before it is defined as \"the average sea-surface temperature (SST)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CNN",
+     "evidence": "\"CNN\" is used (\"...eme El Ni{\\ n}o prediction studied in detail, the CNN produces the most coherent AGOP explanation, whil...\") before it is defined as \"convolutional neural network (CNN)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.05900v1",
+   "field": "q-bio.TO",
+   "findings": [
+    {
+     "check": "benford",
+     "category": "terminal_digit_nonuniform",
+     "severity": "minor",
+     "order": "second",
+     "quote": "result-table terminal digits",
+     "evidence": "Terminal-digit distribution over 519 result numbers deviates strongly from uniform (chi2=1740.9, df=9)."
+    },
+    {
+     "check": "claim_interval",
+     "category": "uncited_float",
+     "severity": "minor",
+     "order": "second",
+     "quote": "us Dual-Sinus Ostium Landmark Detection Head and scale-space cavity gating repelling ventricular divergence; (c) Continuous Spatially-Grounded Deformable Step Flow and Top-Down Recursive Arborescence State Machine guaranteeing single connected acyclic directed tree topology ( \\beta_0 \\equiv 1.0, \\be",
+     "evidence": "is never referenced in the text; a reader has no route to it and a reviewer reads it as padding or as a result the text avoids discussing."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "FFR",
+     "evidence": "\"FFR\" is used (\"...e misclassified as hemodynamically normal ( FFR > 0.80 ). \\c...\") before it is defined as \"Fractional Flow Reserve (FFR)\"."
+    },
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CPR",
+     "evidence": "\"CPR\" is used (\"...P_{a,hyp} . \\subsection{Patient-Specific CPR Profiling, Compliant Waves, Pulsatile WSS \\& Tran...\") before it is defined as \"continuous Curved Planar Reformation (CPR)\"."
+    }
+   ]
+  },
+  {
+   "id": "2610.03817v1",
+   "field": "q-bio.TO",
+   "findings": [
+    {
+     "check": "text_hygiene",
+     "category": "abbreviation_before_definition",
+     "severity": "minor",
+     "order": "second",
+     "quote": "CNN",
+     "evidence": "\"CNN\" is used (\"...ection could be trained end-to-end using standard CNN techniques , recent advances in medical imaging...\") before it is defined as \"convolutional neural network (CNN)\"."
+    }
+   ]
+  }
+ ]
+}
